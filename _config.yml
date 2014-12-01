@@ -1,0 +1,19 @@
+# Permalinks
+permalink:        pretty
+relative_permalinks: true
+
+# Setup
+title:            MTMS.100
+tagline:          Statistiline andmeteadus ja visualiseerimine
+url:              http://andmeteadus.github.io
+paginate:         1
+baseurl:          /
+author:
+  name:           Tanel
+  url:            
+  email:          andmeteadus@gmail.com
+
+# Custom vars
+version:          1.0.0
+github:
+  repo:           http://andmeteadus.github.io/
