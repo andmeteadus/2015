@@ -19,6 +19,5 @@ github:
   repo:           http://andmeteadus.github.io/
 
 pages_list:       
-  About: '/about'
-  Projects: '/projects'
-  Feed: '/atom.xml'
+  Praktikumid: '/praktikumid'
+  Projektid: '/projektid'
