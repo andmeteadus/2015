@@ -27,23 +27,31 @@ Järgnev skeem võtab lühidalt kokku õppeaine olemuse.
 
 ### Sihtgrupp
 
-Kursus on mõeldud statistikahuvilistele üliõpilastele, kes on tuttavad tarkvaraga R.
-
-### Tunniplaan
-
-* Õppeaine toimub 2014/2015. õppeaasta kevadsemestril.
-* Praktikumid toimuvad teisipäeviti kell 14.15 ruumis 203 (nädalatel 24 - 32). 
+* Kursus on mõeldud statistikahuvilistele üliõpilastele, kes on tuttavad tarkvaraga R.
 
 ### Õppetöö korraldus
 
-* Õppeaines on kasutusel nn pööratud klassiruumi meetod. 
+* **Iseseisev töö:** Õppeaines on kasutusel nn pööratud klassiruumi meetod. 
 Loengute asemel on ette nähtud iganädalane iseseisev töö. 
 See võib sisaldada mõne artikliga tutvumist, veebiloengu vaatamist vms. 
 Arutelu iseseisvalt õpitu kohta ning praktikumid toimuvad klassiruumis.
-* Praktikumides antakse kokku 8 kodutööd, mille lahendused tuleb esitada antud tähtajaks. 
-* Lisaks tuleb läbi viia üks praktiline andmeanalüüs ning kirjutada populaarteaduslikus vormis artikkel saadud tulemustest. 
+* **Praktikumid:** Aines toimub kokku 9 praktikumi. 
+* **Kodutööd:** Praktikumides antakse kokku 8 kodutööd. 
+Iga kodutöö tulemuseks on [knitr](http://yihui.name/knitr/)-i raport koos R-i koodi ning kommentaaridega, mis tuleb esitada antud tähtajaks. 
+* **Projekt:** Lisaks tuleb läbi viia üks praktiline andmeanalüüs ning kirjutada populaarteaduslikus vormis artikkel saadud tulemustest. 
 Artikkel on illustreeritud asjakohaste joonistega ning on arusaadav ka mittestatistikule. 
 Projekti võib teha kas üksinda või paaristööna. Tulemusi on vaja esitleda suulisel kaitsmisel.
 
+### Tunniplaan
 
+* Õppeaine toimub 2014/2015. õppeaasta kevadsemestril. 
+* Praktikumid toimuvad teisipäeviti kell 14.15 ruumis 203 (nädalatel 24 - 32). 
+* Konsultatsioon esmaspäeviti kell ?? ruumis ???. 
+
+### Kontakt ja küsimused
+
+* Kaspar Märtens
+* Tanel Pärnamaa
+
+Meiega saab ühendust aadressil: andmeteadus [at] gmail.com
 
