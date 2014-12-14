@@ -15,7 +15,7 @@ body {
 
 svg {
   width: 720px;
-  height: 260px;
+  height: 200px;
 }
 
 #chart {
@@ -131,7 +131,7 @@ svg.on("mousemove", function() {
       .attr("r", 4.5)
       .style("fill", fill)
     .transition()
-      .delay(3000)
+      .delay(2250)
       .attr("r", 1e-6)
       .each("end", function() { nodes.splice(4, 1); })
       .remove();

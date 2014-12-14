@@ -5,7 +5,7 @@ title: Praktikumid
 
 ## Praktikum 1
 
-#### Sissejuhatus ainesse, reprodutseeritavasse analüüsi ja automatiseeritud statistikasse. Tarkvara R meeldetuletamine.
+Sissejuhatus ainesse, reprodutseeritavasse analüüsi ja automatiseeritud statistikasse. Tarkvara R meeldetuletamine.
 
 * [Slaidid](https://)
 * [Ülesanded](https://)
@@ -13,7 +13,7 @@ title: Praktikumid
 
 ## Praktikum 2
 
-#### Pakett knitr. Markdown. Joonised paketiga ggplot2: erinevad joonisetüübid.
+Pakett knitr. Markdown. Joonised paketiga ggplot2: erinevad joonisetüübid.
 
 * [Slaidid](https://)
 * [Ülesanded](https://)
