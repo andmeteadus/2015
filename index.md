@@ -33,10 +33,10 @@ Miks on kursuses olulisel kohal andmeanalüüsi reprodutseeritavus ja visualisee
 
   Teadusajakirjas Nature on olnud palju juttu 
   [reprodutseeritavuse kriisist](http://www.nature.com/nature/focus/reproducibility/index.html): 
-  publitseerituid analüüsitulemusi on raske taastekitada. 
-  Tihti isegi siis kui kasutatakse samu andmestikke
+  publitseeritud analüüsitulemusi on raske taastekitada.  
+  Tihti isegi siis, kui kasutatakse samu andmestikke
   (näiteks Harvardi majandusteadlaste [artikkel](http://en.wikipedia.org/wiki/Growth_in_a_Time_of_Debt), 
-  mida käsitleme õppeaine raames.)
+  mida käsitleme õppeaine raames).
   
 * **Visualiseerimine:**
 
@@ -50,7 +50,7 @@ Miks on kursuses olulisel kohal andmeanalüüsi reprodutseeritavus ja visualisee
 * Kursus on mõeldud statistikahuvilistele üliõpilastele, kes on tuttavad tarkvaraga R.
 
 <div class="message">
-  Kui sa ei ole eriti tuttav R-iga, aga soovid seda ainet õppida, siis kirjuta meile ja leiame sulle sobiliku õppematerjali iseseisvaks ettevalmistuseks.
+  Kui sa ei ole võtnud <em>rangelt soovituslikku</em> eeldusainet "Rakendustarkvara: R", aga soovid seda ainet õppida, siis kirjuta meile ja leiame sulle sobiliku õppematerjali iseseisvaks ettevalmistuseks.
 </div>
 
 ### Õppetöö korraldus
