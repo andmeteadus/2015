@@ -25,9 +25,33 @@ Järgnev skeem võtab lühidalt kokku õppeaine olemuse.
 * Õppida visualiseerimismeetodeid andmetest ülevaate saamiseks, tulemuste tõlgendamiseks ja nende sisu edasi andmiseks.
 * Tutvustada tarkvara R võimalusi reprodutseeritava analüüsi läbiviimiseks ning tulemuste visualiseerimiseks.
 
+Miks on kursuses olulisel kohal andmeanalüüsi reprodutseeritavus ja visualiseerimine?
+
+* **Reprodutseeritav analüüs:** 
+
+  Kas enamik teadusartiklitest on valed?  
+
+  Teadusajakirjas Nature on olnud palju juttu 
+  [reprodutseeritavuse kriisist](http://www.nature.com/nature/focus/reproducibility/index.html): 
+  publitseerituid analüüsitulemusi on raske taastekitada. 
+  Tihti isegi siis kui kasutatakse samu andmestikke
+  (näiteks Harvardi majandusteadlaste [artikkel](http://en.wikipedia.org/wiki/Growth_in_a_Time_of_Debt), 
+  mida käsitleme õppeaine raames.)
+  
+* **Visualiseerimine:**
+
+  Kõige parema ülevaate andmetest saab visualiseerimise abil ning sageli on joonised parimaks viisiks, kuidas statistik saab oma töö tulemusi teistele kommunikeerida. 
+  
+  > Tähtis on analüüsitulemuste kommunikeerimine ja müümine.  
+  > *(Bank of America kvantitatiivne analüütik ja TÜ statistika vilistlane A. Sepp)*
+
 ### Sihtgrupp
 
 * Kursus on mõeldud statistikahuvilistele üliõpilastele, kes on tuttavad tarkvaraga R.
+
+<div class="message">
+  Kui sa ei ole eriti tuttav R-iga, aga soovid seda ainet õppida, siis kirjuta meile ja leiame sulle sobiliku õppematerjali iseseisvaks ettevalmistuseks.
+</div>
 
 ### Õppetöö korraldus
 
@@ -45,7 +69,8 @@ Projekti võib teha kas üksinda või paaristööna. Tulemusi on vaja esitleda s
 ### Tunniplaan
 
 * Õppeaine toimub 2014/2015. õppeaasta kevadsemestril. 
-* Praktikumid toimuvad teisipäeviti kell 14.15 ruumis 203 (nädalatel 24 - 32). 
+* Praktikumid **teisipäeviti kell 14.15** ruumis 203  
+(nädalatel 24 - 25, 27 - 33). 
 * Konsultatsioon esmaspäeviti kell ?? ruumis ???. 
 
 ### Kontakt ja küsimused
