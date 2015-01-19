@@ -71,7 +71,7 @@ Projekti võib teha kas üksinda või paaristööna. Tulemusi on vaja esitleda s
 * Õppeaine toimub 2014/2015. õppeaasta kevadsemestril. 
 * Praktikumid **teisipäeviti kell 14.15** ruumis 203  
 (nädalatel 24 - 25, 27 - 33). 
-* Konsultatsioon esmaspäeviti kell ?? ruumis ???. 
+* Konsultatsioon esmaspäeviti kell 14.15 ruumis 512. 
 
 ### Kontakt ja küsimused
 

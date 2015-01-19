@@ -5,7 +5,7 @@ title: Praktikumid
 
 ## Praktikum 1
 
-Sissejuhatus ainesse, reprodutseeritavasse analüüsi ja automatiseeritud statistikasse. Tarkvara R meeldetuletamine.
+Sissejuhatus ainesse, reprodutseeritavasse analüüsi ja automatiseeritud statistikasse. Tarkvara R meeldetuletamine. Pakett knitr. Markdown. 
 
 * [Slaidid](https://)
 * [Ülesanded](https://)
@@ -13,7 +13,7 @@ Sissejuhatus ainesse, reprodutseeritavasse analüüsi ja automatiseeritud statis
 
 ## Praktikum 2
 
-Pakett knitr. Markdown. Joonised paketiga ggplot2: erinevad joonisetüübid.
+Joonised paketiga ggplot2: erinevad joonisetüübid. Näide: kas e-hääli võltsiti? ÕISi tagasiside visualiseerimine.
 
 * [Slaidid](https://)
 * [Ülesanded](https://)
@@ -29,7 +29,7 @@ Reprodutseeritav analüüs. Näide: Kas suur võlakoorem vähendab riigi majandu
 
 ## Praktikum 4
 
-Lineaarne mudel. Automatiseeritud statistika.
+Mittestandardne graafika. Kuidas teha sama häid jooniseid nagu NY Times seda teeb? (NBA andmestik)
 
 * [Slaidid](https://)
 * [Ülesanded](https://)
@@ -37,7 +37,7 @@ Lineaarne mudel. Automatiseeritud statistika.
 
 ## Praktikum 5
 
-Andmete kraapimine veebist. Näide: Kas valimistel võltsiti e-hääli?
+Andmete kraapimine veebist. Näide: Riigikogu saadikute hääletamismustrid.
 
 * [Slaidid](https://)
 * [Ülesanded](https://)
@@ -45,7 +45,7 @@ Andmete kraapimine veebist. Näide: Kas valimistel võltsiti e-hääli?
 
 ## Praktikum 6
 
-Doping ja statistika. Statistiline test. Näide: ühe dopingujuhtumi analüüs.
+Heatmap. Peakomponentanalüüs. Näide (jätkub): Riigikogu saadikute hääletamismustrid. Käsitsi kirjutatud numbrite andmestik.
 
 * [Slaidid](https://)
 * [Ülesanded](https://)
@@ -53,7 +53,7 @@ Doping ja statistika. Statistiline test. Näide: ühe dopingujuhtumi analüüs.
 
 ## Praktikum 7
 
-Heatmap. Peakomponentanalüüs. Näide: Riigikogu saadikute hääletamismustrid. Klassifitseerimine. Käsitsi kirjutatud numbrite andmestik.
+Doping ja statistika. Statistiline test. Näide: ühe dopingujuhtumi analüüs.
 
 * [Slaidid](https://)
 * [Ülesanded](https://)
@@ -61,7 +61,7 @@ Heatmap. Peakomponentanalüüs. Näide: Riigikogu saadikute hääletamismustrid.
 
 ## Praktikum 8
 
-Mittestandardne graafika. Kuidas teha sama häid jooniseid nagu NY Times seda teeb?
+Mitmese testimise probleem. Näide: biomarkerid ja statistika (ehk kuidas ennustada surma).
 
 * [Slaidid](https://)
 * [Ülesanded](https://)
@@ -69,7 +69,7 @@ Mittestandardne graafika. Kuidas teha sama häid jooniseid nagu NY Times seda te
 
 ## Praktikum 9
 
-Mitmese testimise probleem. Näide: Biomarkerid ja statistika (ehk kuidas ennustada surma).
+Külalisesineja: Krista Fischer. Küsimused dopingujuhtumi ning biomarkerite teema kohta. Kokkuvõte ainest.
 
 * [Slaidid](https://)
 * [Ülesanded](https://)
