@@ -55,21 +55,30 @@ Miks on kursuses olulisel kohal andmeanalüüsi reprodutseeritavus ja visualisee
 
 ### Õppetöö korraldus
 
-* **Iseseisev töö:** Õppeaines on kasutusel nn pööratud klassiruumi meetod. 
-Loengute asemel on ette nähtud iganädalane iseseisev töö. 
+Õppeaines toimub kokku **9 praktikumi**. 
+Kuna aines on kasutusel *pööratud klassiruumi* meetod, siis on loengute asemel ette nähtud iganädalane **iseseisev töö**. 
 See võib sisaldada mõne artikliga tutvumist, veebiloengu vaatamist vms. 
 Arutelu iseseisvalt õpitu kohta ning praktikumid toimuvad klassiruumis.
-* **Praktikumid:** Aines toimub kokku 9 praktikumi. 
-* **Kodutööd:** Praktikumides antakse kokku 8 kodutööd. 
-Iga kodutöö tulemuseks on [knitr](http://yihui.name/knitr/)-i raport koos R-i koodi ning kommentaaridega, mis tuleb esitada antud tähtajaks. 
+
+Lisaks praktikumidele sisaldab õppeaine järgnevaid komponente:
+
+* **Kodutööd:** Kokku antakse 8 kodutööd (igaüks 10 punkti). 
+  * Kodutöö sisaldab enamasti andmete analüüsimist, visualiseerimist jne. Iga kodutöö tulemuseks on [knitr](http://yihui.name/knitr/)-i raport koos R-i koodi ning kommentaaridega. 
+  * Kodutöö võib sisaldada ka küsimusi iseseisvalt õpitu (näiteks videoloengu) kohta. 
 * **Projekt:** Lisaks tuleb läbi viia üks praktiline andmeanalüüs ning kirjutada populaarteaduslikus vormis artikkel saadud tulemustest. 
 Artikkel on illustreeritud asjakohaste joonistega ning on arusaadav ka mittestatistikule. 
 Projekti võib teha kas üksinda või paaristööna. Tulemusi on vaja esitleda suulisel kaitsmisel.
 
+Aine läbimiseks on vaja:
+
+1. kodutööde eest saada vähemalt 75% punktidest (on vaja saada vähemalt 60 punkti 80st võimalikust), 
+2. koostada projekt ning seda esitleda. 
+
 ### Tunniplaan
 
-* Õppeaine toimub 2014/2015. õppeaasta kevadsemestril. 
-* Praktikumid **teisipäeviti kell 14.15** ruumis 203  
+Õppeaine toimub 2014/2015. õppeaasta kevadsemestril. 
+
+* **Praktikumid teisipäeviti kell 14.15** ruumis 203  
 (nädalatel 24 - 25, 27 - 33). 
 * Konsultatsioon esmaspäeviti kell 14.15 ruumis 512. 
 
