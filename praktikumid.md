@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Praktikumid
+title: Praktikumimaterjalid
 ---
 
 ## Praktikum 1
@@ -9,6 +9,7 @@ title: Praktikumid
 
 Sissejuhatus ainesse, reprodutseeritavasse analüüsi ja automatiseeritud statistikasse. Tarkvara R meeldetuletamine. Pakett knitr. Markdown. 
 
+* [Kursuse "Rakendustarkvara: R" õppematerjal](../rakendustarkvara_R). 
 * [Slaidid](https://)
 * [Ülesanded](https://)
 * Tähtaeg: XX.XX.2015
