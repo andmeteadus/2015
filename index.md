@@ -7,7 +7,7 @@ layout: frontpage
 </div>
 
 
-### Õppeaine lühikirjeldus
+# Õppeaine lühikirjeldus
 
 Tegemist on rakendusliku statistikakursusega, kus:
 
@@ -19,7 +19,7 @@ Järgnev skeem võtab lühidalt kokku õppeaine olemuse.
 
 ![skeem](schema1.png)
 
-### Õppeaine eesmärgid
+# Õppeaine eesmärgid
 
 * Tutvustada üliõpilastele, milliseid huvitavaid probleeme saab statistika abil lahendada erinevates valdkondades (näiteks bioteadustes, majanduses, juuras), ning harjutada nende lahendamist.
 * Õppida visualiseerimismeetodeid andmetest ülevaate saamiseks, tulemuste tõlgendamiseks ja nende sisu edasi andmiseks.
@@ -45,7 +45,7 @@ Miks on kursuses olulisel kohal andmeanalüüsi reprodutseeritavus ja visualisee
   > Tähtis on analüüsitulemuste kommunikeerimine ja müümine.  
   > *(Bank of America kvantitatiivne analüütik ja TÜ statistika vilistlane A. Sepp)*
 
-### Sihtgrupp
+# Sihtgrupp
 
 * Kursus on mõeldud statistikahuvilistele üliõpilastele, kes on tuttavad tarkvaraga R.
 
@@ -53,7 +53,7 @@ Miks on kursuses olulisel kohal andmeanalüüsi reprodutseeritavus ja visualisee
   Kui sa ei ole võtnud <em>rangelt soovituslikku</em> eeldusainet "Rakendustarkvara: R", aga soovid seda ainet õppida, siis kirjuta meile ja leiame sulle sobiliku õppematerjali iseseisvaks ettevalmistuseks.
 </div>
 
-### Õppetöö korraldus
+# Õppetöö korraldus
 
 Õppeaines toimub kokku **9 praktikumi**. 
 Kuna aines on kasutusel *pööratud klassiruumi* meetod, siis on loengute asemel ette nähtud iganädalane **iseseisev töö**. 
@@ -74,7 +74,7 @@ Aine läbimiseks on vaja:
 1. kodutööde eest saada vähemalt 75% punktidest (on vaja saada vähemalt 60 punkti 80st võimalikust), 
 2. koostada projekt ning seda esitleda. 
 
-### Tunniplaan
+# Tunniplaan
 
 Õppeaine toimub 2014/2015. õppeaasta kevadsemestril. 
 
@@ -82,7 +82,7 @@ Aine läbimiseks on vaja:
 (nädalatel 24 - 25, 27 - 33). 
 * Konsultatsioon esmaspäeviti kell 14.15 ruumis 512. 
 
-### Kontakt ja küsimused
+# Kontakt ja küsimused
 
 * Kaspar Märtens
 * Tanel Pärnamaa
