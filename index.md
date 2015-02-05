@@ -74,6 +74,13 @@ Aine läbimiseks on vaja:
 1. kodutööde eest saada vähemalt 75% punktidest (on vaja saada vähemalt 60 punkti 80st võimalikust), 
 2. koostada projekt ning seda esitleda. 
 
+Õppeaines (3 EAP) ette nähtud 78 tundi tööd jaguneb järgnevalt:
+
+* praktikumid kokku 13.5 tundi (9 praktikumi, igaüks 1.5 tundi)
+* kodutööd kokku 40 tundi (8 kodutööd, igaüks 5 tundi)
+* projekti koostamine 23 tundi
+* projekti esitlemine 1.5 tundi
+
 # Tunniplaan
 
 Õppeaine toimub 2014/2015. õppeaasta kevadsemestril. 
