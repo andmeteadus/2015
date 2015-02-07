@@ -36,7 +36,7 @@ Andmestikus on näidatud 502 ettevõtte (kõik need ettevõtted, mis on kuulsas S&P 
 * *dividend_aktsia_kohta*: väljamakstud dividendid aastas / aktsiate koguarv
 * *aktsiate_arv*: näitab, kui palju aktsiaid on emiteeritud (st aktisate koguarv)
 
-Laadi alla andmestik aktsiad.csv ning loe andmestik töökeskonda.
+Laadi alla andmestik [aktsiad.csv](/data/aktsiad.csv) ning loe andmestik töökeskonda.
 
 ## Kodutöö raport
 
