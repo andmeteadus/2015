@@ -18,9 +18,7 @@ Eesmärgiks on koostada automaatselt uuenev raport, kus on:
 
 * suurimad tõusjad ja kukkujad;
 * aktsiaturu ülevaade sektorite lõikes;
-* aktsiate ostuoovitused.
-
-
+* aktsiate ostusoovitused.
 
 Andmetabelist info kättesaamiseks kasutame R-i paketti *dplyr*. Selle paketi kohta loe täpsemalt [praktikumimaterjalist](../praks1_dplyr) ning uuri sealseid minimalistlikke näiteid. 
 

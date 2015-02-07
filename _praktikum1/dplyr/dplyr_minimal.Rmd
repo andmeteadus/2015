@@ -45,7 +45,6 @@ andmed = data.frame(sugu = c("M", "M", "N"),
 andmed
 ```
 
-<br><br>
 
 ### select()
 vaatle alamhulka veergudest
@@ -64,8 +63,6 @@ select(andmed, -pikkus)
 
 ```
 
-<br><br>
-
 ### filter()
 
 vaatle alamhulka ridadest
@@ -83,7 +80,6 @@ filter(andmed, pikkus > 160, vanus > 30)
 filter(andmed, pikkus > 160 & vanus > 30)
 ```
 
-<br><br>
 
 ### arrange()
 
@@ -99,7 +95,6 @@ arrange(andmed, pikkus)
 arrange(andmed, desc(pikkus))
 ```
 
-<br><br>
 
 ### mutate()
 
@@ -112,7 +107,6 @@ mutate(andmed, pikkus_meetrites = pikkus/100,
        suvaline_tunnus = pikkus*vanus)
 ```
 
-<br><br>
 
 ### summarise()
 
@@ -123,8 +117,6 @@ agregeeri tunnuse väärtused üheks väärtuseks
 ```{r}
 summarise(andmed, keskmine_pikkus = mean(pikkus))
 ```
-
-<br><br>
 
 ### group_by()
 
@@ -138,7 +130,6 @@ andmed_grupeeritult = group_by(andmed, sugu)
 summarise(andmed_grupeeritult, keskmine_pikkus = mean(pikkus))
 ```
 
-<br><br>
 
 ### top_n()
 
@@ -153,7 +144,6 @@ top_n(andmed, 1, vanus)
 top_n(andmed, 2, vanus)
 ```
 
-<br><br>
 
 Sageli muudavad analüüsi kiireks ja mugavaks funktsioonid:
 

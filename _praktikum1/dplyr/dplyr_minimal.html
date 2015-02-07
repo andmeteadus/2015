@@ -65,7 +65,6 @@ andmed</code></pre>
 ## 1    M    20    180
 ## 2    M    60    200
 ## 3    N    30    150</code></pre>
-<p><br><br></p>
 <div id="select" class="section level3">
 <h3>select()</h3>
 <p>vaatle alamhulka veergudest</p>
@@ -88,7 +87,6 @@ select(andmed, -pikkus)</code></pre>
 ## 1    M    20
 ## 2    M    60
 ## 3    N    30</code></pre>
-<p><br><br></p>
 </div>
 <div id="filter" class="section level3">
 <h3>filter()</h3>
@@ -107,7 +105,6 @@ filter(andmed, pikkus &gt; 160, vanus &gt; 30)</code></pre>
 filter(andmed, pikkus &gt; 160 &amp; vanus &gt; 30)</code></pre>
 <pre><code>##   sugu vanus pikkus
 ## 1    M    60    200</code></pre>
-<p><br><br></p>
 </div>
 <div id="arrange" class="section level3">
 <h3>arrange()</h3>
@@ -125,7 +122,6 @@ arrange(andmed, desc(pikkus))</code></pre>
 ## 1    M    60    200
 ## 2    M    20    180
 ## 3    N    30    150</code></pre>
-<p><br><br></p>
 </div>
 <div id="mutate" class="section level3">
 <h3>mutate()</h3>
@@ -137,7 +133,6 @@ arrange(andmed, desc(pikkus))</code></pre>
 ## 1    M    20    180              1.8            3600
 ## 2    M    60    200              2.0           12000
 ## 3    N    30    150              1.5            4500</code></pre>
-<p><br><br></p>
 </div>
 <div id="summarise" class="section level3">
 <h3>summarise()</h3>
@@ -146,7 +141,6 @@ arrange(andmed, desc(pikkus))</code></pre>
 <pre class="r"><code>summarise(andmed, keskmine_pikkus = mean(pikkus))</code></pre>
 <pre><code>##   keskmine_pikkus
 ## 1        176.6667</code></pre>
-<p><br><br></p>
 </div>
 <div id="group_by" class="section level3">
 <h3>group_by()</h3>
@@ -160,7 +154,6 @@ summarise(andmed_grupeeritult, keskmine_pikkus = mean(pikkus))</code></pre>
 ##   sugu keskmine_pikkus
 ## 1    M             190
 ## 2    N             150</code></pre>
-<p><br><br></p>
 </div>
 <div id="top_n" class="section level3">
 <h3>top_n()</h3>
@@ -175,7 +168,6 @@ top_n(andmed, 2, vanus)</code></pre>
 <pre><code>##   sugu vanus pikkus
 ## 1    M    60    200
 ## 2    N    30    150</code></pre>
-<p><br><br></p>
 <p>Sageli muudavad analüüsi kiireks ja mugavaks funktsioonid:</p>
 <ul>
 <li><code>distinct()</code> - eralda unikaalsed väärtused</li>
