@@ -20,7 +20,7 @@ Eesmärgiks on koostada automaatselt uuenev raport, kus on:
 * aktsiaturu ülevaade sektorite lõikes;
 * aktsiate ostusoovitused.
 
-Andmetabelist info kättesaamiseks kasutame R-i paketti *dplyr*. Selle paketi kohta loe täpsemalt [praktikumimaterjalist](../praks1_dplyr) ning uuri sealseid minimalistlikke näiteid. 
+Andmetabelist info kättesaamiseks kasutame R-i paketti *dplyr*. Selle paketi kohta loe täpsemalt [praktikumimaterjalist](../praktikum1_dplyr) ning uuri sealseid minimalistlikke näiteid. 
 
 ## Ülevaade andmestikust
 
