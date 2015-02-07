@@ -1,0 +1,168 @@
+---
+title: "dplyr minimalistlikud näited"
+output: 
+  html_document:
+    theme: null
+---
+
+Andmetabelist info kättesaamiseks kasutame R-i paketti *dplyr*. See pakett muudab mugavaks ja kiireks sageli ettetulevad operatsioonid nagu andmestiku filtreerimise, sorteerimise ja grupeerimise. Paketi süntaks omab mitmeidki ühisjooni SQL süntaksi või suuremahuliste andmete töötlemise keelega Pig Latin.
+
+Esmakordsel kasutamisel tuleb pakett installeerida 
+
+```{r, eval=FALSE}
+install.packages("dplyr")
+```
+
+Kui pakett on installeeritud, tuleb kasutamiseks see laadida käsuga
+
+```{r, eval=FALSE}
+library(dplyr)
+```
+
+
+Paketi *dplyr* peamised käsud on:
+
+* `select()`: vaatle alamhulka veergudest
+* `filter()`: vaatle alamhulka ridadest
+* `arrange()`: sorteeri ridu
+* `mutate()`: lisa uusi veerge
+* `summarise()`: agregeeri mitu väärtust üheks tunnuseks
+* `group_by()`: muuda andmestik grupeeritud andmestikuks, et seejärel rakendada funktsioone igale grupile eraldi
+* `top_n()`: tipmised tunnused
+
+Nende funktsioonide esimeseks argumendiks on alati *data.frame* ning alati tagastatakse *data.frame*.
+
+Järgnevalt on toodud minimalistlikud näited, mis iseloomustavad paketi *dplyr* funktsionaalsust.
+
+```{r, echo=FALSE, message=FALSE}
+library(dplyr)
+```
+
+```{r}
+andmed = data.frame(sugu = c("M", "M", "N"),
+                  vanus = c(20, 60, 30),
+                  pikkus = c(180, 200, 150))
+andmed
+```
+
+<br><br>
+
+### select()
+vaatle alamhulka veergudest
+
+![alt text](joonis1.png "Näide")
+
+```{r}
+# Näide 1
+select(andmed, vanus)
+
+# Näide 2
+select(andmed, sugu, vanus)
+
+# Näide 3 (annab sama tulemuse, mis näide 2)
+select(andmed, -pikkus)
+
+```
+
+<br><br>
+
+### filter()
+
+vaatle alamhulka ridadest
+
+![alt text](joonis2.png "Näide")
+
+```{r}
+# Näide 1
+filter(andmed, pikkus > 160)
+
+# Näide 2
+filter(andmed, pikkus > 160, vanus > 30)
+
+# Näide 3 (sama, mis näide 2)
+filter(andmed, pikkus > 160 & vanus > 30)
+```
+
+<br><br>
+
+### arrange()
+
+sorteeri ridu
+
+![alt text](joonis_arrange.png "Näide")
+
+```{r}
+# Näide 1
+arrange(andmed, pikkus)
+
+# Näide 2
+arrange(andmed, desc(pikkus))
+```
+
+<br><br>
+
+### mutate()
+
+lisa uusi veerge
+
+![alt text](joonis3.png "Näide")
+
+```{r}
+mutate(andmed, pikkus_meetrites = pikkus/100,
+       suvaline_tunnus = pikkus*vanus)
+```
+
+<br><br>
+
+### summarise()
+
+agregeeri tunnuse väärtused üheks väärtuseks
+
+![alt text](joonis_summarise.png "Näide")
+
+```{r}
+summarise(andmed, keskmine_pikkus = mean(pikkus))
+```
+
+<br><br>
+
+### group_by()
+
+muuda andmestik grupeeritud andmestikuks, kus funktsioone rakendatakse eraldi gruppidele
+
+![alt text](joonis_groupby_ja_summarise_long.png "Näide")
+
+```{r}
+andmed_grupeeritult = group_by(andmed, sugu)
+# Rakendame funktsiooni summarise iga grupi jaoks eraldi
+summarise(andmed_grupeeritult, keskmine_pikkus = mean(pikkus))
+```
+
+<br><br>
+
+### top_n()
+
+tipmised tunnused
+
+![alt text](joonis_top.png "Näide")
+
+```{r}
+# top 1 vanuse järgi
+top_n(andmed, 1, vanus)
+# top 2 vanuse järgi
+top_n(andmed, 2, vanus)
+```
+
+<br><br>
+
+Sageli muudavad analüüsi kiireks ja mugavaks funktsioonid:
+
+* `distinct()` - eralda unikaalsed väärtused
+* `sample_n()` - tõmba n juhuslikku väärtust etteantud veerust
+* `n()` - loe kokku andmepunktide arv
+* `n_distinct()` - loe kokku unikaalsete väärtuste arv
+
+Täiendavat informatsiooni *dplyr* funktsionaalsuse kohta leiab:
+
+* [Introduction to dplyr](http://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html)
+* [dplyr dokumentatsioon](http://cran.r-project.org/web/packages/dplyr/dplyr.pdf)

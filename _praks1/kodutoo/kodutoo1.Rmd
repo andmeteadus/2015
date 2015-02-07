@@ -1,0 +1,158 @@
+---
+output: 
+  html_document:
+    theme: null
+---
+
+# Kodutöö
+
+## Sissejuhatus
+
+Mati "Raha" Masin töötab investeerimispangas ning ta vastutab igapäevase aktsiaturu ülevaate koostamise eest. Ta vihkab oma tööd selle rutiinsuse pärast. Vaja on kopeerida uued aktsiaturu andmed Exceli tabeli õigesse lahtrisse, klikkida vajalikel nuppudel ja kopeerida tulemused raportisse.
+
+Peale selle, et tegevus on igav, võib andmete, valemite ja tulemuste kopeerimisel tekkida mitmeid vigu. Seega kontrollib Mati mitu korda üle ega kopeerimisel vigu ei tekkinud, sest ta teab, et andmete kopeerimisel võivad eksida isegi [Harvardi majandusteadlased](http://en.wikipedia.org/wiki/Growth_in_a_Time_of_Debt) (praktikum 2 teema).
+
+Ta unistab automaatsest statistikaraportist - andmed ning analüüsi tulemused uuenevad automaatselt ja raporti genereerimine on automatiseeritud. Selles praktikumis vaatamegi, kuidas sellist tööprotsessi automatiseerida R-is.
+
+Eesmärgiks on koostada automaatselt uuenev raport, kus on:
+
+* suurimad tõusjad ja kukkujad;
+* aktsiaturu ülevaade sektorite lõikes;
+* aktsiate ostuoovitused.
+
+
+
+Andmetabelist info kättesaamiseks kasutame R-i paketti *dplyr*. Selle paketi kohta loe täpsemalt [praktikumimaterjalist](../praks1_dplyr) ning uuri sealseid minimalistlikke näiteid. 
+
+## Ülevaade andmestikust
+
+Andmestikus on näidatud 502 ettevõtte (kõik need ettevõtted, mis on kuulsas S&P 500 indeksis) kohta järgmised tunnused:
+
+* *symbol*: ettevõtte ID börsil
+* *nimi*: ettevõtte nimi
+* *sektor*: sektor, kus ettevõte tegutseb
+* *hind*: viimase aktsiatehingu hind
+* *tootlus*: aktsiahinna muutus võrreldes eelmise päevaga protsentides
+* *kogus*: aktsiate arv, mis vahetas omanikku päeva jooksul
+* *kasum_aktsia_kohta*: ettevõtte aastakasum / aktsiate koguarv
+* *dividend_aktsia_kohta*: väljamakstud dividendid aastas / aktsiate koguarv
+* *aktsiate_arv*: näitab, kui palju aktsiaid on emiteeritud (st aktisate koguarv)
+
+Laadi alla andmestik aktsiad.csv ning loe andmestik töökeskonda.
+
+## Kodutöö raport
+
+Kodutöö tulemusena peab valmima raport, kus kajastuvad järgnevate ülesannete lahendused. 
+
+### Ülesanne 1 (2 punkti) - Suurimad tõusjad. Suurimad kukkujad.
+
+> Mati tahab oma turuülevaates näidata kolme suurimat tõusjat ja kukkujat.
+
+Kõigepealt leia ja väljasta kolme kõige suurema päevase tootlusega ettevõtte sümbol, nimi ja tootlus.
+
+Seejärel leia ja väljasta kolme kõige madalama päevase tootlusega ettevõtte sümbol, nimi ja tootlus.
+
+<!-- Näpunäide: Variant 1: kasuta funktsiooni `arrange()` sorteerimiseks ja `head()` andmestiku päise saamiseks. Variant 2: kasuta funktsiooni `top_n`.
+-->
+
+
+### Ülesanne 2 (2.5 punkti) - Ülevaade sektorite lõikes
+
+> Mati soovib raportis näidata ülevaadet ka sektorite lõikes, sest kliente võib huvitadada, kas ehitussektori aktsiatega kaubeldi rohkem kui IT-sektori aktsiatega, või kas jälle aktuaalseks kujunenud Kreeka võlateemad mõjutasid ainult finantssektori aktsiate tootlust?
+
+Iga sektori kohta, kus on vähemalt 30 ettevõtet, väljasta: keskmine tootlus, sektori kogukäive, keskmine käive, ettevõtete arv. 
+
+Näpunäited:
+
+* Lisa andmestikku tunnus *käive*, mis näitab, kui suure summa eest igat aktsiat kaubeldi. (Selleks tuleb korrutada päeva jooksul kaubeldud aktsiate arv viimase tehingu hinnaga.)
+
+* Arvuta iga sektori kohta
+    * keskmine tootlus
+    * kogukäive
+    * keskmine käive
+    * ettevõtete arv
+* Summade ja keskmiste arvutamisel ära võta arvesse puuduvaid väärtusi (puuduvate väärtuse välja jätmiseks on `sum` ja `mean` funktsioonidel argument `na.rm`).
+* Näita ainult neid sektoreid, kus on vähemalt 30 ettevõtet.
+
+### Ülesanne 3 (2.5 punkti) - kauplemisalgoritm
+
+> Mati arvates annab iga vähegi nupukam aktsiaanalüütik klientidele aktsiate ostusoovitusi, et klient saaks oma vara kasvatada.
+
+Kirjuta funktsioon *kauplemisalgoritm*, mille sisendiks on andmestik *data* ja mis tagastab kolme kõige atraktiivsema ettevõtte sümbolid, mis saavadki ostusoovitusteks.
+
+Juhised:
+
+* Kõigepealt tekita andmestikule juurde järgmised kaks tunnust:
+    * kasumi-aktsiahinna suhe (kasum_aktsia_kohta/hind) [kui sa tead, mida tähendab PE suhe, siis me arvutame PE suhte pöördväärtust]
+    * dividendi määr (dividend_aktsia_kohta/hind)
+* Arvuta iga aktsia kohta atraktiivsuse skoor, mis on arvutatud järgnevalt `0.5 * kasumi-aktsiahinna suhe + 0.5 * dividendi määr` 
+* Ostusoovituseks leia kolm kõige suurema skooriga aktsiat.
+
+Kui eelnevaga oled hakkama saanud, siis proovi eelnev kood kirjutada funktsiooniks, mis võtab sisendiks suvalise andmestiku ning väljastab kolme kõige atraktiivsema ettevõtte aktsiate sümbolid vektorina. (Näpunäide: üheveerulise andmetabeli saab vektoriks teha `as.character`, `as.numeric` jne funktsioonide abil.)
+
+```{r, eval=FALSE}
+kauplemisalgoritm = function(x){
+  # tekitame andmestikule x juurde tunnuse kasumi-aktsiahinna suhe ja dividendi määr
+  # [sinu kood]
+  
+  # arvutame iga aktsia kohta atraktiivsuse skoori
+  # [sinu kood]
+  
+  # tagasta kolme kõige suurema skooriga ettevõtte sümbolid
+}
+```
+
+
+### Ülesanne 4 (2 punkti) - turvaline kauplemisalgoritm ning ostusoovitused
+
+> Mati ei ole veel vanemanalüütiku staatust saanud ning ta kardab veidi oma soovituste pärast. Mis juhtub kui aktsiasoovitus osutub katastroofiks? Kui kliendid saavad Mati soovituste pärast hiigelsuuri kahjumeid, siis kõigub ka tema töökoht. Mis oleks kui soovitada ainult populaarseid aktsiaid? Siis saab ju alati öelda, et vanemanalüütikud teistes pankades soovitasid ka ...
+
+Nüüd kirjuta funktsioon *kauplemisalgoritm_turvaline*, kus valid atraktiivseid aktsiaid vaid populaarsete aktsiate hulgast. Populaarsed aktsiad on järgnevad: AAPL, FB, GOOG, IBM, TSLA. 
+
+Näpunäited:
+
+* Vali andmestikust välja ainult aktsiad AAPL, FB, GOOG, IBM, TSLA.
+* Rakenda saadud alamandmestikul eelnevas ülesandes kirjutatud funktsiooni. 
+
+Kui eelnev töötab, siis kirjuta eelnev kood funktsiooniks.
+
+```{r, eval=FALSE}
+kauplemisalgoritm_turvaline = function(x){
+  # sinu kood
+}
+```
+
+Kasutades funktsiooni kauplemisalgoritm_turvaline, väljasta 3 ostusoovitust.
+
+
+### Üldised nõuded
+
+* Esitada tuleb nii raport (html või pdf formaadis) kui ka selle lähtekood .Rmd failina. 
+* Kõik andmestike väljatrükid raportis peavad olema tabelitena, näiteks funktsiooni `kable` abil saadud.
+* Ära raportis R-i koodi näita. Selleks kasuta näiteks `echo=FALSE` iga koodibloki jaoks või globaalset sätet, kus lisad `.Rmd` faili algusesse
+
+<pre class="markdown"><code>&#96;&#96;&#96;{r, echo=FALSE}
+library(knitr)
+opts_chunk$set(echo=FALSE, message=FALSE)
+&#96;&#96;&#96;
+</code></pre>
+
+### Näidisraport
+
+Raport võiks välja näha umbes selline (pildil ei ole näidatud ilmtingimata õiged arvulised väärtused): 
+
+![alt text](kodutoo1_naide.png "Näide")
+
+
+### Boonusülesanne 1 (2 punkti): andmete automaatne uuenemine
+
+Muuda kodutööd selliselt, et staatilise faili *aktsia.csv* asemel kasutatakse reaalajas andmeid, mis on saadud portaalist *finance.yahoo.com*.
+
+Mõned näpunäited:
+
+* kasuta R-i paketti `quantmod`
+* kasuks tuleb funktsioon `getQuote`
+* tunnuste loetelu nägemiseks, mida on võimalik *finance.yahoo.com* portaalist saada, on abiks funktsioon `yahooQF()`
+* hinnana kasuta tunnust *Last Trade (Price Only)*, sümbolina *Symbol*, tootlusena *Change in Percent*, kogusena *Volume*, kasumina aktsia kohta *Earnings/Share*, dividendina aktsia kohta *Dividend/Share* 
+* ettevõtte *sektor*, *nimi* ja *aktsiate_arv* võta failist *andmed.csv*. Ühenda see alamandmestik Yahoo'st saadud andmestikuga tunnuse *symbol* alusel (vt`?join` või `?merge`)
+* juhime tähelepanu, et tunnus *tootlus* vajab puhastamist
