@@ -17,7 +17,11 @@ install.packages("rmarkdown")
 
 ## R Markdown
 
-Kõige lihtsam on kasutada raporti kirjutamisel märgenduskeelt Markdown. Joonisel on kõrvuti näidatud nii Markdown keeles kirjutatud koodi näide kui ka tulemus html-ina. 
+Kõige lihtsam on kasutada raporti kirjutamisel märgenduskeelt Markdown. Alustuseks on kõige lihtsam RStudios valida `File -> New File -> R Markdown` ning valida soovitav väljundi formaat (näiteks html). 
+
+Joonisel on kõrvuti näidatud nii Markdown keeles kirjutatud koodi näide kui ka tulemus html-ina. 
+
+### Näide 1
 
 Vasakul **Markdown**, paremal **html**. 
 
@@ -72,6 +76,8 @@ Selle html-i tegemisel kasutas RStudio paketti `rmarkdown`.
 
 Täpsemalt lugege R Markdowni kohta siit **http://rmarkdown.rstudio.com/**. Näiteks [**R Markdown Basics**](http://rmarkdown.rstudio.com/authoring_basics.html) annab kiire ülevaate Markdown põhilisematest elementidest. 
 
+### Näide 2
+
 Proovime nüüd Markdown teksti vahele ka lisada R-i koodi. Selleks on kõige lihtsam lisada koodiblokk (*code chunk*), mis näeb välja selline
 <pre class="markdown"><code>&#96;&#96;&#96;{r}
 # siia tuleb kood
@@ -123,7 +129,11 @@ $(window).load(function(){
 });
 </script>
 
-Näiteks kui salvestasid lähtekoodi faili `praks1.Rmd`, siis on väljundiks saadud html samas kaustas nimega `praks1.html`. Juhul, kui soovid html-i asemel saada pdf-i, peab `.Rmd` faili algus olema selline
+Näiteks kui salvestasid lähtekoodi faili `praks1.Rmd`, siis on väljundiks saadud html samas kaustas nimega `praks1.html`. 
+
+### pdf väljund
+
+Juhul, kui soovid html-i asemel saada pdf-i, peab `.Rmd` faili algus olema selline
 
 ```{r, eval=FALSE}
 ---
@@ -136,7 +146,7 @@ Pdf-i genereerimisel kasutab knitr TeX-i, seega on vaja, et arvutis oleks instal
 
 Alternatiivselt Markdown keelele saab knitr paketi abil kirjutada ka LaTeXi dokumenti (laiendi `.Rmd` asemel tuleb kasutada siis `.Rnw`), aga sellega me käesolevas kursuses ei tegele. 
 
-## Näpunäiteid
+### Näpunäiteid
 
 Kui me raportis ei soovi näidata R-i koodi, tuleb koodikasti jaoks spetsifitseerida `echo=FALSE`
 
@@ -173,7 +183,7 @@ data = data.frame(sugu = c("M", "M", "N"),
 kable(data)
 ```
 
-## Abimaterjal R Markdowni kohta:
+### Abimaterjal R Markdowni kohta:
 
 * [**R Markdown**](http://rmarkdown.rstudio.com/)
 * [**R Markdown Cheat Sheet** pdf](http://www.rstudio.com/wp-content/uploads/2015/01/rmarkdown-cheatsheet.pdf)

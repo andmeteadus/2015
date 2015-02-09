@@ -20,7 +20,7 @@ Eesmärgiks on koostada automaatselt uuenev raport, kus on:
 * aktsiaturu ülevaade sektorite lõikes;
 * aktsiate ostusoovitused.
 
-Andmetabelist info kättesaamiseks kasutame R-i paketti *dplyr*. Selle paketi kohta loe täpsemalt [praktikumimaterjalist](../praktikum1_dplyr) ning uuri sealseid minimalistlikke näiteid. 
+Andmetabelist info kättesaamiseks kasutame R-i paketti *dplyr*. Selle paketi kohta loe täpsemalt [praktikumimaterjalist](/praktikum1_dplyr) ning uuri sealseid minimalistlikke näiteid. 
 
 ## Ülevaade andmestikust
 
@@ -40,25 +40,44 @@ Laadi alla andmestik [aktsiad.csv](/data/aktsiad.csv) ning loe andmestik töökesk
 
 ## Kodutöö raport
 
-Kodutöö tulemusena peab valmima raport, kus kajastuvad järgnevate ülesannete lahendused. 
+Kodutöö tulemusena peab valmima raport, kus kajastuvad järgnevate ülesannete lahendused. Allpool on toodud nii raportile esitatavad täpsemad nõuded kui ka näidisraport. Ülesannete lahendamisel on vaja kasutada *dplyr* paketi funktsioone. 
 
-### Ülesanne 1 (2 punkti) - Suurimad tõusjad. Suurimad kukkujad.
+<div class="message">
+Kui tunned ennast veel ebakindlalt *dplyr* paketi kasutamise osas, siis soovitame ühte järgnevatest:
+
+* Lugeda juhendit [Introduction to dplyr](http://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html)
+* Vaadata videot https://www.youtube.com/watch?v=8SGif63VW6E&t=4m5s, kus Hadley Wickham, kes on *dplyr* paketi autor, õpetas *UseR 2014* konverentsil seda paketti
+    * 4:05 - 8:25 sissejuhatus, ülevaade andmestikest
+    * 8:25 - 27:45 funktsioonid `filter`, `select`, `arrange`, `mutate`
+    * 27:45 - 35:40 funktsioonid `summarise`, `group_by`
+</div>
+
+### Ülesanne 1 (3 punkti) - Suurimad tõusjad. Suurimad kukkujad.
 
 > Mati tahab oma turuülevaates näidata kolme suurimat tõusjat ja kukkujat.
 
-Kõigepealt leia ja väljasta kolme kõige suurema päevase tootlusega ettevõtte sümbol, nimi ja tootlus.
+Kõigepealt leia kolm kõige suurema päevase tootlusega aktsiat ning väljasta nende kohta:
 
-Seejärel leia ja väljasta kolme kõige madalama päevase tootlusega ettevõtte sümbol, nimi ja tootlus.
+1. ettevõtte sümbol
+2. ettevõtte nimi
+3. tootlus.
+
+Seejärel leia kolm kõige madalama päevase tootlusega aktsiat ning väljasta nende kohta samasugune info. 
 
 <!-- Näpunäide: Variant 1: kasuta funktsiooni `arrange()` sorteerimiseks ja `head()` andmestiku päise saamiseks. Variant 2: kasuta funktsiooni `top_n`.
 -->
 
 
-### Ülesanne 2 (2.5 punkti) - Ülevaade sektorite lõikes
+### Ülesanne 2 (6 punkti) - Ülevaade sektorite lõikes
 
 > Mati soovib raportis näidata ülevaadet ka sektorite lõikes, sest kliente võib huvitadada, kas ehitussektori aktsiatega kaubeldi rohkem kui IT-sektori aktsiatega, või kas jälle aktuaalseks kujunenud Kreeka võlateemad mõjutasid ainult finantssektori aktsiate tootlust?
 
-Iga sektori kohta, kus on vähemalt 30 ettevõtet, väljasta: keskmine tootlus, sektori kogukäive, keskmine käive, ettevõtete arv. 
+Iga sektori kohta, kus on vähemalt 30 ettevõtet, väljasta järgnev info:
+
+1. sektori keskmine tootlus
+2. sektori kogukäive
+3. sektori keskmine käive
+4. ettevõtete arv sektoris 
 
 Näpunäited:
 
@@ -72,7 +91,7 @@ Näpunäited:
 * Summade ja keskmiste arvutamisel ära võta arvesse puuduvaid väärtusi (puuduvate väärtuse välja jätmiseks on `sum` ja `mean` funktsioonidel argument `na.rm`).
 * Näita ainult neid sektoreid, kus on vähemalt 30 ettevõtet.
 
-### Ülesanne 3 (2.5 punkti) - kauplemisalgoritm
+### Ülesanne 3 (5 punkti) - kauplemisalgoritm
 
 > Mati arvates annab iga vähegi nupukam aktsiaanalüütik klientidele aktsiate ostusoovitusi, et klient saaks oma vara kasvatada.
 
@@ -80,13 +99,13 @@ Kirjuta funktsioon *kauplemisalgoritm*, mille sisendiks on andmestik *data* ja m
 
 Juhised:
 
-* Kõigepealt tekita andmestikule juurde järgmised kaks tunnust:
+* Kõigepealt tekita andmestikku juurde järgmised kaks tunnust:
     * kasumi-aktsiahinna suhe (kasum_aktsia_kohta/hind) [kui sa tead, mida tähendab PE suhe, siis me arvutame PE suhte pöördväärtust]
     * dividendi määr (dividend_aktsia_kohta/hind)
 * Arvuta iga aktsia kohta atraktiivsuse skoor, mis on arvutatud järgnevalt `0.5 * kasumi-aktsiahinna suhe + 0.5 * dividendi määr` 
 * Ostusoovituseks leia kolm kõige suurema skooriga aktsiat.
 
-Kui eelnevaga oled hakkama saanud, siis proovi eelnev kood kirjutada funktsiooniks, mis võtab sisendiks suvalise andmestiku ning väljastab kolme kõige atraktiivsema ettevõtte aktsiate sümbolid vektorina. (Näpunäide: üheveerulise andmetabeli saab vektoriks teha `as.character`, `as.numeric` jne funktsioonide abil.)
+Kui eelnevaga oled hakkama saanud, siis proovi eelnev kood kirjutada funktsiooniks, mis võtab sisendiks suvalise andmestiku ning väljastab kolme kõige atraktiivsema ettevõtte aktsiate sümbolid **vektorina**. (Näpunäide: Kui meil on andmetabel `df`, siis sealt saab veeru `tunnus` vektorina välja võtta dollarimärgiga `df$tunnus`.)
 
 ```{r, eval=FALSE}
 kauplemisalgoritm = function(x){
@@ -101,7 +120,7 @@ kauplemisalgoritm = function(x){
 ```
 
 
-### Ülesanne 4 (2 punkti) - turvaline kauplemisalgoritm ning ostusoovitused
+### Ülesanne 4 (2 punkti) - turvaline kauplemisalgoritm ja ostusoovitused
 
 > Mati ei ole veel vanemanalüütiku staatust saanud ning ta kardab veidi oma soovituste pärast. Mis juhtub kui aktsiasoovitus osutub katastroofiks? Kui kliendid saavad Mati soovituste pärast hiigelsuuri kahjumeid, siis kõigub ka tema töökoht. Mis oleks kui soovitada ainult populaarseid aktsiaid? Siis saab ju alati öelda, et vanemanalüütikud teistes pankades soovitasid ka ...
 
@@ -120,13 +139,14 @@ kauplemisalgoritm_turvaline = function(x){
 }
 ```
 
-Kasutades funktsiooni kauplemisalgoritm_turvaline, väljasta 3 ostusoovitust.
+Kasutades funktsiooni kauplemisalgoritm_turvaline, väljasta 3 ostusoovitust. 
 
+### Ülesanne 5 (5 punkti) - raporti vormistamine
 
-### Üldised nõuded
+Vormistage eelnevate ülesannete lahendused selliseks *knitr* raportiks (html või pdf formaadis), et 
 
-* Esitada tuleb nii raport (html või pdf formaadis) kui ka selle lähtekood .Rmd failina. 
-* Kõik andmestike väljatrükid raportis peavad olema tabelitena, näiteks funktsiooni `kable` abil saadud.
+* Kõik andmestike väljatrükid oleks toodud tabelitena (selleks kasuta näiteks funktsiooni `kable`).
+* Ostusoovitus (ül 4 tulemus) lisage teksti sisse reasisese R-i koodi abil (*inline R code*). 
 * Ära raportis R-i koodi näita. Selleks kasuta näiteks `echo=FALSE` iga koodibloki jaoks või globaalset sätet, kus lisad `.Rmd` faili algusesse
 
 <pre class="markdown"><code>&#96;&#96;&#96;{r, echo=FALSE}
@@ -141,10 +161,17 @@ Raport võiks välja näha umbes selline (pildil ei ole näidatud ilmtingimata õiged
 
 ![alt text](kodutoo1_naide.png "Näide")
 
+### Mida on vaja esitada?
 
-### Boonusülesanne 1 (2 punkti): andmete automaatne uuenemine
+Esitada tuleb nii raport (html või pdf formaadis) kui ka selle lähtekood .Rmd failina. 
 
-Muuda kodutööd selliselt, et staatilise faili *aktsia.csv* asemel kasutatakse reaalajas andmeid, mis on saadud portaalist *finance.yahoo.com*.
+### Boonusülesanne 1 (1 punkt)
+
+Mõtle välja ning lisa raportisse veel üks sektsioon, mis täiendaks Mati aktsiaturuülevaadet. 
+
+### Boonusülesanne 2 (3 punkti): andmete automaatne uuenemine
+
+Muuda kodutööd selliselt, et staatilise faili *aktsiad.csv* asemel kasutatakse reaalajas andmeid, mis on saadud portaalist *finance.yahoo.com*.
 
 Mõned näpunäited:
 

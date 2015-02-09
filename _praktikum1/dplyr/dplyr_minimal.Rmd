@@ -22,8 +22,8 @@ library(dplyr)
 
 Paketi *dplyr* peamised käsud on:
 
-* `select()`: vaatle alamhulka veergudest
-* `filter()`: vaatle alamhulka ridadest
+* `select()`: vali alamhulk veergudest
+* `filter()`: vali alamhulk ridadest
 * `arrange()`: sorteeri ridu
 * `mutate()`: lisa uusi veerge
 * `summarise()`: agregeeri mitu väärtust üheks tunnuseks
@@ -45,9 +45,8 @@ andmed = data.frame(sugu = c("M", "M", "N"),
 andmed
 ```
 
-
 ### select()
-vaatle alamhulka veergudest
+vali alamhulk veergudest
 
 ![alt text](joonis1.png "Näide")
 
@@ -65,7 +64,7 @@ select(andmed, -pikkus)
 
 ### filter()
 
-vaatle alamhulka ridadest
+vali alamhulk ridadest
 
 ![alt text](joonis2.png "Näide")
 
@@ -80,7 +79,6 @@ filter(andmed, pikkus > 160, vanus > 30)
 filter(andmed, pikkus > 160 & vanus > 30)
 ```
 
-
 ### arrange()
 
 sorteeri ridu
@@ -91,10 +89,9 @@ sorteeri ridu
 # Näide 1
 arrange(andmed, pikkus)
 
-# Näide 2
+# Näide 2 (sorteeri kahanevalt)
 arrange(andmed, desc(pikkus))
 ```
-
 
 ### mutate()
 
@@ -103,10 +100,13 @@ lisa uusi veerge
 ![alt text](joonis3.png "Näide")
 
 ```{r}
-mutate(andmed, pikkus_meetrites = pikkus/100,
+# Näide 1
+mutate(andmed, pikkus2 = pikkus/100)
+
+# Näide 2 (mitme tunnuse lisamine)
+mutate(andmed, pikkus2 = pikkus/100,
        suvaline_tunnus = pikkus*vanus)
 ```
-
 
 ### summarise()
 
@@ -128,22 +128,11 @@ muuda andmestik grupeeritud andmestikuks, kus funktsioone rakendatakse eraldi gr
 andmed_grupeeritult = group_by(andmed, sugu)
 # Rakendame funktsiooni summarise iga grupi jaoks eraldi
 summarise(andmed_grupeeritult, keskmine_pikkus = mean(pikkus))
+# Lisaks keskmisele pikkusele võime ka iga grupi kohta loendada vaatluste arvu
+summarise(andmed_grupeeritult, 
+          keskmine_pikkus = mean(pikkus), 
+          inimeste_arv = n())
 ```
-
-
-### top_n()
-
-tipmised tunnused
-
-![alt text](joonis_top.png "Näide")
-
-```{r}
-# top 1 vanuse järgi
-top_n(andmed, 1, vanus)
-# top 2 vanuse järgi
-top_n(andmed, 2, vanus)
-```
-
 
 Sageli muudavad analüüsi kiireks ja mugavaks funktsioonid:
 
@@ -151,6 +140,40 @@ Sageli muudavad analüüsi kiireks ja mugavaks funktsioonid:
 * `sample_n()` - tõmba n juhuslikku väärtust etteantud veerust
 * `n()` - loe kokku andmepunktide arv
 * `n_distinct()` - loe kokku unikaalsete väärtuste arv
+
+### top_n()
+
+eralda andmestikust mingi tunnuse järgi TOP n vaatlust (kuid peab arvestama, et tagastatav andmetabel ei ole sorteeritud soovitava tunnuse järgi)
+
+<!-- 
+  ### top_n()
+  
+  tipmised tunnused
+  
+  ![alt text](joonis_top.png "Näide")
+-->
+
+```{r}
+# top 1 pikkuse järgi
+top_n(andmed, 1, pikkus)
+# top 2 pikkuse järgi (näeme, et ei ole sorteeritud)
+top_n(andmed, 2, pikkus)
+```
+
+### Mitme funktsiooni järjest rakendamine
+
+Näide: Sorteerime pikkuse järgi ning valime välja ainult read, kus sugu == "M"
+
+```{r}
+# Variant 1
+sorteeritud = arrange(andmed, pikkus)
+filter(sorteeritud, sugu == "M")
+# Variant 2 (ilma vahetulemust salvestamata)
+filter(arrange(andmed, pikkus), 
+       sugu == "M")
+```
+
+### Täiendav abimaterjal
 
 Täiendavat informatsiooni *dplyr* funktsionaalsuse kohta leiab:
 

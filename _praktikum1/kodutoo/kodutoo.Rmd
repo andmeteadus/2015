@@ -1,0 +1,49 @@
+---
+title: "Kodutöö"
+output: 
+  html_document:
+    theme: null
+---
+
+Tähtaeg: 16.02.2015 23:59 GMT
+
+
+### I osa - andmete analüüs
+1. (**21 punkti**) Lahenda [automaatse aktsiaturu ülevaate genereerimise ülesanded](/praktikum1_aktsiad). 
+
+### II osa - veebiloengud, videod, artiklid
+2. (**1 punkt**) Vaata Johns Hopkinsi reprodutseeritava analüüsi videosid:
+
+* [Reproducible Research: Concepts and Ideas (Part 1/3)](https://www.youtube.com/watch?v=4rBX6r5emgQ&index=1&list=PLjTlxb-wKvXOU4WW4p3qc4VKWTI4gLNUf)
+* [Reproducible Research: Concepts and Ideas (Part 2/3)](https://www.youtube.com/watch?v=GXSRP--d3Q4&index=2&list=PLjTlxb-wKvXOU4WW4p3qc4VKWTI4gLNUf)
+* [Reproducible Research: Concepts and Ideas (Part 3/3)](https://www.youtube.com/watch?v=bwQWhZQmDuc&list=PLjTlxb-wKvXOU4WW4p3qc4VKWTI4gLNUf&index=3)
+
+Vasta järgmisele küsimusele:
+
+* Selgitage, mida tähendab, et *reprodutseeritav analüüs* on kompromiss *uuringu replikeerimise* ja *mitte millegi* vahel.
+
+3. (**1 punkt**) Vaata videot [Data Sharing and Management Snafu in 3 Short Acts](https://www.youtube.com/watch?v=N2zK3sAtr-4&)
+
+Vasta järgmisele küsimusele:
+
+* Nimeta vähemalt 3 viga andmete talletamises ning andmehalduses, millele videos viidati.
+
+4. (**2 punkti**) Loe artiklit [Researchers Finally Replicated Reinhart-Rogoff, and There Are Serious Problems](http://www.nextnewdeal.net/rortybomb/researchers-finally-replicated-reinhart-rogoff-and-there-are-serious-problems).
+
+Artikkel kirjeldab majandusteadlaste Reinhart ja Rogoffi 2010. aasta publikatsiooni *Growth in a Time of Debt* ning mis vigu riigivõla ja majanduskasvu uurimisel tehti. Järgmises praktikumis uurime sama andmestikku, mida käsitleti ka Reinhart ja Rogoffi artiklis.
+
+Vasta järgmistele küsimustele:
+
+* Nimeta, mis oli Reinhart'i ja Rogoff'i artikli üks olulisemaid tulemusi.
+* Millel põhines teadlaste Herndon, Ash ja Pollin kriitika majandusteadlaste Reinhart'i ja Rogoff'i teadusartiklile *Growth in a Time of Debt.* (nimeta 3 probleemi).
+
+5. (**1 boonuspunkt**) Kirjuta, kui palju aega kulus osa I ja osa II peale, kommenteeri oma ajakasutust. 
+
+### Mida on vaja esitada?
+
+* I osa kohta tuleb esitada nii andmeanalüüsi raport (html või pdf formaadis) kui ka selle lähtekood .Rmd failina.
+* II osa kohta tuleb esitada vastused tekstifailis või kirjutada vastused meili sisusse. 
+
+Lahendused saata meili peale: andmeteadus@gmail.com
+
+

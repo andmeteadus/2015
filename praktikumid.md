@@ -7,18 +7,23 @@ title: Praktikumimaterjalid
 
 10.02.2015 
 
-Sissejuhatus ainesse, reprodutseeritavasse analüüsi ja automatiseeritud statistikasse. Tarkvara R meeldetuletamine. Pakett knitr. Markdown. 
+Sissejuhatus ainesse, reprodutseeritavasse analüüsi ja automatiseeritud statistikasse. Tarkvara R meeldetuletamine. Pakett knitr. Markdown. Näide: automaatne aktsiaturu ülevaade. 
 
 * [Kursuse "Rakendustarkvara: R" õppematerjal](../rakendustarkvara_R). 
-* [Slaidid](https://)
-* [Ülesanded](https://)
-* Tähtaeg: XX.XX.2015
+* Praktikumis kasutatud materjalid:
+  * Slaidid
+  * [knitr ja R Markdown sissejuhatus](/praktikum1_knitr)
+  * [dplyr minimalistlik näide](/praktikum1_dplyr)
+  * [automaatne aktsiaturu ülevaade (alustame kodutööga)](/praktikum1_aktsiad)
+* [Kodutöö](/praktikum1_kodutoo)
+  * Tähtaeg: 16.02.2015 kell 23.59 GMT
+
 
 ## Praktikum 2
 
 17.02.2015
 
-Joonised paketiga ggplot2: erinevad joonisetüübid. Näide: kas e-hääli võltsiti? ÕISi tagasiside visualiseerimine.
+Reprodutseeritav analüüs. Näide: Kas suur võlakoorem vähendab riigi majanduskasvu? Joonised paketiga ggplot2.
 
 * [Slaidid](https://)
 * [Ülesanded](https://)
@@ -28,7 +33,7 @@ Joonised paketiga ggplot2: erinevad joonisetüübid. Näide: kas e-hääli võlt
 
 03.03.2015
 
-Reprodutseeritav analüüs. Näide: Kas suur võlakoorem vähendab riigi majanduskasvu? Interaktiivsed rakendused paketiga shiny.
+Joonised paketiga ggplot2: erinevad joonisetüübid. Näide: ÕISi tagasiside visualiseerimine. Interaktiivsed rakendused paketiga shiny.
 
 * [Slaidid](https://)
 * [Ülesanded](https://)
