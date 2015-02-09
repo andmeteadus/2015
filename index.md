@@ -62,7 +62,7 @@ Arutelu iseseisvalt õpitu kohta ning praktikumid toimuvad klassiruumis.
 
 Lisaks praktikumidele sisaldab õppeaine järgnevaid komponente:
 
-* **Kodutööd:** Kokku antakse 8 kodutööd (igaüks 10 punkti). 
+* **Kodutööd:** Kokku antakse 8 kodutööd (igaüks 25 punkti). 
   * Kodutöö sisaldab enamasti andmete analüüsimist, visualiseerimist jne. Iga kodutöö tulemuseks on [knitr](http://yihui.name/knitr/)-i raport koos R-i koodi ning kommentaaridega. 
   * Kodutöö võib sisaldada ka küsimusi iseseisvalt õpitu (näiteks videoloengu) kohta. 
 * **Projekt:** Lisaks tuleb läbi viia üks praktiline andmeanalüüs ning kirjutada populaarteaduslikus vormis artikkel saadud tulemustest. 
@@ -71,7 +71,7 @@ Projekti võib teha kas üksinda või paaristööna. Tulemusi on vaja esitleda s
 
 Aine läbimiseks on vaja:
 
-1. kodutööde eest saada vähemalt 75% punktidest (on vaja saada vähemalt 60 punkti 80st võimalikust), 
+1. kodutööde eest saada vähemalt 75% punktidest (on vaja saada vähemalt 150 punkti 200st võimalikust), 
 2. koostada projekt ning seda esitleda. 
 
 Õppeaines (3 EAP) ette nähtud 78 tundi tööd jaguneb järgnevalt:
