@@ -7,14 +7,16 @@ title: Praktikumimaterjalid
 
 10.02.2015 
 
-Sissejuhatus ainesse, reprodutseeritavasse analüüsi ja automatiseeritud statistikasse. Tarkvara R meeldetuletamine. Pakett knitr. Markdown. Näide: automaatne aktsiaturu ülevaade. 
+Sissejuhatus ainesse, reprodutseeritavasse analüüsi ja automatiseeritud statistikasse. Tarkvara R meeldetuletamine. 
+Pakett knitr. Markdown. Pakett dplyr. Näide: automaatne aktsiaturu ülevaade. 
 
 * [Kursuse "Rakendustarkvara: R" õppematerjal](../rakendustarkvara_R). 
 * Praktikumis kasutatud materjalid:
   * Slaidid
+  * Logige [*Socrative* tagasiside keskkonda](http://b.socrative.com/login/student/) koodiga 5fc6f3ec
   * [knitr ja R Markdown sissejuhatus](/praktikum1_knitr)
   * [dplyr minimalistlik näide](/praktikum1_dplyr)
-  * [automaatne aktsiaturu ülevaade (alustame kodutööga)](/praktikum1_aktsiad)
+  * [Automaatne aktsiaturu ülevaade (alustame kodutööga)](/praktikum1_aktsiad)
 * [Kodutöö](/praktikum1_kodutoo)
   * Tähtaeg: 16.02.2015 kell 23.59 GMT
 
