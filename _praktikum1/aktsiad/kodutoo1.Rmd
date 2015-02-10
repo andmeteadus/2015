@@ -4,7 +4,7 @@ output:
     theme: null
 ---
 
-# Kodutöö
+# Kodutöö 1 osa I
 
 ## Sissejuhatus
 
@@ -54,8 +54,7 @@ Kõigepealt leia kolm kõige suurema päevase tootlusega aktsiat ning väljasta nend
 
 Seejärel leia kolm kõige madalama päevase tootlusega aktsiat ning väljasta nende kohta samasugune info. 
 
-<!-- Näpunäide: Variant 1: kasuta funktsiooni `arrange()` sorteerimiseks ja `head()` andmestiku päise saamiseks. Variant 2: kasuta funktsiooni `top_n`.
--->
+Näpunäide: Abiks on funktsioonid `arrange()`, `select()` ja `head()`.
 
 
 ### Ülesanne 2 (6 punkti) - Ülevaade sektorite lõikes
@@ -69,17 +68,18 @@ Iga sektori kohta, kus on vähemalt 30 ettevõtet, väljasta järgnev info:
 3. sektori keskmine käive
 4. ettevõtete arv sektoris 
 
-Näpunäited:
+Juhised:
 
 * Lisa andmestikku tunnus *käive*, mis näitab, kui suure summa eest igat aktsiat kaubeldi. (Selleks tuleb korrutada päeva jooksul kaubeldud aktsiate arv viimase tehingu hinnaga.)
-
 * Arvuta iga sektori kohta
-    * keskmine tootlus
-    * kogukäive
-    * keskmine käive
-    * ettevõtete arv
-* Summade ja keskmiste arvutamisel ära võta arvesse puuduvaid väärtusi (puuduvate väärtuse välja jätmiseks on `sum` ja `mean` funktsioonidel argument `na.rm`).
+    * keskmine tootlus, 
+    * kogukäive, 
+    * keskmine käive, 
+    * ettevõtete arv.  
+  Näpunäide 1: Kasuta paketi dplyr funktsioone `group_by()` ja `summarise()`.  
+  Näpunäide 2: Summade ja keskmiste arvutamisel ära võta arvesse puuduvaid väärtusi (puuduvate väärtuse välja jätmiseks on `sum` ja `mean` funktsioonidel argument `na.rm`).
 * Näita ainult neid sektoreid, kus on vähemalt 30 ettevõtet.
+
 
 ### Ülesanne 3 (5 punkti) - kauplemisalgoritm
 
@@ -105,7 +105,7 @@ kauplemisalgoritm = function(x){
   # arvutame iga aktsia kohta atraktiivsuse skoori
   # [sinu kood]
   
-  # tagasta kolme kõige suurema skooriga ettevõtte sümbolid
+  # tagasta kolme kõige suurema skooriga ettevõtte sümbolid vektorina
 }
 ```
 
@@ -116,7 +116,7 @@ kauplemisalgoritm = function(x){
 
 Nüüd kirjuta funktsioon *kauplemisalgoritm_turvaline*, kus valid atraktiivseid aktsiaid vaid populaarsete aktsiate hulgast. Populaarsed aktsiad on järgnevad: AAPL, FB, GOOG, IBM, TSLA. 
 
-Näpunäited:
+Juhised:
 
 * Vali andmestikust välja ainult aktsiad AAPL, FB, GOOG, IBM, TSLA.
 * Rakenda saadud alamandmestikul eelnevas ülesandes kirjutatud funktsiooni. 
@@ -155,7 +155,7 @@ Raport võiks välja näha umbes selline (pildil ei ole näidatud ilmtingimata õiged
 
 Esitada tuleb nii raport (html või pdf formaadis) kui ka selle lähtekood .Rmd failina. 
 
-### Boonusülesanne 1 (1 punkt)
+### Boonusülesanne 1 (1 punkt): raporti täiendamine
 
 Mõtle välja ning lisa raportisse veel üks sektsioon, mis täiendaks Mati aktsiaturuülevaadet. 
 

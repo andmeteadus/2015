@@ -37,8 +37,8 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 
 
 
-<div id="kodutoo" class="section level1">
-<h1>Kodutöö</h1>
+<div id="kodutoo-1-osa-i" class="section level1">
+<h1>Kodutöö 1 osa I</h1>
 <div id="sissejuhatus" class="section level2">
 <h2>Sissejuhatus</h2>
 <p>Mati “Raha” Masin töötab investeerimispangas ning ta vastutab igapäevase aktsiaturu ülevaate koostamise eest. Ta vihkab oma tööd selle rutiinsuse pärast. Vaja on kopeerida uued aktsiaturu andmed Exceli tabeli õigesse lahtrisse, klikkida vajalikel nuppudel ja kopeerida tulemused raportisse.</p>
@@ -83,10 +83,7 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <li>tootlus.</li>
 </ol>
 <p>Seejärel leia kolm kõige madalama päevase tootlusega aktsiat ning väljasta nende kohta samasugune info.</p>
-<!-- Näpunäide: Variant 1: kasuta funktsiooni `arrange()` sorteerimiseks ja `head()` andmestiku päise saamiseks. Variant 2: kasuta funktsiooni `top_n`.
--->
-
-
+<p>Näpunäide: Abiks on funktsioonid <code>arrange()</code>, <code>select()</code> ja <code>head()</code>.</p>
 </div>
 <div id="ulesanne-2-6-punkti---ulevaade-sektorite-loikes" class="section level3">
 <h3>Ülesanne 2 (6 punkti) - Ülevaade sektorite lõikes</h3>
@@ -100,18 +97,17 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <li>sektori keskmine käive</li>
 <li>ettevõtete arv sektoris</li>
 </ol>
-<p>Näpunäited:</p>
+<p>Juhised:</p>
 <ul>
-<li><p>Lisa andmestikku tunnus <em>käive</em>, mis näitab, kui suure summa eest igat aktsiat kaubeldi. (Selleks tuleb korrutada päeva jooksul kaubeldud aktsiate arv viimase tehingu hinnaga.)</p></li>
+<li>Lisa andmestikku tunnus <em>käive</em>, mis näitab, kui suure summa eest igat aktsiat kaubeldi. (Selleks tuleb korrutada päeva jooksul kaubeldud aktsiate arv viimase tehingu hinnaga.)</li>
 <li>Arvuta iga sektori kohta
 <ul>
-<li>keskmine tootlus</li>
-<li>kogukäive</li>
-<li>keskmine käive</li>
-<li>ettevõtete arv</li>
+<li>keskmine tootlus,</li>
+<li>kogukäive,</li>
+<li>keskmine käive,</li>
+<li>ettevõtete arv.<br /> Näpunäide 1: Kasuta paketi dplyr funktsioone <code>group_by()</code> ja <code>summarise()</code>.<br /> Näpunäide 2: Summade ja keskmiste arvutamisel ära võta arvesse puuduvaid väärtusi (puuduvate väärtuse välja jätmiseks on <code>sum</code> ja <code>mean</code> funktsioonidel argument <code>na.rm</code>).</li>
 </ul></li>
-<li>Summade ja keskmiste arvutamisel ära võta arvesse puuduvaid väärtusi (puuduvate väärtuse välja jätmiseks on <code>sum</code> ja <code>mean</code> funktsioonidel argument <code>na.rm</code>).</li>
-<li><p>Näita ainult neid sektoreid, kus on vähemalt 30 ettevõtet.</p></li>
+<li>Näita ainult neid sektoreid, kus on vähemalt 30 ettevõtet.</li>
 </ul>
 </div>
 <div id="ulesanne-3-5-punkti---kauplemisalgoritm" class="section level3">
@@ -138,7 +134,7 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
   # arvutame iga aktsia kohta atraktiivsuse skoori
   # [sinu kood]
   
-  # tagasta kolme kõige suurema skooriga ettevõtte sümbolid
+  # tagasta kolme kõige suurema skooriga ettevõtte sümbolid vektorina
 }</code></pre>
 </div>
 <div id="ulesanne-4-2-punkti---turvaline-kauplemisalgoritm-ja-ostusoovitused" class="section level3">
@@ -147,7 +143,7 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <p>Mati ei ole veel vanemanalüütiku staatust saanud ning ta kardab veidi oma soovituste pärast. Mis juhtub kui aktsiasoovitus osutub katastroofiks? Kui kliendid saavad Mati soovituste pärast hiigelsuuri kahjumeid, siis kõigub ka tema töökoht. Mis oleks kui soovitada ainult populaarseid aktsiaid? Siis saab ju alati öelda, et vanemanalüütikud teistes pankades soovitasid ka …</p>
 </blockquote>
 <p>Nüüd kirjuta funktsioon <em>kauplemisalgoritm_turvaline</em>, kus valid atraktiivseid aktsiaid vaid populaarsete aktsiate hulgast. Populaarsed aktsiad on järgnevad: AAPL, FB, GOOG, IBM, TSLA.</p>
-<p>Näpunäited:</p>
+<p>Juhised:</p>
 <ul>
 <li>Vali andmestikust välja ainult aktsiad AAPL, FB, GOOG, IBM, TSLA.</li>
 <li>Rakenda saadud alamandmestikul eelnevas ülesandes kirjutatud funktsiooni.</li>
@@ -182,8 +178,8 @@ opts_chunk$set(echo=FALSE, message=FALSE)
 <h3>Mida on vaja esitada?</h3>
 <p>Esitada tuleb nii raport (html või pdf formaadis) kui ka selle lähtekood .Rmd failina.</p>
 </div>
-<div id="boonusulesanne-1-1-punkt" class="section level3">
-<h3>Boonusülesanne 1 (1 punkt)</h3>
+<div id="boonusulesanne-1-1-punkt-raporti-taiendamine" class="section level3">
+<h3>Boonusülesanne 1 (1 punkt): raporti täiendamine</h3>
 <p>Mõtle välja ning lisa raportisse veel üks sektsioon, mis täiendaks Mati aktsiaturuülevaadet.</p>
 </div>
 <div id="boonusulesanne-2-3-punkti-andmete-automaatne-uuenemine" class="section level3">
