@@ -186,4 +186,4 @@ kable(data)
 ### Abimaterjal R Markdowni kohta:
 
 * [**R Markdown**](http://rmarkdown.rstudio.com/)
-* [**R Markdown Cheat Sheet** pdf](http://www.rstudio.com/wp-content/uploads/2015/01/rmarkdown-cheatsheet.pdf)
+* **R Markdown Cheat Sheet** pdf leiate lehelt http://www.rstudio.com/resources/cheatsheets/
