@@ -216,6 +216,31 @@ filter(arrange(andmed, pikkus),
 ## 1    M    20    180
 ## 2    M    60    200</code></pre>
 </div>
+<div id="operaator" class="section level3">
+<h3>%&gt;% operaator</h3>
+<p>Funktsioonide järjest rakendamist võimaldab <em>dplyr</em> kirja panna <em>pipe</em> operaatori <code>%&gt;%</code> abil.</p>
+<p>See operaator võtab vasakul oleva objekti, ning annab selle edasi paremal oleva funktsiooni esimeseks argumendiks. Näiteks <code>f(x, y)</code> võime kirjutada <code>x %&gt;% f(y)</code>.</p>
+<pre class="r"><code># Eelneva näite jätk:
+# Variant 3, pipe operaatoriga
+andmed %&gt;% 
+  arrange(pikkus) %&gt;%
+  filter(sugu == &quot;M&quot;)</code></pre>
+<pre><code>##   sugu vanus pikkus
+## 1    M    20    180
+## 2    M    60    200</code></pre>
+<p>Eelnevat <code>%&gt;%</code> abil kirja pandud koodi võib lugeda järgnevalt</p>
+<pre><code>Võta andmestik &quot;andmed&quot;, seejärel
+  sorteeri see pikkuse järgi, seejärel
+  eralda sellised read, kus sugu == &quot;M&quot;</code></pre>
+<p>Nii saadud kood on paremini loetav, eriti kui järjest rakendatakse mitmeid funktsioone.</p>
+<p>Näiteks eelnevalt kirja pandud näite</p>
+<pre class="r"><code>andmed_grupeeritult = group_by(andmed, sugu)
+summarise(andmed_grupeeritult, keskmine_pikkus = mean(pikkus))</code></pre>
+<p>saab <code>%&gt;%</code> abil kirja panna</p>
+<pre class="r"><code>andmed %&gt;%
+  group_by(sugu) %&gt;%
+  summarise(keskmine_pikkus = mean(pikkus))</code></pre>
+</div>
 <div id="taiendav-abimaterjal" class="section level3">
 <h3>Täiendav abimaterjal</h3>
 <p>Täiendavat informatsiooni <em>dplyr</em> funktsionaalsuse kohta leiab:</p>

@@ -173,6 +173,47 @@ filter(arrange(andmed, pikkus),
        sugu == "M")
 ```
 
+### %>% operaator
+
+Funktsioonide järjest rakendamist võimaldab *dplyr* kirja panna *pipe* operaatori `%>%` abil. 
+
+See operaator võtab vasakul oleva objekti, ning annab selle edasi paremal oleva funktsiooni esimeseks argumendiks. Näiteks `f(x, y)` võime kirjutada `x %>% f(y)`.
+
+```{r}
+# Eelneva näite jätk:
+# Variant 3, pipe operaatoriga
+andmed %>% 
+  arrange(pikkus) %>%
+  filter(sugu == "M")
+```
+
+Eelnevat `%>%` abil kirja pandud koodi võib lugeda järgnevalt
+
+```
+Võta andmestik "andmed", seejärel
+  sorteeri see pikkuse järgi, seejärel
+  eralda sellised read, kus sugu == "M"
+```
+
+Nii saadud kood on paremini loetav, eriti kui järjest rakendatakse mitmeid funktsioone. 
+
+Näiteks eelnevalt kirja pandud näite
+
+```{r, eval=FALSE}
+andmed_grupeeritult = group_by(andmed, sugu)
+summarise(andmed_grupeeritult, keskmine_pikkus = mean(pikkus))
+```
+
+saab `%>%` abil kirja panna
+
+```{r, eval=FALSE}
+andmed %>%
+  group_by(sugu) %>%
+  summarise(keskmine_pikkus = mean(pikkus))
+```
+
+
+
 ### Täiendav abimaterjal
 
 Täiendavat informatsiooni *dplyr* funktsionaalsuse kohta leiab:
