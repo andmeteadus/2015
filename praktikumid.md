@@ -29,7 +29,7 @@ Reprodutseeritav analüüs. Näide: Kas suur võlakoorem vähendab riigi majandu
 
 * Praktikumis kasutatud materjalid:
   * [ggplot2 minimalistlik näide](/praktikum2_ggplot2)
-  * Boxploti [ülesanne 1](/slides/praktikum2_boxplot_quiz1.pdf) ja [ülesanne 2](praktikum2_boxplot_quiz2.pdf).
+  * Boxploti [ülesanne 1](/slides/praktikum2_boxplot_quiz1.pdf) ja [ülesanne 2](/slides/praktikum2_boxplot_quiz2.pdf)
   * [*Growth in a Time of Debt*: Riigi võlakoormuse ja SKP vaheline seos](/praktikum2_riigivolg) (alustame kodutööga)
 * [Kodutöö](/praktikum2_kodutoo)
   * Tähtaeg: 02.03.2015 kell 23.59 GMT
