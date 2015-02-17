@@ -16,7 +16,7 @@ Pakett knitr. Markdown. Pakett dplyr. Näide: automaatne aktsiaturu ülevaade.
   * Logige [*Socrative*](http://b.socrative.com/login/student/) tagasiside keskkonda koodiga 5fc6f3ec
   * [knitr ja R Markdown sissejuhatus](/praktikum1_knitr)
   * [dplyr minimalistlik näide](/praktikum1_dplyr)
-  * [Automaatne aktsiaturu ülevaade (alustame kodutööga)](/praktikum1_aktsiad)
+  * [Automaatne aktsiaturu ülevaade](/praktikum1_aktsiad) (alustame kodutööga)
 * [Kodutöö](/praktikum1_kodutoo)
   * Tähtaeg: 16.02.2015 kell 23.59 GMT
 
@@ -27,9 +27,11 @@ Pakett knitr. Markdown. Pakett dplyr. Näide: automaatne aktsiaturu ülevaade.
 
 Reprodutseeritav analüüs. Näide: Kas suur võlakoorem vähendab riigi majanduskasvu? Joonised paketiga ggplot2.
 
-* [Slaidid](https://)
-* [Ülesanded](https://)
-* Tähtaeg: XX.XX.2015
+* Praktikumis kasutatud materjalid:
+  * [ggplot2 minimalistlik näide](/praktikum2_ggplot2)
+  * [*Growth in a Time of Debt*: Riigi võlakoormuse ja SKP vaheline seos](/praktikum2_riigivolg) (alustame kodutööga)
+* [Kodutöö](/praktikum2_kodutoo)
+  * Tähtaeg: 02.03.2015 kell 23.59 GMT
 
 ## Praktikum 3
 
