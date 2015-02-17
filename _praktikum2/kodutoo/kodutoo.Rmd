@@ -1,0 +1,47 @@
+---
+title: "Kodutöö"
+output: 
+  html_document:
+    theme: null
+---
+
+Tähtaeg: 02.03.2015 23:59 GMT
+
+
+# I osa (10 punkti)
+
+Lahenda praktikumis alustatud [*Growth in a Time of Debt*](/praktikum2_riigivolg) ülesanded.
+
+
+# II osa (11 punkti)
+
+Lahenda [pettuse tuvastamise ülesanded](/praktikum2_pettus). 
+
+
+# III osa - veebiloengud, videod, artiklid (4 punkti)
+1. (**3 punkti**) Vaata Johns Hopkinsi andmeanalüüsi kursuse videosid:
+
+* [The ggplot2 Plotting System - Part 2 (1/3)](https://www.youtube.com/watch?v=zLwrYvH2Hg0&list=PLjTlxb-wKvXPhZ7tQwlROtFjorSj9tUyZ&index=13)
+* [The ggplot2 Plotting System - Part 2 (2/3)](https://www.youtube.com/watch?v=Z3WP_Up8b5I&list=PLjTlxb-wKvXPhZ7tQwlROtFjorSj9tUyZ&index=14)
+* [The ggplot2 Plotting System - Part 2 (3/3)](https://www.youtube.com/watch?v=gU8w0gjSx40&list=PLjTlxb-wKvXPhZ7tQwlROtFjorSj9tUyZ&index=15)
+
+Nimeta kolm kasulikku teadmist, mis videotest teada said. (Juhul, kui ükski ei olnud sinu jaoks kasulik, nimeta kolm sellist.)
+
+2. (**1 punkt**) Vaata https://www.youtube.com/watch?v=5Dnw46eC-0o
+
+Võta selle video idee ühe lausega kokku.
+
+3. (**1 boonuspunkt**) Kirjuta, kui palju aega kulus osa I, II ja III peale. Mida arvad ülesannetest ja videotest (kasulikkus, huvitavus)?
+
+4. (**5 boonuspunkti**) Mõtle välja enda projekti teema. Kirjuta lühiülevaade, milles projekt seisneb, kust andmed saad jne. Juhul, kui tegu on paaristööga, siis ka kaasüliõpilase nimi.  
+
+Tuletame meelde, et projekt seisneb ühe praktilise andmeanalüüsi läbiviimises ning saadud tulemuste esitamisest populaarteadusliku artikli vormis. Projekti eesmärk on eelkõige kinnistada õppeaines õpitut ning leida häid viise tulemuste kommunikeerimiseks graafikute abil. Artikkel peab olema illustreeritud asjakohaste joonistega ning olema arusaadav ka mittestatistikule.
+
+
+# Mida on vaja esitada?
+
+* I ja II osa kohta tuleb esitada nii andmeanalüüsi raport (html või pdf formaadis) kui ka selle lähtekood .Rmd failina.
+* III osa kohta tuleb esitada vastused tekstifailis või kirjutada vastused meili sisusse. 
+
+Lahendused saata meili peale: andmeteadus@gmail.com
+
