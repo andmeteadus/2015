@@ -106,7 +106,8 @@ nagu me ise spetsifitseerisime. Kuna punktide kuju ning suuruse kohta me midagi 
 Näiteks tunnuse `Species` põhjal saame oma joonise jagada alamjoonisteks (tahkudeks) järgnevalt
 
 ```{r}
-ggplot(iris, aes(x = Sepal.Length, y = Petal.Length)) + geom_point() + facet_wrap(~ Species)
+ggplot(iris, aes(x = Sepal.Length, y = Petal.Length)) + geom_point() + 
+  facet_wrap(~ Species)
 ```
 
 ## geom_histogram()
@@ -116,9 +117,11 @@ ggplot(iris, aes(x = Petal.Length)) + geom_histogram()
 # Saame histogrammi tulpasid värvida Species järgi
 ggplot(iris, aes(x = Petal.Length, fill=Species)) + geom_histogram()
 # Või jagada histogramm tahkudeks Species järgi, üksteise alla
-ggplot(iris, aes(x = Petal.Length, fill=Species)) + geom_histogram() + facet_wrap(~ Species, ncol=1)
+ggplot(iris, aes(x = Petal.Length, fill=Species)) + geom_histogram() + 
+  facet_wrap(~ Species, ncol=1)
 # Mitteparameetriline tiheduse hinnang
-ggplot(iris, aes(x = Petal.Length, fill=Species)) + geom_density(alpha=0.5)
+ggplot(iris, aes(x = Petal.Length, fill=Species)) + 
+  geom_density(alpha=0.5)
 ```
 
 ## geom_boxplot() ja geom_jitter()
@@ -130,7 +133,8 @@ ggplot(iris, aes(x = Species, y = Petal.Length)) + geom_jitter()
 
 ```{r}
 # informatiivse joonise saame kahe eelneva kihi (boxploti ja punktide) kombineerimisel
-ggplot(iris, aes(x = Species, y = Petal.Length)) + geom_boxplot() + geom_jitter()
+ggplot(iris, aes(x = Species, y = Petal.Length)) + 
+  geom_boxplot() + geom_jitter()
 ```
 
 
@@ -139,6 +143,7 @@ ggplot(iris, aes(x = Species, y = Petal.Length)) + geom_boxplot() + geom_jitter(
 Saame lisada näiteks regressioonisirge iga grupi jaoks
 
 ```{r}
-ggplot(iris, aes(x = Sepal.Length, y = Petal.Length, colour=Species)) + geom_point() + stat_smooth(method="lm", se=FALSE)
+ggplot(iris, aes(x = Sepal.Length, y = Petal.Length, colour=Species)) + 
+  geom_point() + stat_smooth(method="lm", se=FALSE)
 ```
 
