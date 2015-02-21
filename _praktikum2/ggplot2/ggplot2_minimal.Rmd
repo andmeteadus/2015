@@ -82,12 +82,16 @@ ggplot(iris, aes(x = Sepal.Length, y = Petal.Length, colour = Species)) + geom_p
 
 Märkus: Samasuguse joonise saame ka järgnevate käskude tulemusena
 ```{r, eval=FALSE}
-# Kui soovime iga kihi jaoks kasutada erinevaid tunnuseid x, y koordinaatide jaoks, värvi jaoks jne:
+# Eelistatud, kui soovime iga kihi jaoks kasutada erinevaid tunnuseid 
+# x, y koordinaatide jaoks, värvi jaoks jne, 
+# aga andmestik oleks kõigi kihtide jaoks sama
 ggplot(iris) + geom_point(aes(x = Sepal.Length, y = Petal.Length, colour = Species))
-# Kui soovime iga kihi jaoks kasutada erinevaid andmestikke:
+# Eelistatud, kui soovime iga kihi jaoks kasutada erinevaid andmestikke
 ggplot() + geom_point(data=iris, aes(x = Sepal.Length, y = Petal.Length, colour = Species))
 
 ```
+
+[Siin](http://docs.ggplot2.org/current/ggplot.html) on näide, kuidas erinevate kihtide jaoks kasutada erinevaid andmetabeleid.
 
 #### Mida teeb aes()?
 
