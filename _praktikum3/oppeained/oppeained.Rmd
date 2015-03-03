@@ -80,7 +80,8 @@ Juhised:
 
 ```{r, eval=FALSE}
 plot_oppeained = function(data, tk, sem){
-  # vali andmestikust data välja sellised read, kus teaduskond == tk ja semester == sem
+  # vali andmestikust data välja sellised read, 
+  # kus teaduskond == tk ja semester == sem
   
   # sinu kood
   
