@@ -1,0 +1,24 @@
+---
+title: "Kodutöö"
+output: 
+  html_document:
+    theme: null
+---
+
+Tähtaeg: 09.03.2015 23:59 GMT
+
+
+Lahenda praktikumis alustatud [**õppetulemuste visualiseerimise**](/praktikum3_oppeained) ülesanded.
+
+(**1 boonuspunkt**) Kirjuta, kui palju aega kulus ülesannete 1-2 (visualiseerimine) ja ülesande 3 (shiny rakendus) jaoks. Mida arvad ülesannetest (kasulikkus, huvitavus)?
+
+(**3 boonuspunkti**) Mõtle välja enda projekti teema (juhul, kui sa seda veel pole teinud). Kirjuta lühiülevaade, milles projekt seisneb, kust andmed saad jne. Juhul, kui tegu on paaristööga, siis ka kaasüliõpilase nimi. 
+Tuletame meelde, et projekt seisneb ühe praktilise andmeanalüüsi läbiviimises ning saadud tulemuste esitamisest populaarteadusliku artikli vormis. Projekti eesmärk on eelkõige kinnistada õppeaines õpitut ning leida häid viise tulemuste kommunikeerimiseks graafikute abil. Artikkel peab olema illustreeritud asjakohaste joonistega ning olema arusaadav ka mittestatistikule.
+
+
+# Mida on vaja esitada?
+
+* Ülesande 3 kohta tuleb esitada zip fail, kus oleks kõik, mis vajalik shiny rakenduse töötamiseks, sealhulgas *server.R*, *ui.R* ning andmestiku fail.
+* Ülejäänud ülesannete kohta tuleb esitada nii andmeanalüüsi raport (html või pdf formaadis) kui ka selle lähtekood .Rmd failina.
+
+Lahendused saata meili peale: andmeteadus@gmail.com

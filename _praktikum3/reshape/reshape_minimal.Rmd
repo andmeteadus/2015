@@ -1,0 +1,74 @@
+---
+title: "reshape2"
+output: 
+  html_document:
+    theme: null
+---
+
+`reshape2` on Hadley Wickhami kirjutatud R-i pakett, mis aitab laias formaadis andmetabelit transformeerida pikas formaadis andmestikuks ja vastupidi.
+
+![alt text](lai_ja_pikk.png "Näide")
+
+Laias formaadis andmestik - üks rida vastab ühele objektile.
+
+Pikas formaadis andmestik - sama omadust kirjeldavad andmed on ühes veerus. Üks objekt võib esineda mitmel real.
+
+Paljud paketid tahavad sisendiks pikas formaadis andmeid (nt `ggplot2` pakett või funktsioonid `lm(), glm()`). Inimestel on aga mugavam vaadelda ja sisestada andmeid pikas formaadingus. Loe artiklist [Tidy Data](http://www.jstatsoft.org/v59/i10/paper), milline on Hadley Wickham'i arvates hea andmete esitusviis. 
+
+Järgnevalt on toodud minimalistlikud näited, mis iseloomustavad paketi `reshape2` funktsionaalsust.
+
+```{r}
+andmed = data.frame(nimi= c("Mati", "Toomas", "Kati"),
+                    sugu = c("M", "M", "N"),
+                    vanus = c(20, 60, 30),
+                    pikkus = c(180, 200, 150),
+                    kaal = c(80, 100, 50))
+andmed
+```
+
+
+### melt()
+
+Transformeeri lai andmestik pikaks.
+
+![alt text](lai_to_pikk.png "Näide")
+
+```{r}
+library(reshape2)
+
+# Näide 1
+melt(andmed, id.vars=c("nimi", "sugu"))
+
+# Näide 2
+melt(andmed, id.vars=1:2)
+
+# Näide 3
+melt(andmed, measure.vars=c("vanus", "pikkus", "kaal"))
+
+# Näide 4
+melt(andmed, measure.vars=3:5)
+
+# Näide 5
+melt(andmed, measure.vars=2:5)
+
+```
+
+
+### dcast()
+
+Transformeeri pikk andmestik laiaks.
+
+![alt text](pikk_to_lai.png "Näide")
+
+```{r}
+# pikas formaadis andmed
+andmed.m = melt(andmed, id.vars=c("nimi", "sugu"))
+andmed.m
+
+dcast(andmed.m, nimi + sugu ~ variable, value.var = "value")
+```
+
+
+Abiks võib olla järgmine värviline illustratsioon.
+
+![alt text](dcast-illustration.png "Näide")

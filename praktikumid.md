@@ -40,9 +40,14 @@ Reprodutseeritav analüüs. Näide: Kas suur võlakoorem vähendab riigi majandu
 
 Joonised paketiga ggplot2: erinevad joonisetüübid. Näide: ÕISi tagasiside visualiseerimine. Interaktiivsed rakendused paketiga shiny.
 
-* [Slaidid](https://)
-* [Ülesanded](https://)
-* Tähtaeg: XX.XX.2015
+* Praktikumis kasutatud materjalid:
+  * [reshape2 minimalistlik näide](/praktikum3_reshape)
+  * [Jaotuste äraarvamise ülesanne](/praktikum3_quiz1)
+  * [Graafikute tajumise ülesanne](/praktikum3_quiz2)
+  * [Õppetulemuste visualiseerimise ülesanded](/praktikum3_oppeained) (alustame kodutööga)
+* [Kodutöö](/praktikum3_kodutoo)
+  * Tähtaeg: 09.03.2015 kell 23.59 GMT
+
 
 ## Praktikum 4
 
