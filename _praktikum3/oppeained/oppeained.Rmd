@@ -49,6 +49,11 @@ Laadi ÕISist alla andmestik *UT_13_14_hinded.csv*. Selles andmestikus on 2013/2
 
 Kas mõnes teaduskonnas saavad üliõpilased paremaid hindeid kui mõnes teises? Kuidas seda visuaalselt kontrollida? Tee seda. 
 
+> Praktikumis pakuti välja ja tegime järgmised joonised:
+![](praks_pilt1.png)
+![](praks_pilt2.png)
+![](praks_pilt3.png)
+
 ### Ülesanne 2 (4 punkti)
 
 Kas mõnes õppeaines saavad üliõpilased paremaid hindeid kui mõnes teises? Millistes ainetes täpsemalt? Visualiseeri. 
@@ -127,7 +132,7 @@ Näiteid Shiny rakendustest:
 * [R Graph Catalog (ggplot2)](http://shinyapps.stat.ubc.ca/r-graph-catalog/)
 -->
 
-### Boonuülesanne 2: Kuidas optimeerida õppeaine tagasisidet?
+### Boonusülesanne 2: Kuidas optimeerida õppeaine tagasisidet?
 
 Õppejõud Peeter "Bijektsioon" Ratsionaalil kästi õppeaine ümber korraldada. Tema õpetatavate ainete tagasiside on siiani olnud kehv, kuid ta on veendunud, et see pole mitte viletsa õpetamise ja halva ainekorralduse tõttu, vaid et üliõpilased annavadki paremat tagasisidet sellistele ainetele, kus eriti midagi tegema ei pea ning kus saab vähese vaevaga häid hindeid. 
 
