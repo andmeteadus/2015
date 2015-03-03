@@ -53,21 +53,40 @@ Kas mõnes teaduskonnas saavad üliõpilased paremaid hindeid kui mõnes teises?
 ![](praks_pilt1.png)
 ![](praks_pilt2.png)
 ![](praks_pilt3.png)
+> Kui sa praktikumis ei osalenud, siis mõned näpunäited:
+>
+> * Esimese joonise (boxploti) tegemiseks on vaja kõigepealt arvutada iga aine kohta keskmine hinne. Esialgu on teaduskonnad x-teljel tähestikulises järjekorras, sest faktortunnuse tasemete järjekord on vaikimisi selline. Et järjestada need kasvavalt keskmise hinde järgi, on abiks funktsioon `reorder`. 
+* Teise ja kolmanda joonise tegemiseks on vaja andmestiku esitust muuta (laia formaadi asemel kasutada pikka). Abiks on käsk `melt` paketist `reshape2` ning [abimaterjal reshape2 minimalistlik näide](/praktikum3_reshape). 
+* Teise joonise juures uuri http://docs.ggplot2.org/current/geom_bar.html, kuidas on vaja muuta `geom_bar()` argumenti `stat`.  
+* Kolmanda joonise juures on veel abiks http://docs.ggplot2.org/current/position_fill.html
 
 ### Ülesanne 2 (4 punkti)
 
 Kas mõnes õppeaines saavad üliõpilased paremaid hindeid kui mõnes teises? Millistes ainetes täpsemalt? Visualiseeri. 
 
-<!-- Tee joonis, kus oleks näha parimate hinnetega õppeained (fikseeritud teaduskonna ja semestri korral). -->
-
 Juhised:
 
-* Vali välja sobiv joonisetüüp. 
-* Esialgu tegele väiksema andmestikuga, kus teaduskond ja semester oleksid fikseeritud. (Järgmises ülesandes tuleb koodi natuke modifitseerida, et rakenduse kasutaja saaks ise valida teda huvitava teaduskonna ja semestri.)
+* Vali välja sobiv joonisetüüp. Selleks võid kasutada mõnda eelmises ülesandes välja pakutud lahendust või pakkuda välja enda variandi. 
+* Esialgu vaatle väiksemat andmestikku, kus teaduskond ja semester oleksid fikseeritud. Näiteks võid valida matemaatika-informaatikateaduskonna ning kevadsemestri.  
+(Järgmises ülesandes tuleb koodi natuke modifitseerida, et rakenduse kasutaja saaks ise valida teda huvitava teaduskonna ja semestri.)
 * Vaatle ainult selliseid aineid, kus oli vähemalt 5 registreerunut. 
 * Leia iga õppeaine keskmine hinne. 
 * Järjesta õppeained keskmise hinde põhjal. 
+* Vali visualiseerimiseks välja TOP 25 ained. 
 * Praegu on õppeaine nimi selline faktor, mille tasemed on tähestikulises järjekorras. Aga ggplot2 joonise jaoks oleks hea, kui see oleks järjestatud keskmise hinde põhjal. (Näpunäide: kasuta funktsiooni `reorder`.)
+* Tee joonis. 
+* Juhul, kui kasutad mõnda tulpdiagrammi, võib horisontaalne esitus osutuda efektiivsemaks kui vertikaalne. Abiks on `coord_flip()`. 
+* Kirjuta eelnev kood funktsiooniks, mille sisendiks sobiks selline andmestik nagu oli failis *UT_13_14_hinded.csv*. Lisaks oleks sisendiks teaduskond ja semester. Funktsioon peab tagastama ggplot2 joonise. Kontrolli, kas funktsioon töötab. 
+
+```{r, eval=FALSE}
+plot_oppeained = function(data, tk, sem){
+  # vali andmestikust data välja sellised read, kus teaduskond == tk ja semester == sem
+  
+  # sinu kood
+  
+  # tagasta ggplot2 joonis
+}
+```
 
 
 
@@ -89,7 +108,7 @@ Praeguseks võiks sinu rakendus välja näha umbes selline:
 ![](shiny_1.png)
 
 3. Tööta läbi *lesson 3*. 
-    * Lisa valikukast, mille abil saab rakenduse kasutaja valida teaduskonna. Näita teaduskondade nimesid pikemalt kui vastavad lühendid andmestikus. 
+    * Lisa valikukast, mille abil saab rakenduse kasutaja valida teaduskonna. Näita teaduskondade nimesid pikemalt kui vastavad lühendid andmestikus (abiks võib olla `?selectInput`). 
     * Lisa nupp, mille abil saab kasutaja valida, kas teda huvitavad sügis- või kevadsemestri ained.
     
 Praeguseks võiks sinu rakendus välja näha umbes selline:
@@ -104,11 +123,9 @@ Praeguseks võiks rakendus välja näha umbes selline:
     * Lisa oma rakenduse kataloogi kasutatava andmestiku fail (näiteks kas `csv` või `RData` failina).
     * Loe see fail sisse, et kasutada seda rakenduses.
     
-6. Lisa nüüd eelmise ülesande tulemusena valminud joonis shiny väljundisse. 
+6. Kasuta nüüd ülesande 2 tulemusena valminud funktsiooni ning lisa joonis shiny väljundisse. Kutsu see funktsioon välja nii, et sisendid teaduskond ning semester vastaksid kasutaja poolt sisestatud väärtustele. 
 
 Näpunäide: kui teksti kuvamiseks kasutasid funktsioone `textOutput` ja `renderText`, siis joonise jaoks tuleb kasutada vastavalt funktsioone `plotOutput` ja `renderPlot`. (Kui soovid muuta joonise suurust, selleks on funktsioonil `renderPlot` argumendid `width` ja `height`.)
-
-Muuda joonise tegemise koodi selliselt, et teaduskond ning semester vastaksid kasutaja poolt sisestatud väärtustele. 
 
 Praeguseks võiks rakendus välja näha umbes selline:
 ![](shiny_4.png)
