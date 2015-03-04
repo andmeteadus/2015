@@ -66,8 +66,8 @@ Kas mõnes õppeaines saavad üliõpilased paremaid hindeid kui mõnes teises? M
 
 Juhised:
 
-* Vali välja sobiv joonisetüüp. Selleks võid kasutada mõnda eelmises ülesandes välja pakutud lahendust või pakkuda välja enda variandi. 
-* Esialgu vaatle väiksemat andmestikku, kus teaduskond ja semester oleksid fikseeritud. Näiteks võid valida matemaatika-informaatikateaduskonna ning kevadsemestri.  
+* Vali välja sobiv joonisetüüp. Selleks võid kasutada mõnda eelmises ülesandes välja pakutud lahendust või pakkuda välja enda variandi. (Näiteks võid teha analoogilise joonise nagu ülesande 1 kolmas joonis, ainult et teaduskondade rollis oleksid õppeained. Samas võid ka teha näiteks tulpdiagrammi, mis näitaks iga õppeaine keskmist hinnet.)
+* Vaatle väiksemat andmestikku, kus teaduskond ja semester oleksid fikseeritud. Näiteks võid valida matemaatika-informaatikateaduskonna ning kevadsemestri.  
 (Järgmises ülesandes tuleb koodi natuke modifitseerida, et rakenduse kasutaja saaks ise valida teda huvitava teaduskonna ja semestri.)
 * Vaatle ainult selliseid aineid, kus oli vähemalt 5 registreerunut. 
 * Leia iga õppeaine keskmine hinne. 
@@ -128,7 +128,7 @@ Praeguseks võiks rakendus välja näha umbes selline:
 
 Näpunäide: kui teksti kuvamiseks kasutasid funktsioone `textOutput` ja `renderText`, siis joonise jaoks tuleb kasutada vastavalt funktsioone `plotOutput` ja `renderPlot`. (Kui soovid muuta joonise suurust, selleks on funktsioonil `renderPlot` argumendid `width` ja `height`.)
 
-Praeguseks võiks rakendus välja näha umbes selline:
+Praeguseks võiks rakendus välja näha umbes selline (sõltub, millise joonise tüübi ülesandes 2 valisid):
 ![](shiny_4.png)
 
 Et erinevate teaduskondade joonised oleksid kohakuti (mõnedel ainetel on väga pikad nimed), võid aine nime asemel joonisel näidata aine nime algust (näiteks esimest *n* sümbolit, abiks on funktsioon `substr`). 
@@ -177,7 +177,7 @@ Laadi ÕISist alla andmestik *UT_13_14_tagasiside.csv*. (Praktikumis kasutatud a
 
 Ülesanded:
 
-a. (**3 boonuspunkti**) Uuri, kas õppeainele antud hinne üleüldse sõltub aine töömahust, ning kas ette nähtust väiksem töömaht tagab ainele parema tagasiside skoori. Visualiseeri. 
+a. (**3 boonuspunkti**) Uuri, kas õppeaine tagasiside skoor üleüldse sõltub aine töömahust, ning kas ette nähtust väiksem töömaht tagab ainele parema tagasiside. Visualiseeri. 
 
 b. (**3 boonuspunkti**) Uuri, kas õppeainele antud tagasiside üleüldse sõltub tudengite õppetulemustest seal aines, ning milline see sõltuvus on. Visualiseeri. 
 
