@@ -7,9 +7,9 @@ output:
 
 Tähtaeg: 16.03.2015 23:59 GMT
 
-(**12 punkti**) Lahenda praktikumis alustatud [*NBA*](/praktikum4_nba) ülesanded.
+(**11 punkti**) Lahenda praktikumis alustatud [*NBA*](/praktikum4_nba) ülesanded.
 
-(**13 punkti**) Lahenda [lennuliikluse visualiseerimise](/praktikum4_geo) ülesanded.
+(**14 punkti**) Lahenda [lennuliikluse visualiseerimise](/praktikum4_geo) ülesanded.
 
 (**1 boonuspunkt**) Kirjuta, kui palju aega kulus osa I ja II peale. Mida arvad ülesannetest (kasulikkus, huvitavus)?
 
