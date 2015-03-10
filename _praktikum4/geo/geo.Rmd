@@ -1,0 +1,109 @@
+---
+output: 
+  html_document:
+    theme: null
+---
+
+Paul Butler oli 2010. aasta lõpus Facebookis praktikal. Ta visualiseeris sotsiaalvõrgustiku andmeid tõmmates jooni sõprade asukohtade vahel.
+
+![alt text](facebook_map.png "Näide")
+
+Joonis on atraktiivne ja annab hästi edasi FB visiooni. Seda sama joonist näidatakse igapäevaselt FB kontoris hiigelsuurelt ekraanilt ja kasutati näiteks FB aktsiaemissiooni prospektis, et meelde tuletada või selgitada ettevõtte missiooni. Paul tegi selle joonise [kasutades R-i.](http://paulbutler.org/archives/visualizing-facebook-friends/) Kuna FB meile andmeid ei andnud, vaatame selles kodutöös, kuidas lennuliiklus ühendab maailma.
+
+### Tutvumine andmestikuga
+
+Laadi alla andmestikud [airports.csv](/data/airports.csv) ja [flights.csv](/data/flights.csv) ning loe need töökeskkonda.
+
+Andmestikus *airports.csv* on informatsioon lennujaamade kohta. Selles on järgnevad tunnused:
+
+* *id* - lennujaama id
+* *name* - lennujaama nimi
+* *city* - millises linnas asub lennujaam
+* *country* - millises riigis asub lennujaam
+* *lat* - lennujaama asukoha laiuskraad
+* *lon* - lennujaama asukoha pikkuskraad
+
+Andmestik *flights.csv* sisaldab infot lendude kohta. Selles on järgnevad tunnused:
+
+* *airline* - lennukompanii lühend
+* *airline_id* - lennukompanii id
+* *source_airport* - lähtekoha lennujaama lühend
+* *source_airport_id* - lähtekoha lennujaama lühend
+* *dest_airport* - sihtkoha lennujaama lühend
+* *dest_airport_id* - sithkoha lennujaama id
+
+### Suurringjoon
+
+Paul Butler kasutas suurringjooni, et visualiseerida ühendusi sõprade vahel. Kahe punkti lühim vahemaa keral avaldub [suurringjoone](http://en.wikipedia.org/wiki/Great_circle) kaudu. Kui tuult ja muid sarnaseid tegureid mitte arvestada, lendavad lennukid pikki vahemaid suurringjoonte marsruutide kaudu.
+
+Järgneval joonisel on see tähistatud punase joonega.
+
+![alt text](great_circle.jpg "Näide")
+
+### Näide: suurringjoon R-is
+
+Näide, kuidas joonistada suurringjoont R-is. Ühendame Liivi 2 maja Facebooki peakontoriga.
+
+```{r, message=FALSE}
+library(maps)
+library(geosphere)
+
+map("world", col="#f2f2f2", fill=TRUE, border=NA)
+
+lat_liivi = 58.379491
+lon_liivi = 26.713199
+lat_fb = 37.485245
+lon_fb = -122.148807
+
+gc_points = gcIntermediate(c(lon_liivi, lat_liivi), c(lon_fb, lat_fb), n=50, addStartEnd=TRUE)
+lines(gc_points)
+```
+
+### Ülesanne 1 (5 punkti)
+
+Visualiseeri suurringjoonte abil ühendusi, kuhu saab Tallinna lennujaamast otselennuga.
+
+Näpunäited:
+
+* Kuna otselennuga saab Tallinnast vaid Euroopasse, siis kanna joonisele vaid Euroopa kaart. Selleks uuri, kuidas `map` funktioonile ette anda koordinaate. Kasuta `xlim = c(-10, 40), ylim = c(30, 70)`.
+* Tallinna lennujaama kood on 415 (mille võid leida, kui uurid andmestikust `airports` Eesti lennujaamu).
+* Sihtkohtade lennujaamad leiad andmestikust *flights.csv*.
+* Lennujaamade koordinaadid leiad andmestikus *airports.csv*.
+
+```{r}
+# sinu kood
+
+```
+
+### Ülesanne 2 (9 punkti)
+
+Visualiseeri ühendusi, kuhu saab Tallinna lennujaamast otselennu või ühe vahepeatusega.
+
+Näpunäide: Et värve muuta läbipaistvaks, lisa värvikoodile lõppu läbipaistvuse intensiivsus. Näiteks kasuta funktsiooni `lines` korral argumenti `col="#00000010"`, et muuta mustade (värvikood #000000) joonte läbipaistvus 10%-ni.
+
+
+```{r}
+# sinu kood
+
+```
+
+Sinu joonis võiks tulla umbes selline:
+
+![alt text](otselend_voi_yks_vahepeatus.png "Näide")
+
+### Boonusülesanne 1 (1 punkt) - Juhuslik ekslemine eralennukiga
+
+Alusta Tallinna lennujaamast. Vali kõikvõimalikest lennujaamadest juhuslikult üks ja lenda sinna. Vali nüüd juhuslikult järgmine sihtpunkt ning lenda sinna. Jätka seda protsessi 100 korral ja visualiseeri läbitud teekonda.
+
+```{r}
+# sinu kood
+```
+
+
+### Boonusülesanne 2 (2 punkti) - Juhuslik ekslemine kasutades kommertsliine
+
+Alusta Tallinna lennujaamast. Vali võimalikest sihtkohtadest üks ja lenda sinna. Vali selle lennujaama võimalikest sihtkohtadest juhuslikult järgmine ning lenda sinna. Jätka seda protsessi 100 korral ja visualiseeri läbitud teekonda.
+
+```{r}
+# sinu kood
+```
