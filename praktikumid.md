@@ -56,9 +56,10 @@ Joonised paketiga ggplot2: erinevad joonisetüübid. Näide: ÕISi tagasiside vi
 
 Mittestandardne graafika. Kuidas teha sama häid jooniseid nagu NY Times seda teeb? (NBA andmestik)
 
-* [Slaidid](https://)
-* [Ülesanded](https://)
-* Tähtaeg: XX.XX.2015
+* [NBA ülesanded](/praktikum4_nba)
+* [Lennuliikluse visualiseerimise ülesanded](/praktikum4_geo)
+* [Kodutöö](/praktikum4_kodutoo)
+  * Tähtaeg: 16.03.2015 kell 23.59 GMT
 
 ## Praktikum 5
 
