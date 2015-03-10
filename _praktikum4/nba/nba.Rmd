@@ -70,11 +70,13 @@ Näpunäited:
 * Esmalt tekita tühi aken, kuhu hakkame joonistama: `plot(0, 0, type = "n", xlim=c(-250, 250), ylim=c(0, 400))`
 * Ringikesed kanna joonisele funktsiooni `symbols` abil.
 * Kuigi `symbols` töötab ka vektoritega, on edasise huvides lihtsam kasutada `for` tsüklit ning kanda ringid/ruudud joonisele ükshaaval.
-
+* Funksiooni `symbols` korral on kasulikud argumendid `inches=FALSE, add=TRUE`. Esimene neist on vajalik selleks, et sümboli suurus skaleeruks vastavalt etteantud raadiusele, `add=TRUE` selleks, et viimati tehtud joonisele lisada uus sümbol.
 
 ```{r}
 # sinu kood
 ```
+
+Edasises kasuta omal valikul kas ringe või ruute.
 
 ### Ülesanne 4 - suuruse muutmine (2 punkti)
 
