@@ -124,8 +124,6 @@ pie(1:5, col=colors[c(1, 25, 50, 75, 100)])
 ```{r, eval=FALSE}
 get_color = function(visketabamus){
   # sinu kood
-  
-  # tagasta visketabamuste vektorile vastavad värvikoodid
 }
 ```
 
