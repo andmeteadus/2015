@@ -16,7 +16,7 @@ Pakett knitr. Markdown. Pakett dplyr. Näide: automaatne aktsiaturu ülevaade.
   * Logige [*Socrative*](http://b.socrative.com/login/student/) tagasiside keskkonda koodiga 5fc6f3ec
   * [knitr ja R Markdown sissejuhatus](/praktikum1_knitr)
   * [dplyr minimalistlik näide](/praktikum1_dplyr)
-  * [Automaatne aktsiaturu ülevaade](/praktikum1_aktsiad) (alustame kodutööga)
+* [Automaatne aktsiaturu ülevaade](/praktikum1_aktsiad)
 * [Kodutöö](/praktikum1_kodutoo)
   * Tähtaeg: 16.02.2015 kell 23.59 GMT
 
@@ -26,11 +26,12 @@ Pakett knitr. Markdown. Pakett dplyr. Näide: automaatne aktsiaturu ülevaade.
 17.02.2015
 
 Reprodutseeritav analüüs. Näide: Kas suur võlakoorem vähendab riigi majanduskasvu? Joonised paketiga ggplot2.
+Pettuse tuvastamine Benfordi seaduse abil. 
 
 * Praktikumis kasutatud materjalid:
   * [ggplot2 minimalistlik näide](/praktikum2_ggplot2)
   * Boxploti [ülesanne 1](/slides/praktikum2_boxplot_quiz1.pdf) ja [ülesanne 2](/slides/praktikum2_boxplot_quiz2.pdf)
-  * [*Growth in a Time of Debt*: Riigi võlakoormuse ja SKP vaheline seos](/praktikum2_riigivolg) (alustame kodutööga)
+* [*Growth in a Time of Debt*: Riigi võlakoormuse ja SKP vaheline seos](/praktikum2_riigivolg)
 * [Pettuse tuvastamise ülesanded](/praktikum2_pettus)
 * [Kodutöö](/praktikum2_kodutoo)
   * Tähtaeg: 02.03.2015 kell 23.59 GMT
@@ -39,13 +40,12 @@ Reprodutseeritav analüüs. Näide: Kas suur võlakoorem vähendab riigi majandu
 
 03.03.2015
 
-Joonised paketiga ggplot2: erinevad joonisetüübid. Näide: ÕISi tagasiside visualiseerimine. Interaktiivsed rakendused paketiga shiny.
+Joonised paketiga ggplot2: erinevad joonisetüübid. Interaktiivsed rakendused paketiga shiny. Näide: ÕISi tagasiside visualiseerimine. 
 
 * Praktikumis kasutatud materjalid:
   * [reshape2 minimalistlik näide](/praktikum3_reshape)
-  * [Jaotuste äraarvamise ülesanne](/praktikum3_quiz1)
-  * [Graafikute tajumise ülesanne](/praktikum3_quiz2)
-  * [Õppetulemuste visualiseerimise ülesanded](/praktikum3_oppeained) (alustame kodutööga)
+  * [Jaotuste äraarvamise ülesanne](/praktikum3_quiz1) ja [graafikute tajumise ülesanne](/praktikum3_quiz2)
+* [Õppetulemuste visualiseerimise ülesanded](/praktikum3_oppeained)
 * [Kodutöö](/praktikum3_kodutoo)
   * Tähtaeg: 09.03.2015 kell 23.59 GMT
 
@@ -54,7 +54,7 @@ Joonised paketiga ggplot2: erinevad joonisetüübid. Näide: ÕISi tagasiside vi
 
 10.03.2015
 
-Mittestandardne graafika. Kuidas teha sama häid jooniseid nagu NY Times seda teeb? (NBA andmestik)
+Mittestandardne graafika. Kuidas teha sama häid jooniseid nagu NY Times seda teeb? Näide: NBA andmestik.
 
 * [NBA ülesanded](/praktikum4_nba)
 * [Lennuliikluse visualiseerimise ülesanded](/praktikum4_geo)
