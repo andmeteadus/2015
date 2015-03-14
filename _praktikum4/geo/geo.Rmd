@@ -79,7 +79,11 @@ Näpunäited:
 
 Visualiseeri ühendusi, kuhu saab Tallinna lennujaamast otselennu või ühe vahepeatusega.
 
-Näpunäide: Et värve muuta läbipaistvaks, lisa värvikoodile lõppu läbipaistvuse intensiivsus. Näiteks kasuta funktsiooni `lines` korral argumenti `col="#00000010"`, et muuta mustade (värvikood #000000) joonte läbipaistvus 10%-ni.
+Näpunäited: 
+
+* Et värve muuta läbipaistvaks, lisa värvikoodile lõppu läbipaistvuse intensiivsus. Näiteks kasuta funktsiooni `lines` korral argumenti `col="#00000010"`, et muuta mustade (värvikood #000000) joonte läbipaistvus 10%-ni.
+
+* Visualiseeri ühendusi Tallinn - vahelennujaam - lõpp-punkt. Tingimata pole tarvis mitu korda joonistada Tallinn - vahelennujaam ühendusi, need võid joonistada ka ühe korra.
 
 
 ```{r}
