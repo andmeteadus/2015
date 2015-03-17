@@ -1,7 +1,7 @@
 ---
 title: "Andmete kraapimine veebist"
 output: 
-  html_document:
+  html_document:  
     theme: null
 ---
 
@@ -24,15 +24,15 @@ Kaks esimest ülesannet õpetavad paketi *rvest* funktsionaalsust ja annavad sisse
 
 ### Ülesanne 1 (2 punkti) - CSS id
 
-Eralda [html koodis](html1.html) sinisena olev tekst muutujasse `tekst`. Kasuta paketti *rvest*. 
+Eralda [html koodis](/examples/html1.html) sinisena olev tekst muutujasse `tekst`. Kasuta paketti *rvest*. 
 
 ![alt text](veebi_kraapimine_ex2.png "Näide")
 
 * Vastava html koodiga saad mängida [siin](http://www.w3schools.com/html/tryit.asp?filename=tryhtml_css_id).
 
-* Loe lühiülevaadet, [millest koosnevad veebilehed](http://andmeteadus.github.io/praktikum5_html_ja_rvest.html).
+* Loe lühiülevaadet, [millest koosnevad veebilehed](http://andmeteadus.github.io/praktikum5_rvest_minimal).
 
-* Uuri paketi [*rvest* minimalistlikku näidet](http://andmeteadus.github.io/praktikum5_html_ja_rvest.html#html).
+* Uuri paketi [*rvest* minimalistlikku näidet](http://andmeteadus.github.io/praktikum5_rvest_minimal).
 
 * Uuri paketi [*rvest* dokumentatsiooni](http://cran.r-project.org/web/packages/rvest/rvest.pdf). Kasuks tulevad funktsioonid `html, html_node, html_nodes ja html_text`.
 
@@ -75,7 +75,7 @@ print(tekst)
 
 ### Ülesanne 2 (2 punkti) - CSS class
 
-Eralda [html koodis](html2.html) punaselt olev tekst muutujasse `tekst`. Kasuta paketti *rvest*. 
+Eralda [html koodis](/examples/html2.html) punaselt olev tekst muutujasse `tekst`. Kasuta paketti *rvest*. 
 
 ![alt text](veebi_kraapimine_ex1.png "Näide")
 

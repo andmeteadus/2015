@@ -93,7 +93,7 @@ CSS-i õppimiseks on tore *tutorial*
 
 ![alt text](veebi_kraapimine_minimal.png "Näide")
 
-Minimaalne näide, kuidas eelneval pildil näidatud [HTML lähtekoodist](minimal_html.html) eraldada pealkirja ja lõiku.
+Minimaalne näide, kuidas eelneval pildil näidatud [HTML lähtekoodist](/examples/minimal_html.html) eraldada pealkirja ja lõiku.
 
 ```{r}
 library(rvest)
@@ -130,7 +130,7 @@ Pane tähele, et funktsioonile html võib ette anda kas veebilehe urli, faili asuk
 
 #### XML
 
-XML on märgistuskeel, mille eesmärgiks on struktureeritud info jagamine. XML koosneb kasutaja defineeritud siltidest (tags), mis märgitakse sümbolite < > vahele ning mille abil kirjeldatakse andmete struktuuri. Järgnevalt on toodud minimalistlik näide, kuidas [XML failist](minimal_xml.xml) eraldada infot.
+XML on märgistuskeel, mille eesmärgiks on struktureeritud info jagamine. XML koosneb kasutaja defineeritud siltidest (tags), mis märgitakse sümbolite < > vahele ning mille abil kirjeldatakse andmete struktuuri. Järgnevalt on toodud minimalistlik näide, kuidas XML failist eraldada infot.
 
 ```{r}
 library(rvest)
@@ -141,17 +141,13 @@ xml_source = '
   <nimi>Mati</nimi>
   <vanus>25</vanus>
 </inimene>
-<inimene>
-  <nimi>Kati</nimi>
-  <vanus>40</vanus>
-</inimene>
 '
 
 page = html(xml_source)
 
 # vanuste eraldamine
 page %>% 
-  html_nodes("inimene") %>%
+  html_node("inimene") %>%
   html_node("vanus") %>%
   html_text()
 
