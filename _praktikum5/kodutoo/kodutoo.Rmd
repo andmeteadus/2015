@@ -1,0 +1,40 @@
+---
+title: "Kodutöö"
+output: 
+  html_document:
+    theme: null
+---
+
+Tähtaeg: 23.03.2015 23:59 GMT
+
+# I osa
+
+(**21 punkti**) Lahenda praktikumis alustatud [andmete veebist kraapimise](/praktikum5_web) ülesanded.
+
+# II osa
+
+Järgmises praktikumis kasutame peakomponentanalüüsi, seetõttu seisneb kodutöö II osa peakomponentanalüüsiga tutvumises. 
+
+(**2 punkti**) Vaata videot [PCA 1: curse of dimensionality](https://www.youtube.com/watch?v=IbE0tbjy6JQ) 
+
+* Selgita, mida tähendab, et andmestiku tegelik dimensionaalsus võib olla väiksem kui tunnuste arv andmestikus. Too kaks näidet. 
+
+(**1 punkt**) Vaata videot [PCA 3: direction of greatest variance](https://www.youtube.com/watch?v=2bV_YQTIJrg) 
+
+* Kuidas valitakse esimese peakomponendi suund (st millise kriteeriumi järgi valitakse esimene peakomponent)?
+
+(**1 punkt**) Vaata Stanfordi masinõppe kursuse videot [Principal Component Analysis Problem Formulation](https://www.youtube.com/watch?v=jY0281gSBTo)
+
+* Mida uut said siit videost teada lisaks eelnevale kahele? Kumb meeldis rohkem? 
+
+Lisaks võid uurida [Explained Visually: Principal Component Analysis](http://setosa.io/ev/principal-component-analysis/)
+
+(**1 boonuspunkt**) Kirjuta, kui palju aega kulus osa I ja II peale. Mida arvad ülesannetest (kasulikkus, huvitavus)?
+
+
+# Mida on vaja esitada?
+
+* I osa kohta tuleb esitada nii andmeanalüüsi raport (html või pdf formaadis) kui ka selle lähtekood .Rmd failina.
+* II osa vastused tuleb kirjutada meili sisusse või esitada tekstifailina.
+
+Lahendused saata meili peale: andmeteadus@gmail.com
