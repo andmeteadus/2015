@@ -1,0 +1,162 @@
+---
+title: "Andmete automatiseeritud eraldamine veebist"
+output: 
+  html_document:
+    theme: null
+---
+
+Veebis on aina rohkem andmeid struktureerimata kujul. Näiteks ilmaennustusi, korterite hindu, geograafilist infot, sotsiaalvõrgustike andmeid, valimistulemusi, aktsiahindu või ajalehe artikleid ei ole alati saadaval csv või Exceli failina. Alati on võimalik andmeid manuaalselt kopeerida, aga see on tülikas, aeganõudev ning vigaderohke. Veebilehtedel oleva info automatiseeritud eraldamiseks on suuresti kaks võimalust:
+
+1. **Rakendusliidesed** (*web API*) - struktureeritud http päringud tagastavad andmed (üldjuhul) *JSON* või *XML* formaadis
+
+Näiteks soovides kodeerida aadressi *Juhan Liivi 2, Tartu, Tartu linn* laius- ja pikkuskraadideks kasutades Google Geocoding API-t, annab päring "http://maps.googleapis.com/maps/api/geocode/json?address=Juhan+Liivi+2,+Tartu,+Tartu+linn" tulemuseks JSON faili, millest tükikene on näidatud järgnevalt:
+
+```{r, eval=FALSE}
+{
+   "results" : [
+      {
+   
+      # osa teksti on eemaldatud
+   
+         "formatted_address" : "University of Tartu, Juhan Liivi 2, 50409 Tartu, Estonia",
+         "geometry" : {
+            "location" : {
+               "lat" : 58.37824850000001,
+               "lng" : 26.7146733
+            }
+      # osa teksti on eemaldatud
+}
+```
+
+
+2. **Ekraanilt kraapimine** - andmete eraldamine veebilehe lähtekoodist.
+
+Praktikumis keskendume sellele, kuidas infot eraldada lähtekoodist.
+
+NB! Mängureeglid:
+
+1. Vaata, kas andmed on struktureeritud kujul olemas või on veebilehel olemas API.
+2. Vaata ja austa veebilehe robots.txt faili (nt [www.postimees.ee/robots.txt](http://www.postimees.ee/robots.txt)). See määrab, milliseid kohti veebilehest *lubatakse* robotil protsessida.
+3. Kraabi ainult neid andmeid, mida vajad.
+4. Oota teatud aeg (näiteks 1 sekund) pärast iga uut päringut.
+
+### Veebilehtede ülesehitusest
+
+Et tegeleda andmete kraapimisega veebist, on vaja omada ülevaadet süntaksist, millega veebilehti koostatakse. Seega tutvume HTML-i põhitõdedega. Alustame näitest:
+
+```{r, eval=FALSE}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+</head>
+
+<body>
+  <h1>This is a Heading</h1>
+  <p>This is a paragraph.</p>
+</body>
+
+</html>
+```
+
+Et näha tulemust, võid ülevaloleva koodi salvestada .html failina ning avada brauseris. Alternatiivina kliki [siia](http://www.w3schools.com/html/tryit.asp?filename=tryhtml_default).
+
+Lühidalt kokku võttes: HTML koosneb siltidest (*tags*), mis märgitakse sümbolite < > vahele ning mille abil kirjeldatakse veebilehe struktuuri.
+
+Rohkem infot HTML siltide kohta leiad [siit](http://www.w3schools.com/tags/default.asp)
+
+HTML määrab veebilehe üldise struktuuri. Et muuta teksti värvi ja muud stiili, selleks kasutatakse CSS-i.
+
+Vaata näiteid:
+
+* [Minimaalne näide](http://www.w3schools.com/html/tryit.asp?filename=tryhtml_css_internal)
+* [Kuidas kasutada CSS id-sid](http://www.w3schools.com/html/tryit.asp?filename=tryhtml_css_id)
+* [Kuidas kasutada CSS klasse](http://www.w3schools.com/html/tryit.asp?filename=tryhtml_css_class)
+
+Andmete kättesaamise idee seisnebki selles, et veebilehe lähtekoodist leiame ülesse vajaliku sildi ning eraldame vastava väärtuse. CSS-i määratud klassid ja id-d, aitavad meil tihti hõlpsamini vajaliku info asukohta määrata.
+
+Rohkem infot HTMLi ja CSS kohta leiad: 
+
+* http://www.w3schools.com/html/
+* http://www.w3schools.com/css/default.asp
+
+CSS-i õppimiseks on tore *tutorial* 
+
+* http://flukeout.github.io/
+
+### Paketi rvest minimaalne näide
+
+*rvest* on Hadley tehtud pakett veebilehtedelt andmete kraapimiseks. 
+
+
+#### HTML
+
+![alt text](veebi_kraapimine_minimal.png "Näide")
+
+Minimaalne näide, kuidas eelneval pildil näidatud [HTML lähtekoodist](minimal_html.html) eraldada pealkirja ja lõiku.
+
+```{r}
+library(rvest)
+
+html_source = '
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+</head>
+
+<body>
+  <h1>This is a Heading</h1>
+  <p>This is a paragraph.</p>
+</body>
+
+</html>
+'
+
+page = html(html_source)
+
+# pealkirja eraldamine
+page %>% 
+  html_node("h1") %>%
+  html_text()
+
+# lõigu eraldamine
+page %>% 
+  html_node("p") %>%
+  html_text()
+```
+
+Pane tähele, et funktsioonile html võib ette anda kas veebilehe urli, faili asukoha või sõne.
+
+#### XML
+
+XML on märgistuskeel, mille eesmärgiks on struktureeritud info jagamine. XML koosneb kasutaja defineeritud siltidest (tags), mis märgitakse sümbolite < > vahele ning mille abil kirjeldatakse andmete struktuuri. Järgnevalt on toodud minimalistlik näide, kuidas [XML failist](minimal_xml.xml) eraldada infot.
+
+```{r}
+library(rvest)
+
+xml_source = '
+<?xml version="1.0" encoding="UTF-8"?>
+<inimene>
+  <nimi>Mati</nimi>
+  <vanus>25</vanus>
+</inimene>
+<inimene>
+  <nimi>Kati</nimi>
+  <vanus>40</vanus>
+</inimene>
+'
+
+page = html(xml_source)
+
+# vanuste eraldamine
+page %>% 
+  html_nodes("inimene") %>%
+  html_node("vanus") %>%
+  html_text()
+
+```
+
+Funktsiooni `html` asemel võib kasutada funktsiooni `xml` või `html_node` asemel `xml_node`, kuid vastavad XML-ekvivalendid kutsuvad välja vastavad html funktsioonid, seega ei ole vahet kumba varianti kasutada.
+
+Uuri ka [*rvest* dokumentatsiooni](http://cran.r-project.org/web/packages/rvest/rvest.pdf).
