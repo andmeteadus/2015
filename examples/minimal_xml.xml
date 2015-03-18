@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<inimene>
-  <nimi>Mati</nimi>
-  <vanus>25</vanus>
-</inimene>
-<inimene>
-  <nimi>Kati</nimi>
-  <vanus>40</vanus>
-</inimene>
+<inimesed>
+  <inimene>
+    <nimi>Mati</nimi>
+    <vanus>25</vanus>
+  </inimene>
+  <inimene>
+    <nimi>Kati</nimi>
+    <vanus>40</vanus>
+  </inimene>
+</inimesed>

@@ -130,24 +130,30 @@ Pane tähele, et funktsioonile html võib ette anda kas veebilehe urli, faili asuk
 
 #### XML
 
-XML on märgistuskeel, mille eesmärgiks on struktureeritud info jagamine. XML koosneb kasutaja defineeritud siltidest (tags), mis märgitakse sümbolite < > vahele ning mille abil kirjeldatakse andmete struktuuri. Järgnevalt on toodud minimalistlik näide, kuidas XML failist eraldada infot.
+XML on märgistuskeel, mille eesmärgiks on struktureeritud info jagamine. XML koosneb kasutaja defineeritud siltidest (tags), mis märgitakse sümbolite < > vahele ning mille abil kirjeldatakse andmete struktuuri. Järgnevalt on toodud minimalistlik näide, kuidas [XML failist]((/examples/minimal_xml.xml)) eraldada infot.
 
 ```{r}
 library(rvest)
 
 xml_source = '
 <?xml version="1.0" encoding="UTF-8"?>
-<inimene>
-  <nimi>Mati</nimi>
-  <vanus>25</vanus>
-</inimene>
+<inimesed>
+  <inimene>
+    <nimi>Mati</nimi>
+    <vanus>25</vanus>
+  </inimene>
+  <inimene>
+    <nimi>Kati</nimi>
+    <vanus>40</vanus>
+  </inimene>
+</inimesed>
 '
 
 page = html(xml_source)
 
 # vanuste eraldamine
 page %>% 
-  html_node("inimene") %>%
+  html_nodes("inimene") %>%
   html_node("vanus") %>%
   html_text()
 

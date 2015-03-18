@@ -146,25 +146,31 @@ page %&gt;%
 </div>
 <div id="xml" class="section level4">
 <h4>XML</h4>
-<p>XML on märgistuskeel, mille eesmärgiks on struktureeritud info jagamine. XML koosneb kasutaja defineeritud siltidest (tags), mis märgitakse sümbolite &lt; &gt; vahele ning mille abil kirjeldatakse andmete struktuuri. Järgnevalt on toodud minimalistlik näide, kuidas XML failist eraldada infot.</p>
+<p>XML on märgistuskeel, mille eesmärgiks on struktureeritud info jagamine. XML koosneb kasutaja defineeritud siltidest (tags), mis märgitakse sümbolite &lt; &gt; vahele ning mille abil kirjeldatakse andmete struktuuri. Järgnevalt on toodud minimalistlik näide, kuidas <a href="(/examples/minimal_xml.xml)">XML failist</a> eraldada infot.</p>
 <pre class="r"><code>library(rvest)
 
 xml_source = '
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;inimene&gt;
-  &lt;nimi&gt;Mati&lt;/nimi&gt;
-  &lt;vanus&gt;25&lt;/vanus&gt;
-&lt;/inimene&gt;
+&lt;inimesed&gt;
+  &lt;inimene&gt;
+    &lt;nimi&gt;Mati&lt;/nimi&gt;
+    &lt;vanus&gt;25&lt;/vanus&gt;
+  &lt;/inimene&gt;
+  &lt;inimene&gt;
+    &lt;nimi&gt;Kati&lt;/nimi&gt;
+    &lt;vanus&gt;40&lt;/vanus&gt;
+  &lt;/inimene&gt;
+&lt;/inimesed&gt;
 '
 
 page = html(xml_source)
 
 # vanuste eraldamine
 page %&gt;% 
-  html_node(&quot;inimene&quot;) %&gt;%
+  html_nodes(&quot;inimene&quot;) %&gt;%
   html_node(&quot;vanus&quot;) %&gt;%
   html_text()</code></pre>
-<pre><code>## [1] &quot;25&quot;</code></pre>
+<pre><code>## [1] &quot;25&quot; &quot;40&quot;</code></pre>
 <p>Funktsiooni <code>html</code> asemel võib kasutada funktsiooni <code>xml</code> või <code>html_node</code> asemel <code>xml_node</code>, kuid vastavad XML-ekvivalendid kutsuvad välja vastavad html funktsioonid, seega ei ole vahet kumba varianti kasutada.</p>
 <p>Uuri ka <a href="http://cran.r-project.org/web/packages/rvest/rvest.pdf"><em>rvest</em> dokumentatsiooni</a>.</p>
 </div>
