@@ -61,10 +61,14 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <li><p>Vastava html koodiga saad mängida <a href="http://www.w3schools.com/html/tryit.asp?filename=tryhtml_css_id">siin</a>.</p></li>
 <li><p>Loe lühiülevaadet, <a href="http://andmeteadus.github.io/praktikum5_rvest_minimal">millest koosnevad veebilehed</a>.</p></li>
 <li><p>Uuri paketi <a href="http://andmeteadus.github.io/praktikum5_rvest_minimal"><em>rvest</em> minimalistlikku näidet</a>.</p></li>
+<li><p>Minimalistliku näite põhjal peaksid oskama eraldada lähtekoodis olevad 4 lõiku. Et eraldada lõik, kus id=“p01”, pead teadma, kuidas CSS-is tähistatakse id-sid. Suur vihje on olemas eelneva html koodi &lt; style &gt; blokis. Abiks võib-olla ka <a href="http://www.w3schools.com/cssref/trysel.asp">CSS selektorite interaktiivne testnäide</a>.</p></li>
+<li><p>(<strong>1 boonuspunkt</strong>) CSS selektorite õppimiseks on tore tutorial <a href="http://flukeout.github.io/">http://flukeout.github.io/</a>. Tee läbi esimesed 6 taset ja saada vastused tekstina.</p></li>
 <li><p>Uuri paketi <a href="http://cran.r-project.org/web/packages/rvest/rvest.pdf"><em>rvest</em> dokumentatsiooni</a>. Kasuks tulevad funktsioonid <code>html, html_node, html_nodes ja html_text</code>.</p></li>
 <li><p>Lõpptulemuse peaks olema selline: <code>tekst = c(&quot;I am different.&quot;)</code></p></li>
 </ul>
-<pre class="r"><code># sinu kood</code></pre>
+<pre class="r"><code>url = &quot;http://andmeteadus.github.io/examples/html1.html&quot;
+
+# sinu kood</code></pre>
 <!--
 
 ```r
@@ -104,7 +108,9 @@ print(tekst)
 <li><p>Vastava html koodiga saad mängida <a href="http://www.w3schools.com/html/tryit.asp?filename=tryhtml_css_class">siin</a>.</p></li>
 <li><p>Lõpptulemuse peaks olema selline: <code>tekst = c(&quot;I am different.&quot;, &quot;I am different too.&quot;)</code></p></li>
 </ul>
-<pre class="r"><code># sinu kood</code></pre>
+<pre class="r"><code>url = &quot;http://andmeteadus.github.io/examples/html2.html&quot;
+
+# sinu kood</code></pre>
 <!--
 
 ```r
@@ -145,6 +151,14 @@ print(tekst)
 <li>oli erapooletu</li>
 <li>ei hääletanud</li>
 </ul>
+<blockquote>
+<p>Praktikumis tutvusime, kuidas brauseri veebiarendus tööriistadega leida üles lähtekoodist vajalikud kohad. Variandid olid:</p>
+<ul>
+<li>Chrome’is vajuta parem klikk ja “inspekteeri elementi”. Alernatiivid on klahvikombinatsioon Ctrl + Shift + I või klahv F12.</li>
+<li>vahendiga <a href="http://selectorgadget.com/">selectorgadget</a></li>
+</ul>
+<p>Need muudavad lähtekoodis õige klassi, id või sildi leidmise oluliselt lihtsamaks. Mõnes olukorras on kasulikum üks variant, mõnes teine.</p>
+</blockquote>
 <p>Vihje: Kasutada paketi <em>tidyr</em> funktsiooni <code>extract_numeric()</code> kui sa ei taha regulaaravaldistega mässata. Vaata näiteks, mida teeb järgmine koodirida <code>&quot;Kokku: 101 liiget&quot; %&gt;% extract_numeric()</code></p>
 <pre class="r"><code>url = &quot;http://www.riigikogu.ee/?op=ems&amp;page=haaletus&amp;hid=a85129ed-4873-4b9d-ac37-4788b6587fa0&amp;&quot;
 
@@ -166,9 +180,9 @@ extract_table = function(x){
 }</code></pre>
 <p>Kontrolli, et funktsioon töötab.</p>
 </div>
-<div id="ulesanne-5-7-punkti---andmestiku-ehitamine" class="section level3">
-<h3>Ülesanne 5 (7 punkti) - andmestiku ehitamine</h3>
-<p>Ülesandes 4 tegid läbi Riigikogu saadikute hääletamistulemuste eraldamise kooseluseaduse korral. Failis <a href="/data/htmls.zip">htmls.zip</a> on olemas veebilehed kõigi Riigikogu XII hääletuste kohta. Sinu ülesandeks on koostada andmetabel, kus ridades on Riigikogu saadiku nimi ja veergudes kõik hääletamiskorrad. Seda andmestikku läheb vaja järgmises praktikumis, kus uurime hääletamismustreid.</p>
+<div id="ulesanne-5-5-punkti---andmestiku-ehitamine" class="section level3">
+<h3>Ülesanne 5 (5 punkti) - andmestiku ehitamine</h3>
+<p>Ülesandes 4 tegid läbi Riigikogu saadikute hääletamistulemuste eraldamise kooseluseaduse korral. Failis <a href="data/htmls.zip">htmls.zip</a> on olemas veebilehed kõigi Riigikogu XII hääletuste kohta. Sinu ülesandeks on koostada andmetabel, kus ridades on Riigikogu saadiku nimi ja veergudes kõik hääletamiskorrad. Seda andmestikku läheb vaja järgmises praktikumis, kus uurime hääletamismustreid.</p>
 <ol style="list-style-type: decimal">
 <li>Kõigepealt paki lahti zip fail ning loe R-i sisse kõigi html failide nimed.<br />Näpunäide: Järgnev kood aitab kätte saada kõigi antud kaustas olevad csv-failide nimed (seejuures argument <code>full.names</code> võimaldab tagastada terve failitee).</li>
 </ol>
@@ -194,6 +208,7 @@ for(i in 1:length(filenames)){
 <li><p>Nüüdseks peaksid olema saanud listi, mille elementideks on erinevad andmetabelid (kõiki faile kasutades peaks nende koguarv olema 1845). Tee nendest andmetabelitest üks suur (pikk) andmetabel, paigutades need üksteise otsa. Seda aitab teha paketi dplyr funktsioon <code>rbind_all</code>. Tulemuseks peaksid saama andmetabeli, mille ridade arv on 101 * “sinu kasutatud failide arv”.</p></li>
 <li><p>Muuda pikk andmetabel laiaks. Seda aitab teha paketi reshape2 käsk <code>dcast</code>. Uuri funktsiooni <code>dcast</code> minimalistlikku näidet <a href="http://andmeteadus.github.io/praktikum3_reshape/#dcast">siit</a>.</p></li>
 <li><p>Kui kõik eelnev töötab, tee eelnev läbi kõikide html failidega. Ära kohku, kui kõikide html tabelite eraldamisega läheb aega 5 minutit või rohkem.</p></li>
+<li><p>Soovitus: Kui oled eelneva ühe korra läbi teinud, pole vaja knitri raporti genereerimisel enam sedasama korrata. Saadud andmetabeli saad endale salvestada käsuga <code>save(andmed, file=&quot;riigikogu.RData&quot;)</code>. Raportis võid muuta vastava koodiploki <code>eval=FALSE</code>.</p></li>
 </ol>
 <pre class="r"><code># sinu kood</code></pre>
 <p>Lõpptulemuseks võiksid saada järgneva andmestiku, kus on 143 rida ning 1846 veergu.</p>
@@ -276,35 +291,37 @@ for(i in 1:length(filenames)){
 </ul>
 <p>Näpunäide:</p>
 <ul>
-<li>Uuri paketi <a href="http://andmeteadus.github.io/praktikum5_html_ja_rvest.html#xml"><em>rvest</em> minimalistlikku näidet info eraldamisest XML failist</a>.</li>
+<li>Uuri paketi <a href="http://andmeteadus.github.io/praktikum5_rvest_minimal/#xml"><em>rvest</em> minimalistlikku näidet info eraldamisest XML failist</a>.</li>
 </ul>
 </div>
-<div id="boonusulesanne-1-2-3-punkti---viking-loto" class="section level3">
-<h3>Boonusülesanne 1 (2 + 3 punkti) - Viking Loto</h3>
+<div id="ulesanne-8-2-punkti" class="section level3">
+<h3>Ülesanne 8 (2 punkti)</h3>
 <blockquote>
-<p>Eva “Usin” Masin on lotohuviline, aga ta pole aastaid Viking Lotoga võitnud. Ta arvab, et lototulemused pole päris juhuslikud ning lotos on võimalik statistiline eelis saada. Seepärast märgib ta iga lotokolmapäev Viking Loto loositud numbrid üles ja uurib, kas number kahtesid loositakse rohkem välja, kui juhus lubaks.</p>
+<p>Eva “Usin” Masin on lotohuviline, aga ta pole aastaid Viking Lottoga võitnud. Ta arvab, et lototulemused pole päris juhuslikud ning lotos on võimalik statistiline eelis saada. Seepärast märgib ta iga lotokolmapäev Viking Lotto loositud numbrid üles ja uurib, kas number kahtesid loositakse rohkem välja, kui juhus lubaks.</p>
 </blockquote>
-<p>Õpeta tehis-Eva tegema seda sama.</p>
+<p>1.) Õpeta tehis-Eva tegema seda sama.</p>
 <ul>
-<li>Eesti Loto veebilehel on toodud <a href="https://www.eestiloto.ee/osi/stats.do?lastDraws=537&amp;gameCode=11&amp;sort=frq0&amp;action=searchNumbers">statistika loositud pallide sagedusest</a>.</li>
+<li>Eesti Loto veebilehel on toodud <a href="https://www.eestiloto.ee/osi/stats.do?lastDraws=250&amp;gameCode=11&amp;sort=frq0&amp;action=searchNumbers">statistika loositud pallide sagedusest</a>.</li>
 <li>Eralda vastav tabel, kus veergudes on tunnused <em>number</em>, <em>sagedus</em> ja <em>sagedus protsentides</em>.</li>
-<li>selectorgadget veab sind siin alt ning kergem on lähtekoodi inspekteerida brauseris olevate tööriistadega (Chrome’s vajuta <code>Ctrl + Shift + I</code>).</li>
-<li><strong>(3 lisaboonuspunkti)</strong> Uuri, kas on alust arvata, et Viking Loto süsteem on kallutatud.</li>
+<li>selectorgadget veab sind siin alt ning kergem on lähtekoodi inspekteerida brauseris olevate tööriistadega (Chrome’s vajuta <code>Ctrl + Shift + I</code> või tee parem klikk ja vajuta inspekteeri elementi).</li>
+<li>Visualiseeri saadud andmetabelit. Tee näiteks tulpdiagramm, kus x-teljel on arvud 1-48 ning y-telg tähistab sagedust.</li>
 </ul>
+<p>2.) (<strong>2 boonuspunkti + lisaboonuspunkt</strong>) Viimase 250 loosiga on pall 35 tulnud 28 korral, pall 34 aga 59 korral. Uuri, kas on alust arvata, et Viking Lotto süsteem on kallutatud. Selleks mõtle välja, kuidas seda kontrollida (näiteks võid kasutada simulatsioonidel põhinevat lähenemist). Selgita lühidalt oma lähenemist ja raporteeri, millise tulemuse said. Lisaboonuspunkti saamiseks visualiseeri seda tulemust.</p>
 </div>
-<div id="boonusulesanne-2-kuni-5-punkti---kas-koik-teed-viivad-facebooki-ehk-juhuslik-ekslemine-veebilehtedel" class="section level3">
-<h3>Boonusülesanne 2 (kuni 5 punkti) - Kas kõik teed viivad Facebooki? (ehk juhuslik ekslemine veebilehtedel)</h3>
+<div id="boonusulesanne-1-kuni-5-punkti---kas-koik-teed-viivad-facebooki-ehk-juhuslik-ekslemine-veebilehtedel" class="section level3">
+<h3>Boonusülesanne 1 (kuni 5 punkti) - Kas kõik teed viivad Facebooki? (ehk juhuslik ekslemine veebilehtedel)</h3>
 <p>Alusta suvaliselt veebilehelt. Eralda kõik väljuvad lingid. Vali üks neist linkidest suvaliselt. Hüppa sellele lingile. Kui sellel leheküljel pole ühtegi väljuvat linki, mine tagasi. Kui väljuvaid linke on mitmeid, vali jälle välja suvaline ja hüppa sinna. Kui jõudsid Facebooki, on katse lõppenud. Korda seda protsessi mitu korda ja erinevate alglehtedega. Uuri, mitmel juhul jõudsid FBsse.</p>
+<p>Näpunäide: Abiks on paketi rvest funktsioon <code>follow_link()</code>.</p>
 </div>
-<div id="boonusulesanne-3---facebooki-api-kasutamine" class="section level3">
-<h3>Boonusülesanne 3 - Facebooki API kasutamine</h3>
+<div id="boonusulesanne-2---facebooki-api-kasutamine" class="section level3">
+<h3>Boonusülesanne 2 - Facebooki API kasutamine</h3>
 <p>Kasuta paketti <em>Rfacebook</em> ning leia:</p>
 <p><strong>(1 boonuspunkt)</strong> Mis on olnud Tartu Ülikooli Facebooki lehe kõige populaarsem postitus? Mis on olnud matemaatika-informaatikateaduskonna Facebooki lehe kõige populaarsem postitus?</p>
-<p><strong>(5 boonuspunkti :-))</strong> Kasuta R-i, et uuendada oma staatust tekstiga ‘Teen aine “Statistiline andmeteadus ja visualiseerimine” kodutööd. Väga põnev! :-)’ (kasuks tuleb käsk <code>updateStatus</code>).</p>
+<p><strong>(5 boonuspunkti :-))</strong> Kasuta R-i, et uuendada oma staatust tekstiga ‘Teen aine “Statistiline andmeteadus ja visualiseerimine” kodutööd. Väga põnev! :-)’. Abiks on käsk <code>updateStatus</code>.</p>
 <p><strong>(3 boonuspunkti)</strong> Kui sulle ei meeldi Facebooki algoritm, mille põhjal ta postitusi ja pilte uudisvoos järjestab, mõtle välja algoritm, mis selle parandab. Implementeeri selle prototüüp (kasuks tuleb käsk <code>getNewsfeed</code>).</p>
 <p>Abistavad lingid:</p>
 <ul>
-<li>Kuidas audentida: <a href="http://thinktostart.com/analyzing-facebook-with-r/">http://thinktostart.com/analyzing-facebook-with-r/</a></li>
+<li>Kuidas autentida: <a href="http://thinktostart.com/analyzing-facebook-with-r/">http://thinktostart.com/analyzing-facebook-with-r/</a></li>
 <li>Rfacebook dokumentatsioon: <a href="http://cran.r-project.org/web/packages/Rfacebook/Rfacebook.pdf">http://cran.r-project.org/web/packages/Rfacebook/Rfacebook.pdf</a></li>
 </ul>
 </div>
