@@ -42,6 +42,8 @@ Pane tähele, et tunnused oleksid numbrilised mitte sõned.
 
 ### Ülesanne 2 (2 punkti) - visualiseeri andmeid heatmapi abil
 
+> Hierarhilise klasterdamise kohta on kodutöö kolmandas osas video. Soovitavalt vaata seda esmalt.
+
 a. Sorteeri andmestiku read fraktsiooni põhjal ja visualiseeri neid heatmapi abil. Tõlgenda tulemusi.
 
 ```{r}
