@@ -163,13 +163,17 @@ Siin oleme ette andnud täiendatud `plot_digit` funktsiooni, mis muudab valge läb
 
 
 ```{r}
-plot_digit = function(digit, add=FALSE, x_id=NA, y_id=NA, transparency=FALSE, ...){
-  if(sum(is.na(x_id)) > 0){
-    x_id = seq(0, 1, length=28)
+plot_digit = function(digit, x=NA, y=NA, scale=1, add=FALSE, transparency=FALSE, ...){
+  if(is.na(x)){
+    x = 0
   }
-  if(sum(is.na(y_id)) > 0){
-    y_id = seq(0, 1, length=28)
+  if(is.na(y)){
+    y = 0
   }
+  
+  x_id = seq(x, x + scale, length=28)
+  y_id = seq(y, y + scale, length=28)
+  
   if(transparency==TRUE){
     tmp = as.character(round(seq(0, 0.99, length=256)*100))
     tmp[nchar(tmp) == 1] = paste("0", tmp[nchar(tmp) == 1], sep="")
@@ -196,11 +200,7 @@ for(i in 1:5){
   x = runif(1, 0, 10) # vaja muuta
   y = runif(1, 0, 10) # vaja muuta
   
-  scale = 1
-  x_id = seq(x, x + scale, length=28)
-  y_id = seq(y, y + scale, length=28)
-  
-  plot_digit(nullid[i, ], add=TRUE, x_id, y_id, transparency = T)
+  plot_digit(nullid[i, -785], x, y, add=TRUE, transparency = T)
 }
 ```
 
