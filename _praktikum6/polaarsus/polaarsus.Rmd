@@ -1,0 +1,137 @@
+---
+title: "Erakondade polaarsus"
+output: 
+  html_document:
+    theme: null
+---
+
+### Sissejuhatus
+
+Maidu "Parem" Käsi haaras lapsena kaisukaru küll vasaku käega, kuid ema sõnad "vasak on paha, parem on parem" ei teinud tast ainult paremakäelist, vaid
+need jäid alatiseks meelde. Näiteks meeldib Maidule kinos istuda kõige parempoosel pingil ja valimistel hääletada kõige parempoolse poliitiku poolt.
+Aga kuidas Maidu teab, kes on kõige parempoolne poliitik?
+
+Selles ülesanneteblokis vaatamegi, kui hästi on peakomponentanalüüsi abil võimalik poliitikuid liigitada vasak- ja parempoolseteks.
+
+### Andmestik
+
+Tegeleme sama andmestikuga, mis jäi viienda kodutöö viiendas ülesandes koostada. Sellele oleme lisanud ka fraktsiooni tunnuse ning iga hääletuse nimetuses on lisaks kuupäev. Andmestikku on jäetud saadikud, kes hääletasid vähemalt 10 korda. Täpsemalt on andmestikus tunnused:
+
+* nimi - saadiku nimi
+* fraktsioon - millisesse fraktsiooni kuulus saadik (kui saadik vahetas fraktsiooni, siis on näidatud kõige sagedasem fraktsioon, kuhu saadik Riigikogu XII vältel kuulus)
+* 2011-04-05 2821  - hääletuse tulemus, mis toimus 2011-04-05 (2821 on kontrollindeks ja ei oma sisulist tähendust)
+* 2011-04-11 2825 - hääletuse tulemus, mis toimus 2011-04-05 (2825 on kontrollindeks ja ei oma sisulist tähendust) 
+* ...
+* 2014-12-18 5363 - hääletuse tulemus, mis toimus 2014-12-18 (5363 on kontrollindeks ja ei oma sisulist tähendust) 
+
+Laadi alla andmestik *riigikogu_xii.csv* ja loe töökeskkonda.
+
+### Ülesanne 1 (1 punkt) - andmestiku mudimine 1
+
+Muuda tunnused numbriliseks. Selleks kodeeri hääletused järgmiselt:
+
+* *vastu* tähista arvuga -1
+* *poolt* tähista arvuga 1
+* *puudub, erapooletu, ei hääletanud, NA* tähista arvuga 0
+
+Pane tähele, et tunnused oleksid numbrilised mitte sõned.
+
+```{r}
+# sinu kood
+```
+
+### Ülesanne 2 (2 punkti) - visualiseeri andmeid heatmapi abil
+
+a. Sorteeri andmestiku read fraktsiooni põhjal ja visualiseeri neid heatmapi abil. Tõlgenda tulemusi.
+
+```{r}
+# sinu kood
+```
+
+Tõlgendus: ...
+
+b. Visualiseeri andmestikku heatmapi abil, aga seekord klasterda ka read. Tõlgenda tulemusi.
+
+```{r}
+# sinu kood
+```
+
+Tõlgendus: ...
+
+c. Visualiseeri andmestikku heatmapi abil, aga seekord klasterda nii read kui veerud. Tõlgenda tulemusi.
+
+```{r}
+# sinu kood
+```
+
+Tõlgendus: ...
+
+### Ülesanne 3 (1 punkt)
+
+Riigikogu 2011. aasta valimised võitis Reformierakond ning koalitsioonilepe sõlmiti REF ja IRL vahel. See koalitsioon tegi tööd 3 aastat enne kui purunes.  26. märtsil 2014 algas Taavi Rõivase valitsus, kus koalitsioonis olid REF ja SDE. 
+
+Jaga sisseloetud andmestik *data* kaheks alamandmestikuks *data1* ja *data2*. Esimene neist sisaldagu hääletusi kuni 2014-03-26. Andmestik *data2* sisaldagu hääletusi alates kuupäevast 2014-03-26.
+
+Näpunäited:
+
+* Mõlemas andmestikus olgu tunnused *nimi* ja *fraktsioon*.
+* Veergude nimed saab kätte käsuga `names`.
+* Kasuks võib tulla funktsioon `grepl`. Uuri, mis annab tulemuseks järgmine koodilõik `grepl("2014-03-26", c("2013-03-26 1", "2014-03-26 1", "2014-03-26 2"))`
+
+```{r}
+# sinu kood
+```
+
+### Ülesanne 4 (3 punkti)
+
+a. Tee PCA esialgsele andmestikule. Visualiseeri kahte esimest peakomponenti hajuvusdiagrammi abil. Tõlgenda tulemusi.
+
+```{r}
+# sinu kood
+```
+
+Tõlgendus: ...
+
+b. Tee PCA nii andmestikule *data1* kui ka *data2*. Mõlemal juhul visualiseeri kahte esimest peakomponenti hajuvusdiagrammi abil. Tõlgenda tulemusi.
+
+```{r}
+# sinu kood
+```
+
+Tõlgendus: ...
+
+### Ülesanne 5 (3 punkt)
+
+a. Eelmises ülesandes rakendasid PCA-d andmestikule *data1* ja visualiseerisid seda kasutades kahte esimest komponenti. Kas piisab ka ühest komponendist?
+
+Vastus: ...
+
+b. Visualiseeri *data1* esimest peakomonenti selliselt, et näha oleksid ka saadikute nimed. Kas esimest peakomonenti võib tõlgendada kui vasak- ja parempoolsust?
+
+> Vasakpoolsust iseloomustab püüd riigi kaudu teostada sotsiaalset ja majanduslikku võrdsustamist. Parempoolsust iseloomustab põhimõte, mille kohaselt iga ühiskonna liige on ise vastutav oma sotsiaalse ja majandusliku heaolu eest. [Vikipeedia](http://et.wikipedia.org/wiki/Eesti_erakonnad_vasak-parem-skaalal)
+
+```{r}
+# sinu kood
+```
+
+### Boonusülesanne (2 punkti) - jooksikud
+
+XII Riigikogu ajal vahetasid fraktsiooni järgmised saadikud:
+
+* Aivar Riisalu - Eesti Keskerakonna fraktsioon;Fraktsiooni mittekuuluvad Riigikogu liikmed
+* Andres Herkel - Isamaa ja Res Publica Liidu fraktsioon;Fraktsiooni mittekuuluvad Riigikogu liikmed
+* Deniss Boroditð   - Fraktsiooni mittekuuluvad Riigikogu liikmed;Eesti Keskerakonna fraktsioon
+* Inara Luigas - Fraktsiooni mittekuuluvad Riigikogu liikmed;Eesti Keskerakonna fraktsioon;
+* Kalle Laanet - Fraktsiooni mittekuuluvad Riigikogu liikmed;Eesti Keskerakonna fraktsioon;
+* Lembit Kaljuvee - Fraktsiooni mittekuuluvad Riigikogu liikmed;Eesti Keskerakonna fraktsioon;
+* Olga Sõtnik - Eesti Keskerakonna fraktsioon;Fraktsiooni mittekuuluvad Riigikogu liikmed
+* Rainer Vakra - Fraktsiooni mittekuuluvad Riigikogu liikmed;Eesti Keskerakonna fraktsioon
+
+(Fraktsioonid ei ole ajalises järjestuses.)
+
+Uuri, kuidas muutusid erakonnavahetajate otsused. Kas suudad andmetest tuvastada, millal nad fraktsiooni vahetasid?
+
+```{r}
+# sinu kood
+```
+
