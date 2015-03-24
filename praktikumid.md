@@ -78,15 +78,16 @@ Andmete kraapimine veebist. Näide: Riigikogu saadikute hääletamismustrid.
 
 Heatmap. Peakomponentanalüüs. Näide (jätkub): Riigikogu saadikute hääletamismustrid. Käsitsi kirjutatud numbrite andmestik.
 
-* [Slaidid](https://)
-* [Ülesanded](https://)
-* Tähtaeg: XX.XX.2015
+* [Käsitsi kirjutatud numbritel põhinevad ülesanded](/praktikum6_numbrid)
+* [Riigikogu saadikute hääletusmustrite analüüs](/praktikum6_polaarsus)
+* [Kodutöö](/praktikum6_kodutoo)
+  * Tähtaeg: 30.03.2015 kell 23.59 GMT
 
 ## Praktikum 7
 
 31.03.2015
 
-Doping ja statistika. Statistiline test. Näide: ühe dopingujuhtumi analüüs.
+Mitmese testimise probleem. Näide: biomarkerid ja statistika (ehk kuidas ennustada surma).
 
 * [Slaidid](https://)
 * [Ülesanded](https://)
@@ -96,7 +97,7 @@ Doping ja statistika. Statistiline test. Näide: ühe dopingujuhtumi analüüs.
 
 7.04.2015
 
-Mitmese testimise probleem. Näide: biomarkerid ja statistika (ehk kuidas ennustada surma).
+Doping ja statistika. Statistiline test. Näide: ühe dopingujuhtumi analüüs.
 
 * [Slaidid](https://)
 * [Ülesanded](https://)

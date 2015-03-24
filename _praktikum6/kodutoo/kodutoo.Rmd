@@ -1,0 +1,56 @@
+---
+title: "Kodutöö"
+output: 
+  html_document:
+    theme: null
+---
+
+Tähtaeg: 30.03.2015 23:59 GMT
+
+# I osa
+
+(**10 punkti**) Lahenda praktikumis alustatud [käsitsi kirjutatud numbrite ülesanded](/praktikum6_numbrid).
+
+# II osa
+
+(**10 punkti**) Lahenda [riigikogu hääletustulemuste andmestiku PCA ülesanded](/praktikum6_polaarsus). 
+
+# III osa
+
+(**1 punkt**) Vaata Stanfordi Statistical Learning kursuse videot [hierarhilise klasterdamise kohta](https://www.youtube.com/watch?v=Tuuc9Y06tAc)
+
+Mida (uut) said teada hierarhilisest klasterdamisest?
+
+(**1 punkt**) Vaata Johns Hopkinsi videot [logistilise regressiooni kohta](https://www.youtube.com/watch?v=79q9avsyG9Y)
+
+Nimeta üks põhjus, miks lineaarne regressioon ei ole mõistlik valik binaarse y-tunnuse modelleerimiseks?
+
+(**2 punkti**) Joonista R-is logistiliste kõverate 
+$$y = \frac{e^{\beta_0 + \beta_1 x}}{1 + e^{\beta_0 + \beta_1 x}}$$
+graafikud:
+
+* Ühel joonisel $\beta_0 \in \{-1, 0, 1\}$ ja $\beta_1 = 1$.
+* Teisel joonisel $\beta_0 = 0$ ja $\beta_1 \in \{0.5, 1, 2\}$. 
+
+```{r}
+# sinu kood
+```
+
+
+Selgita, millist mõju omab $\beta_0$ ja millist $\beta_1$ muutmine. 
+
+(**1 punkt**) Loe artiklit http://www.postimees.ee/2721878/hoiatus-meie-vereproovist
+
+Nimeta jutuks olnud teadusartikli põhitulemus. 
+
+Soovitame sul katsuda jõudu ka teadusartikli endaga [Biomarker Profiling by Nuclear Magnetic Resonance Spectroscopy for the Prediction of All-Cause Mortality: An Observational Study of 17,345 Persons](http://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1001606#pmed-1001606-g001)
+
+(**1 boonuspunkt**) Kirjuta, kui palju aega kulus osa I ja II peale. Mida arvad ülesannetest (kasulikkus, huvitavus)?
+
+
+# Mida on vaja esitada?
+
+* I ja II osa kohta tuleb esitada nii andmeanalüüsi raport (html või pdf formaadis) kui ka selle lähtekood .Rmd failina.
+* III osa vastused tuleb kirjutada meili sisusse või esitada tekstifailina.
+
+Lahendused saata meili peale: andmeteadus@gmail.com
