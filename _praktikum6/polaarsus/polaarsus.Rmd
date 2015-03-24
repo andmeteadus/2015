@@ -24,7 +24,7 @@ Tegeleme sama andmestikuga, mis jäi viienda kodutöö viiendas ülesandes koostada.
 * ...
 * 2014-12-18 5363 - hääletuse tulemus, mis toimus 2014-12-18 (5363 on kontrollindeks ja ei oma sisulist tähendust) 
 
-Laadi alla andmestik *riigikogu_xii.csv* ja loe töökeskkonda.
+Laadi alla andmestik [riigikogu_xii.csv](/data/riigikogu_xii.csv) ja loe töökeskkonda.
 
 ### Ülesanne 1 (1 punkt) - andmestiku mudimine 1
 
