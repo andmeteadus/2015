@@ -13,7 +13,7 @@ Tähtaeg: 30.03.2015 23:59 GMT
 
 # II osa
 
-(**10 punkti**) Lahenda [riigikogu hääletustulemuste andmestiku PCA ülesanded](/praktikum6_polaarsus). 
+(**10 punkti**) Analüüsi [riigikogu hääletusmustreid](/praktikum6_polaarsus). 
 
 # III osa
 
@@ -36,16 +36,15 @@ graafikud:
 # sinu kood
 ```
 
-
 Selgita, millist mõju omab $\beta_0$ ja millist $\beta_1$ muutmine. 
 
 (**1 punkt**) Loe artiklit http://www.postimees.ee/2721878/hoiatus-meie-vereproovist
 
 Nimeta jutuks olnud teadusartikli põhitulemus. 
 
-Soovitame sul katsuda jõudu ka teadusartikli endaga [Biomarker Profiling by Nuclear Magnetic Resonance Spectroscopy for the Prediction of All-Cause Mortality: An Observational Study of 17,345 Persons](http://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1001606#pmed-1001606-g001)
+Soovitame sul katsuda jõudu ka teadusartikli endaga [Biomarker Profiling by Nuclear Magnetic Resonance Spectroscopy for the Prediction of All-Cause Mortality: An Observational Study of 17,345 Persons](http://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1001606). Järgmises praktikumis kasutame sedasama andmestikku, millel see artikkel põhineb. 
 
-(**1 boonuspunkt**) Kirjuta, kui palju aega kulus osa I ja II peale. Mida arvad ülesannetest (kasulikkus, huvitavus)?
+(**1 boonuspunkt**) Kirjuta, kui palju aega kulus I, II ja III osa peale. Kuivõrd selgeks sai sinu jaoks PCA kontseptsioon? Mida arvad ülesannetest (kasulikkus, huvitavus)?
 
 
 # Mida on vaja esitada?

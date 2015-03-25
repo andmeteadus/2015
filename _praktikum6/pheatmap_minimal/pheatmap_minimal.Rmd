@@ -1,0 +1,47 @@
+---
+output: 
+  html_document:
+    theme: null
+---
+
+# pheatmap minimalistlik näide
+
+Suurtest andmetabelitest või maatriksitest on n-ö silmaga peale vaadates raske ülevaadet saada. Üks võimalus nende visualiseerimiseks on [*heat map*](http://en.wikipedia.org/wiki/Heat_map), kus sarnaselt geograafilisele soojuskaardile kasutatakse värve, et näidata maatriksi elementide väärtuseid. 
+
+Tutvume järgnevalt paketiga *pheatmap* (tähendusega *pretty heatmaps*), mille autoriks on Raivo Kolde (TÜ statistika vilistlane). Funktsiooni `pheatmap()` võib kasutada muuhulgas järgmiste visualisatsioonide jaoks:
+
+1. Visualiseerida maatriksit nii, nagu ta on.
+2. Visualiseerida maatriksit, klasterdades kas ainult tema ridu või veerge. 
+3. Visualiseerida maatriksit, klasterdades nii ridu kui ka veerge. 
+
+Sisuliselt tähendab klasterdamine, et sarnased read või veerud paigutatakse lähestikku. See võimaldab näha andmetes mustreid, mis muidu jääks võib-olla märkamata. Et klasterdamisest täpsemalt teada saada, vaata Stanfordi [videot hierarhilise klasterdamise kohta](https://www.youtube.com/watch?v=Tuuc9Y06tAc). 
+
+### Näide 1: heatmap ilma klasterdamiseta
+
+```{r}
+# Koostame näidismaatriksi, mis sisaldaks teatud mustrit
+test = matrix(rnorm(200), 20, 10)
+test[1:10, seq(1, 10, 2)] = test[1:10, seq(1, 10, 2)] + 3
+test[11:20, seq(2, 10, 2)] = test[11:20, seq(2, 10, 2)] + 2
+test[15:20, seq(2, 10, 2)] = test[15:20, seq(2, 10, 2)] + 4
+# Kui anname maatriksi ridadele/veergudele nimed, näeme neid heatmapil
+colnames(test) = paste("Veerg", 1:10, sep = "")
+rownames(test) = paste("Rida", 1:20, sep = "")
+```
+
+Et visualiseerida maatriksit nii, nagu ta on, on vaja argumente `cluster_rows=FALSE, cluster_cols=FALSE`, sest vaikimisi on nende väärtus `TRUE`.  
+
+```{r, fig.height=6}
+library(pheatmap)
+pheatmap(test, cluster_rows=FALSE, cluster_cols=FALSE)
+```
+
+### Näide 2: heatmap klasterdatud veergudega
+
+```{r, fig.height=6}
+pheatmap(test, cluster_rows=FALSE)
+```
+
+Näeme, et veergude järjestus on muutunud: sarnased veerud asetsevad lähestikku. 
+
+Uuri täpsemalt `?pheatmap`. 

@@ -18,7 +18,7 @@ Selleks on meil kasutada andmestik, kus on palju näiteid käsitsi kirjutatud numb
 
 ![alt text](numbrid.png "Binaarkood?")
 
-Laadi alla andmestik [numbrid.csv](/data/numbrid.csv). Andmestiku viimane veerg *label* näitab, kas tegu on nulli või ühega. Ülejäänud veerud näitavad vastava piksli intensiivsust, kusjuures pikslid on järjestatud ülalt alla (alates vasakust ülemisest nurgast). 
+Laadi alla andmestik [numbrid.csv](/data/numbrid.csv). Iga rida vastab ühele pildile. Andmestiku viimane veerg *label* näitab, kas tegu on nulli või ühega. Ülejäänud veerud näitavad vastava piksli intensiivsust, kusjuures pikslid on järjestatud ülalt alla (alates vasakust ülemisest nurgast). 
 
 ### Ülesanne 1 (2 punkti) - andmestikuga tutvumine
 
@@ -26,7 +26,7 @@ a. Visualiseeri näiteid nii nullide kui ka ühtede seast.
 
 Näpunäited:
 
-* Abiks on ette antud funktsioon `plot_digit` 
+* Abiks on ette antud funktsioon `plot_digit`, mille argumendiks sobib andmestiku üks rida (NB! ilma viimase veeruta)
 * Alamjooniste tegemisel on kasuks käsk `par(mfrow = c(mitu_rida, mitu_veergu))`
 * Ääriseid saad muuta `par(mar = c(bottom, left, top, right))`
 
@@ -45,20 +45,18 @@ Lisanäpunäide:
 * Selleks, et saada esialgsed graafilisi parameetreid tagasi, võid käituda järgmiselt:
 
 ```{r, eval=FALSE}
-# salvesta esialgsed graafilised parameetrid muutujasse default_par 
-default_par = par(mfrow=c(1, 1), mar=c(5, 4, 4, 2) + 0.1)
-
 # sinu kood, kus muudad graafilisi parameetreid mfrow ja mar
+# Näiteks
 par(mfrow=c(2, 5), mar=c(1, 1, 1, 1) + 0.1)
 
-# taasta esiaglsed graafilised parameetrid
-par(default_par)
+# Pärast taasta esialgsed graafilised parameetrid
+par(mfrow=c(1, 1), mar=c(5, 4, 4, 2) + 0.1)
 ```
 
 
 b. Tutvu ka paketi *pheatmap* funktsionaalsusega ja visualiseeri nulle ja ühtesid. Abiks on ette antud funktsioon `plot_digit_pheatmap`.
 
-Näiteks nullide korral võiks su tulemus välja näha selline:
+Näiteks nullide korral võiksid joonised välja näha umbes järgnevad. (Aga joonise mitmeks jagamine `mfrow` abil ei tööta siin. Raportisse saad väiksemad pildid, kui muudad koodiploki sätteid `fig.width`, `fig.height`.)
 
 ![alt text](nullid.png "Nullid")
 
@@ -73,7 +71,7 @@ plot_digit_pheatmap = function(digit){
 # sinu kood
 ```
 
-c. Sorteeri andmestiku read selliselt, et üleval oleksid nullid ja all ühed. Visualiseeri kogu andmestikku kasutadaes `pheatmap` funktsiooni. Kasuta argumente `cluster_rows=FALSE, cluster_cols=FALSE`.
+c. Sorteeri andmestiku read selliselt, et üleval oleksid nullid ja all ühed. Visualiseeri kogu andmestikku kasutadaes `pheatmap` funktsiooni. Kasuta argumente `cluster_rows=FALSE, cluster_cols=FALSE`. Abiks on [pheatmap minimalistlik näide](/praktikum6_pheatmap_minimal).
 
 
 ```{r}
@@ -86,7 +84,7 @@ Vastus: ...
 
 ### Ülesanne 2 (4 punkti)
 
-a. Tee andmestikul PCA (kontrolli, et oled eelnevalt andmestikust eemaldanud tunnuse label). PCA tegemiseks kasuta funktsiooni `prcomp`.
+a. Tee andmestikul PCA (kontrolli, et oled eelnevalt andmestikust eemaldanud tunnuse label). PCA tegemiseks kasuta funktsiooni `prcomp`. Abiks on [PCA minimalistlik näide](/praktikum6_pca_minimal). 
 
 ```{r}
 # sinu kood
@@ -134,9 +132,9 @@ Küsimus: Kas oskad selle joonise põhjal tõlgendada peakomponente PC1 ja PC2?
 
 Vastus: ...
 
-b. Vali üheksa numbrit tasandi erinevatest nurkadest ja visualiseeri neid funktsiooni `plot_digit` abil. (Järgmisel joonisel on tähistatud punasena 25 punkti tasandi erinevatest nurkadest. Sinul piisab võtta analoogilisest võrestikust 9 punktikest ja visualiseerida neid numbreid.)
+b. Vali üheksa numbrit tasandi erinevatest nurkadest ja visualiseeri neid funktsiooni `plot_digit` abil. (Järgmisel joonisel on tähistatud punasena 25 punkti tasandi erinevatest nurkadest. Paremal pool on näidatud number 3 jaoks võimalik tulemus. Sinul piisab võtta analoogilisest võrestikust 9 punktikest ja visualiseerida neid numbreid.)
 
-![alt text](pca_example.png "Näide")
+![alt text](pca_example2.png "Näide")
 
 Näpunäide: Kasuks võib tulla funktsioon `identify`, mis aitab joonisele vajutades leida lähimad punktid.
 
@@ -225,35 +223,33 @@ Küsimus: Kuidas tõlgendad selle joonise põhjal peakomponente PC1 ja PC2?
 Vastus: ...
 
 
-### Boonusülesanne 1 (2 punkti) - klassifitseeri numbreid
+### Boonusülesanne 1 (2 punkti) - implementeeri PCA
+
+Selle ülesande eesmärk on implementeerida omaenda PCA. Võid kasutada järgnevat pseudokoodi. 
+
+PCA pseudokood:
+
+1. Tsentreeri andmestik (ehk lahuta igast tunnusest tema keskmine). Tähistame tsentreeritud andmemaartiksit $X$ (vaatlused ridades, tunnused veergudes). 
+
+2. Arvuta kovariatsioonimaatriks $X^T X$. (Näpunäide: maatriksite korrutamiseks on R-is operaator `%*%`.)
+
+3. Leia kovariatsioonimaatriksi omaväärtused ja omavektorid. (Näpunäide: Abiks on funktsioon `eigen`)
+
+4. Esimese omavektori elemendid on PC1 kordajad, teise omavektori elemendid PC2 kordajad jne. Kasuta nüüd neid kordajaid maatriksi $X$ elementidele, et leida PC1 ja PC2 väärtus. 
+
+5. Tagasta PC1 ja PC2 väärtused. 
+
+6. Võrdle minimaalse näite põhjal, kas sinu PCA annab samu tulemusi, mis `prcomp`.
+
+
+```{r}
+# sinu kood
+```
+
+### Boonusülesanne 2 (2 punkti) - klassifitseeri numbreid
 
 Paku välja moodus, kuidas pikslite põhjal eristada numbreid 0 ja 1. Leia mitmel juhul sinu meetod prognoosib õigesti, mitmel juhul valesti ja raporteeri täpsus (õigete klassifitseerimiste arv koguarvust). Võiksid täpsuseks saada vähemalt 90%.
 
 ```{r}
 # sinu kood
 ```
-
-### Boonusülesanne 2 (2 punkti) - implementeeri PCA
-
-PCA pseudokood:
-
-1. tsentreeri andmestik (ehk muuda keskväärtus nulliks)
-
-2. Arvuta kovariatsioonimaatriks
-
-3. Leia kovariatsioonimaatriksi omaväärtused ja omavektorid
-
-Näpunäide:
-
-* Kasuks tuleb funktsioon `eigen`
-
-4. peakomponentide maatriksina tagasta omavektorite maatriks
-
-5. võrdle minimaalse näite põhjal, kas `pca$rotation` annab samu tulemusi, kui sinu pca implementatsioon
-
-
-```{r}
-# sinu kood
-```
-
-

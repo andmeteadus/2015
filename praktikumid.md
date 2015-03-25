@@ -67,7 +67,7 @@ Mittestandardne graafika. Kuidas teha sama häid jooniseid nagu NY Times seda te
 
 Andmete kraapimine veebist. Näide: Riigikogu saadikute hääletamismustrid.
 
-* [Paketi rvest minimalistlik näide](/praktikum5_rvest_minimal)
+* [rvest minimalistlik näide](/praktikum5_rvest_minimal)
 * [Veebi kraapimise ülesanded](/praktikum5_web)
 * [Kodutöö](/praktikum5_kodutoo)
   * Tähtaeg: 23.03.2015 kell 23.59 GMT
@@ -78,6 +78,8 @@ Andmete kraapimine veebist. Näide: Riigikogu saadikute hääletamismustrid.
 
 Heatmap. Peakomponentanalüüs. Näide (jätkub): Riigikogu saadikute hääletamismustrid. Käsitsi kirjutatud numbrite andmestik.
 
+* [PCA minimalistlik näide](/praktikum6_pca_minimal)
+* [pheatmap minimalistlik näide](/praktikum6_pheatmap_minimal)
 * [Käsitsi kirjutatud numbritel põhinevad ülesanded](/praktikum6_numbrid)
 * [Riigikogu saadikute hääletusmustrite analüüs](/praktikum6_polaarsus)
 * [Kodutöö](/praktikum6_kodutoo)
@@ -87,7 +89,7 @@ Heatmap. Peakomponentanalüüs. Näide (jätkub): Riigikogu saadikute hääletam
 
 31.03.2015
 
-Mitmese testimise probleem. Näide: biomarkerid ja statistika (ehk kuidas ennustada surma).
+Logistiline regressioon. Mitmese testimise probleem. Näide: biomarkerid ja statistika (ehk kuidas ennustada surma).
 
 * [Slaidid](https://)
 * [Ülesanded](https://)

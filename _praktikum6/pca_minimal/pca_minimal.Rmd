@@ -1,0 +1,66 @@
+---
+output: 
+  html_document:
+    theme: null
+---
+
+# PCA minimalistlik näide
+
+Järgnev PCA minimalistlik näide põhineb iiriste andmestikul. 
+
+```{r}
+data(iris)
+head(iris)
+```
+
+Teeme PCA iiriste andmestikul funktsiooni `prcomp` abil. 
+
+```{r}
+# PCA tegemisel jätame viimase veeru Species välja
+pca = prcomp(iris[, -5])
+
+```
+
+Funktsioonile `prcomp` ette antud andmestikus oli neli tunnust. Seega tagastab PCA meile neli peakomponenti PC1, PC2, PC3, PC4. 
+
+```{r}
+head(pca$x)
+```
+
+Enim huvi pakkuvad on alati esimesed. Teeme PC1 - PC2 hajuvusdiagrammi.
+
+```{r}
+pc1 = pca$x[, 1]
+pc2 = pca$x[, 2]
+plot(pc1, pc2, pch=16)
+```
+
+Joonisel on näha kahte eristuvat gruppi. Oleks huvitav teada, kas tekkinud gruppe kirjeldab andmestikus olnud tunnus *Species*. 
+
+```{r}
+plot(pc1, pc2, pch=16, col=as.numeric(iris$Species))
+```
+
+Tundub, et jah. Isegi ainuüksi PC1 võimaldab suhteliselt hästi liikidel vahet teha. 
+
+PC1 ning PC2 on saadud esialgsete tunnuste lineaarkombinatsioonina. Kuidas leida kordajad? Need saame kätte järgnevalt
+
+```{r}
+pca$rotation
+```
+
+
+$$PC_1 = 0.36 \cdot \text{Sepal.Length} - 0.08 \cdot \text{Sepal.Width} + 0.86 \cdot \text{Petal.Length} + 0.36 \cdot \text{Petal.Width } $$
+
+$$PC_2 = -0.66 \cdot \text{Sepal.Length} -0.73 \cdot \text{Sepal.Width} + 0.17 \cdot \text{Petal.Length} + 0.07 \cdot \text{Petal.Width } $$
+
+
+```{r}
+# Kui suure osa varieeruvusest seletavad PC1, PC2?
+summary(pca)
+```
+
+Näeme, et 
+
+* PC1 seletab 92.5\% kogu variatsioonist, 
+* PC1 ja PC2 kokku seletavad 97.7\% kogu variatsioonist. 
