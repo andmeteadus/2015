@@ -16,7 +16,7 @@ Tutvume järgnevalt paketiga *pheatmap* (tähendusega *pretty heatmaps*), mille au
 
 Sisuliselt tähendab klasterdamine, et sarnased read või veerud paigutatakse lähestikku. See võimaldab näha andmetes mustreid, mis muidu jääks võib-olla märkamata. Et klasterdamisest täpsemalt teada saada, vaata Stanfordi [videot hierarhilise klasterdamise kohta](https://www.youtube.com/watch?v=Tuuc9Y06tAc). 
 
-### Näide 1: heatmap ilma klasterdamiseta
+### Näidisandmestiku koostamine
 
 ```{r}
 # Koostame näidismaatriksi, mis sisaldaks teatud mustrit
@@ -28,6 +28,8 @@ test[15:20, seq(2, 10, 2)] = test[15:20, seq(2, 10, 2)] + 4
 colnames(test) = paste("Veerg", 1:10, sep = "")
 rownames(test) = paste("Rida", 1:20, sep = "")
 ```
+
+### Näide 1: heatmap ilma klasterdamiseta
 
 Et visualiseerida maatriksit nii, nagu ta on, on vaja argumente `cluster_rows=FALSE, cluster_cols=FALSE`, sest vaikimisi on nende väärtus `TRUE`.  
 
