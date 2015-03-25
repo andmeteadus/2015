@@ -78,8 +78,9 @@ Andmete kraapimine veebist. Näide: Riigikogu saadikute hääletamismustrid.
 
 Heatmap. Peakomponentanalüüs. Näide (jätkub): Riigikogu saadikute hääletamismustrid. Käsitsi kirjutatud numbrite andmestik.
 
-* [PCA minimalistlik näide](/praktikum6_pca_minimal)
-* [pheatmap minimalistlik näide](/praktikum6_pheatmap_minimal)
+* Abimaterjalid:
+  * [PCA minimalistlik näide](/praktikum6_pca_minimal)
+  * [pheatmap minimalistlik näide](/praktikum6_pheatmap_minimal)
 * [Käsitsi kirjutatud numbritel põhinevad ülesanded](/praktikum6_numbrid)
 * [Riigikogu saadikute hääletusmustrite analüüs](/praktikum6_polaarsus)
 * [Kodutöö](/praktikum6_kodutoo)
