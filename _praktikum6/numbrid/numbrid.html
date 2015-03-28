@@ -202,10 +202,15 @@ for(i in 1:5){
 <p>Selle ülesande eesmärk on implementeerida omaenda PCA. Võid kasutada järgnevat pseudokoodi.</p>
 <p>PCA pseudokood:</p>
 <ol style="list-style-type: decimal">
-<li><p>Tsentreeri andmestik (ehk lahuta igast tunnusest tema keskmine). Tähistame tsentreeritud andmemaartiksit <span class="math">\(X\)</span> (vaatlused ridades, tunnused veergudes).</p></li>
-<li><p>Arvuta kovariatsioonimaatriks <span class="math">\(X^T X\)</span>. (Näpunäide: maatriksite korrutamiseks on R-is operaator <code>%*%</code>.)</p></li>
+<li><p>Tsentreeri andmestik (ehk lahuta igast tunnusest tema keskmine).<br />Tähistame tsentreeritud andmemaatriksit <span class="math">\(X\)</span> (vaatlused ridades, tunnused veergudes).</p></li>
+<li><p>Arvuta kovariatsioonimaatriks <span class="math">\(X^T X\)</span>. (Näpunäide: maatriksite korrutamiseks on R-is operaator <code>%*%</code>, transponeerimiseks funktsioon <code>t()</code>.)</p></li>
 <li><p>Leia kovariatsioonimaatriksi omaväärtused ja omavektorid. (Näpunäide: Abiks on funktsioon <code>eigen</code>)</p></li>
-<li><p>Esimese omavektori elemendid on PC1 kordajad, teise omavektori elemendid PC2 kordajad jne. Kasuta nüüd neid kordajaid maatriksi <span class="math">\(X\)</span> elementidele, et leida PC1 ja PC2 väärtus.</p></li>
+<li><p>Esimese omavektori elemendid on PC1 kordajad, teise omavektori elemendid PC2 kordajad jne. Kasuta nüüd neid kordajaid, et leida kõigi andmepunktide jaoks PC1 ja PC2 väärtus. Selleks tuleb vastavad lineaarkombinatsioonid arvutada kõigi <span class="math">\(X\)</span> ridade jaoks.</p></li>
+</ol>
+<blockquote>
+<p>Näiteks kui esimese omavektori elemendid on <span class="math">\(\alpha_1, \alpha_2, ..., \alpha_k\)</span>, siis PC1 saadakse tsentreeritud tunnuste lineaarkombinatsioonina <span class="math">\(PC_1 = \alpha_1 X_{1} + \alpha_2 X_{2} + ... + \alpha_k X_{k}\)</span>. Siin <span class="math">\(X_1\)</span> tähistab tsentreeritud esimest tunnust, <span class="math">\(X_2\)</span> teist jne.</p>
+</blockquote>
+<ol start="5" style="list-style-type: decimal">
 <li><p>Tagasta PC1 ja PC2 väärtused.</p></li>
 <li><p>Võrdle minimaalse näite põhjal, kas sinu PCA annab samu tulemusi, mis <code>prcomp</code>.</p></li>
 </ol>

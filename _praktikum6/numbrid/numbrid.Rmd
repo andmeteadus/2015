@@ -229,13 +229,18 @@ Selle ¸lesande eesm‰rk on implementeerida omaenda PCA. Vıid kasutada j‰rgnevat p
 
 PCA pseudokood:
 
-1. Tsentreeri andmestik (ehk lahuta igast tunnusest tema keskmine). T‰histame tsentreeritud andmemaartiksit $X$ (vaatlused ridades, tunnused veergudes). 
+1. Tsentreeri andmestik (ehk lahuta igast tunnusest tema keskmine).  
+T‰histame tsentreeritud andmemaatriksit $X$ (vaatlused ridades, tunnused veergudes). 
 
-2. Arvuta kovariatsioonimaatriks $X^T X$. (N‰pun‰ide: maatriksite korrutamiseks on R-is operaator `%*%`.)
+2. Arvuta kovariatsioonimaatriks $X^T X$. (N‰pun‰ide: maatriksite korrutamiseks on R-is operaator `%*%`, transponeerimiseks funktsioon `t()`.)
 
 3. Leia kovariatsioonimaatriksi omav‰‰rtused ja omavektorid. (N‰pun‰ide: Abiks on funktsioon `eigen`)
 
-4. Esimese omavektori elemendid on PC1 kordajad, teise omavektori elemendid PC2 kordajad jne. Kasuta n¸¸d neid kordajaid maatriksi $X$ elementidele, et leida PC1 ja PC2 v‰‰rtus. 
+4. Esimese omavektori elemendid on PC1 kordajad, teise omavektori elemendid PC2 kordajad jne. 
+Kasuta n¸¸d neid kordajaid, et leida kıigi andmepunktide jaoks PC1 ja PC2 v‰‰rtus. Selleks tuleb vastavad lineaarkombinatsioonid arvutada kıigi $X$ ridade jaoks. 
+
+> N‰iteks kui esimese omavektori elemendid on $\alpha_1, \alpha_2, ..., \alpha_k$, siis PC1 saadakse tsentreeritud tunnuste lineaarkombinatsioonina $PC_1 = \alpha_1 X_{1} + \alpha_2 X_{2} + ... + \alpha_k X_{k}$. Siin $X_1$ t‰histab tsentreeritud esimest tunnust, $X_2$ teist jne. 
+
 
 5. Tagasta PC1 ja PC2 v‰‰rtused. 
 
