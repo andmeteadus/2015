@@ -136,7 +136,16 @@ b. Vali üheksa numbrit tasandi erinevatest nurkadest ja visualiseeri neid funkts
 
 ![alt text](pca_example2.png "Näide")
 
-Näpunäide: Kasuks võib tulla funktsioon `identify`, mis aitab joonisele vajutades leida lähimad punktid.
+Näpunäide: Kasuks võib tulla funktsioon `identify`, mis aitab joonisele vajutades leida lähimad punktid. Uuri mida teeb järgmine koodiblokk:
+
+```{r, eval=FALSE}
+x = c(1,2,3)
+y = c(2,5,3)
+plot(x, y)
+identify(c(1,2,3), c(2,5,3), n=1)
+# kliki joonisel ja jälgi konsooli
+```
+
 
 ```{r}
 # sinu kood
@@ -156,6 +165,7 @@ Näpunäited:
 * Kõigepealt joonista tühi aken.
 * `for` tsükli abil lisa numbrid.
 * Sul ei ole vaja joonistada kõiki numbreid, sest numbrid võivad kattuda. Võid joonistada näiteks 500 numbrit.
+* Kui numbrid tulevad liiga väikesed, siis muuda argumenti `scale`.
 
 Siin oleme ette andnud täiendatud `plot_digit` funktsiooni, mis muudab valge läbipaistvaks (mis on kasulik, kui numbrid joonistuvad üksteise peale). 
 
@@ -198,7 +208,7 @@ for(i in 1:5){
   x = runif(1, 0, 10) # vaja muuta
   y = runif(1, 0, 10) # vaja muuta
   
-  plot_digit(nullid[i, -785], x, y, add=TRUE, transparency = T)
+  plot_digit(nullid[i, -785], x, y, scale=1, add=TRUE, transparency = T)
 }
 ```
 
