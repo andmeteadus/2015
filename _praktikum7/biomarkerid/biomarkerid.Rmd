@@ -84,7 +84,9 @@ Eelnimetatud teadusartiklis vaadeldi kıiki 106 biomarkerit. Tegelenud esialgu ko
 
 ### ‹lesanne 4 (3 punkti) - p-v‰‰rtuse piiri paikapanek
 
-Kui soovime testida kıiki 106 biomarkeri olulisust surma ennustamisel, puutume kokku mitmese testimise probleemiga. Vaata selle kohta [koomiksit "Significant"](https://xkcd.com/882/) ning selgitavat videot [Multiple Testing](https://www.youtube.com/watch?v=IDaHKAjxu_s) (vaata esimest 10 minutit). 
+Kui soovime testida kıiki 106 biomarkeri olulisust surma ennustamisel, puutume kokku mitmese testimise probleemiga. Vaata selle kohta [koomiksit "Significant"](https://xkcd.com/882/) ning vajadusel selgitavat videot [Multiple Testing](https://www.youtube.com/watch?v=IDaHKAjxu_s) (vaata esimest 11 minutit). 
+
+(**1 punkt**) Selgita, milles seisnes koomiksi idee. 
 
 (**1 punkt**) Artiklis kasutati olulisuse nivood `p < 0.0005`. T‰psemalt,
 
@@ -92,7 +94,7 @@ Kui soovime testida kıiki 106 biomarkeri olulisust surma ennustamisel, puutume k
 
 Selgita, miks kasutati sellist p-v‰‰rtuse piiri (aga mitte klassikalist `p < 0.05`)?
 
-(**2 punkti**) Eelmises ¸lesandes n‰gime, et mitmed biomarkerid on omavahel tugevalt korreleeritud. Niisiis vıib Bonferroni korrektsioon osutuda praegu liiga rangeks. Alternatiivselt vıiksime leida, kui palju on meie andmestikus mittekorreleeritud tunnuseid, ning teha nende arvu j‰rgi Bonferroni korrektsiooni. Selleks, et leida andmestiku nn "efektiivne dimensionaalsus", kasuta PCA-d. 
+(**1 punkt**) Eelmises ¸lesandes n‰gime, et mitmed biomarkerid on omavahel tugevalt korreleeritud. Niisiis vıib Bonferroni korrektsioon osutuda praegu liiga rangeks. Alternatiivselt vıiksime leida, kui palju on meie andmestikus mittekorreleeritud tunnuseid, ning teha nende arvu j‰rgi Bonferroni korrektsiooni. Selleks, et leida andmestiku nn "efektiivne dimensionaalsus", kasuta PCA-d. 
 
 Juhised:
 
@@ -128,7 +130,7 @@ Juhised:
 * Mudeli saab sobitada `model = glm(updated_formula, family=binomial, data=data)`. 
 * Mudeli p-v‰‰rtuse ja kordaja saad eraldada maatriksist `coef(summary(model))`. 
 
-(**1 boonuspunkt**) Muuda eelnevat funktsiooni nii, et iga biomarkeri kordajale arvutad ka 95\% usaldusintervalli. Vıid kasutada normaaljaotusel pıhinevat l‰hendit ning arvutada selle `1.96 * SE`, kus SE on `summary(model)` v‰ljundis toodud `Std. Error`. Funktsioon peaks n¸¸d lisaks tagastama listi, mille elementide seas oleks ka `lower` ja `upper`. 
+(**1 boonuspunkt**) Muuda eelnevat funktsiooni nii, et iga biomarkeri kordajale arvutad ka 95\% usaldusintervalli. Vıid kasutada normaaljaotusel pıhinevat l‰hendit ning arvutada selle `kordaja_hinnang +- 1.96 * SE`, kus SE on `summary(model)` v‰ljundis toodud `Std. Error`. Funktsioon peaks n¸¸d lisaks tagastama listi, mille elementide seas oleks ka `lower` ja `upper`. 
 
 Kontrolli, kas funktsioon tˆˆtab. 
 
@@ -144,7 +146,7 @@ c. Millised biomarkerid osutuvad olulisteks?
 
 Artiklis on kirjeldatud mudeli koostamist j‰rgnevalt: 
 
-> For biomarker discovery in the Estonian Biobank cohort, a multivariate model was derived in a forward stepwise fashion (Figure 2). First, the biomarker leading to the smallest p-value in the Cox model adjusted for age and sex only was included as a predictor. Subsequently, the biomarker leading to the smallest p-value in the multivariate model adjusted for age, sex, and the first biomarker was included in the prediction model. The process was repeated until no additional biomarkers were significant at the Bonferroni-corrected threshold of p<0.0005, accounting for testing of 106 candidate biomarkers.
+> For biomarker discovery in the Estonian Biobank cohort, a multivariate model was derived in a forward stepwise fashion (Figure 2). First, the biomarker leading to the smallest p-value in the model adjusted for age and sex only was included as a predictor. Subsequently, the biomarker leading to the smallest p-value in the multivariate model adjusted for age, sex, and the first biomarker was included in the prediction model. The process was repeated until no additional biomarkers were significant at the Bonferroni-corrected threshold of p<0.0005, accounting for testing of 106 candidate biomarkers.
 
 Eelmises ¸lesandes leidsid kıige olulisema p-v‰‰rtusega biomarkeri. J‰tka n¸¸d *forward selection*-iga:
 

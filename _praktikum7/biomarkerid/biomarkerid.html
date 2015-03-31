@@ -110,13 +110,14 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 </div>
 <div id="ulesanne-4-3-punkti---p-vaartuse-piiri-paikapanek" class="section level3">
 <h3>Ülesanne 4 (3 punkti) - p-väärtuse piiri paikapanek</h3>
-<p>Kui soovime testida kõiki 106 biomarkeri olulisust surma ennustamisel, puutume kokku mitmese testimise probleemiga. Vaata selle kohta <a href="https://xkcd.com/882/">koomiksit “Significant”</a> ning selgitavat videot <a href="https://www.youtube.com/watch?v=IDaHKAjxu_s">Multiple Testing</a> (vaata esimest 10 minutit).</p>
+<p>Kui soovime testida kõiki 106 biomarkeri olulisust surma ennustamisel, puutume kokku mitmese testimise probleemiga. Vaata selle kohta <a href="https://xkcd.com/882/">koomiksit “Significant”</a> ning vajadusel selgitavat videot <a href="https://www.youtube.com/watch?v=IDaHKAjxu_s">Multiple Testing</a> (vaata esimest 11 minutit).</p>
+<p>(<strong>1 punkt</strong>) Selgita, milles seisnes koomiksi idee.</p>
 <p>(<strong>1 punkt</strong>) Artiklis kasutati olulisuse nivood <code>p &lt; 0.0005</code>. Täpsemalt,</p>
 <blockquote>
 <p>… significant at the Bonferroni-corrected threshold of p&lt;0.0005, accounting for testing of 106 candidate biomarkers</p>
 </blockquote>
 <p>Selgita, miks kasutati sellist p-väärtuse piiri (aga mitte klassikalist <code>p &lt; 0.05</code>)?</p>
-<p>(<strong>2 punkti</strong>) Eelmises ülesandes nägime, et mitmed biomarkerid on omavahel tugevalt korreleeritud. Niisiis võib Bonferroni korrektsioon osutuda praegu liiga rangeks. Alternatiivselt võiksime leida, kui palju on meie andmestikus mittekorreleeritud tunnuseid, ning teha nende arvu järgi Bonferroni korrektsiooni. Selleks, et leida andmestiku nn “efektiivne dimensionaalsus”, kasuta PCA-d.</p>
+<p>(<strong>1 punkt</strong>) Eelmises ülesandes nägime, et mitmed biomarkerid on omavahel tugevalt korreleeritud. Niisiis võib Bonferroni korrektsioon osutuda praegu liiga rangeks. Alternatiivselt võiksime leida, kui palju on meie andmestikus mittekorreleeritud tunnuseid, ning teha nende arvu järgi Bonferroni korrektsiooni. Selleks, et leida andmestiku nn “efektiivne dimensionaalsus”, kasuta PCA-d.</p>
 <p>Juhised:</p>
 <ul>
 <li>Rakenda andmestikul PCA-d ning leia, mitu peakomponenti seletavad näiteks 99% variatsioonist.</li>
@@ -147,7 +148,7 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <li>Mudeli saab sobitada <code>model = glm(updated_formula, family=binomial, data=data)</code>.</li>
 <li>Mudeli p-väärtuse ja kordaja saad eraldada maatriksist <code>coef(summary(model))</code>.</li>
 </ul>
-<p>(<strong>1 boonuspunkt</strong>) Muuda eelnevat funktsiooni nii, et iga biomarkeri kordajale arvutad ka 95% usaldusintervalli. Võid kasutada normaaljaotusel põhinevat lähendit ning arvutada selle <code>1.96 * SE</code>, kus SE on <code>summary(model)</code> väljundis toodud <code>Std. Error</code>. Funktsioon peaks nüüd lisaks tagastama listi, mille elementide seas oleks ka <code>lower</code> ja <code>upper</code>.</p>
+<p>(<strong>1 boonuspunkt</strong>) Muuda eelnevat funktsiooni nii, et iga biomarkeri kordajale arvutad ka 95% usaldusintervalli. Võid kasutada normaaljaotusel põhinevat lähendit ning arvutada selle <code>kordaja_hinnang +- 1.96 * SE</code>, kus SE on <code>summary(model)</code> väljundis toodud <code>Std. Error</code>. Funktsioon peaks nüüd lisaks tagastama listi, mille elementide seas oleks ka <code>lower</code> ja <code>upper</code>.</p>
 <p>Kontrolli, kas funktsioon töötab.</p>
 <ol style="list-style-type: lower-alpha">
 <li>Millise mudeliga alustad, st kas lisad sugu, vanusegrupp, suits, hyp esialgsesse mudelisse?</li>
@@ -161,7 +162,7 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <h3>Ülesanne 6 (2 punkti + 2 boonuspunkti) - Forward selection</h3>
 <p>Artiklis on kirjeldatud mudeli koostamist järgnevalt:</p>
 <blockquote>
-<p>For biomarker discovery in the Estonian Biobank cohort, a multivariate model was derived in a forward stepwise fashion (Figure 2). First, the biomarker leading to the smallest p-value in the Cox model adjusted for age and sex only was included as a predictor. Subsequently, the biomarker leading to the smallest p-value in the multivariate model adjusted for age, sex, and the first biomarker was included in the prediction model. The process was repeated until no additional biomarkers were significant at the Bonferroni-corrected threshold of p&lt;0.0005, accounting for testing of 106 candidate biomarkers.</p>
+<p>For biomarker discovery in the Estonian Biobank cohort, a multivariate model was derived in a forward stepwise fashion (Figure 2). First, the biomarker leading to the smallest p-value in the model adjusted for age and sex only was included as a predictor. Subsequently, the biomarker leading to the smallest p-value in the multivariate model adjusted for age, sex, and the first biomarker was included in the prediction model. The process was repeated until no additional biomarkers were significant at the Bonferroni-corrected threshold of p&lt;0.0005, accounting for testing of 106 candidate biomarkers.</p>
 </blockquote>
 <p>Eelmises ülesandes leidsid kõige olulisema p-väärtusega biomarkeri. Jätka nüüd <em>forward selection</em>-iga:</p>
 <ul>

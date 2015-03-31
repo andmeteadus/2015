@@ -91,8 +91,9 @@ summary(model)</code></pre>
 </div>
 <div id="mudeli-kordajate-interpreteerimine" class="section level3">
 <h3>Mudeli kordajate interpreteerimine</h3>
-<p>Temperatuuri ees oleva kordaja <code>- 0.23</code> interpretatsioon:</p>
-<p>Kui temperatuur suureneb ühe Fahrenheiti võrra, siis <span class="math">\(\log \frac{p}{1-p}\)</span> väheneb <code>0.23</code> võrra. Järelikult tõenäosus <span class="math">\(p\)</span> muutub <code>exp(-0.23) / (1 + exp(-0.23))</code> korda.</p>
+<p>Temperatuuri ees oleva kordaja <code>-0.23</code> interpretatsioon:</p>
+<p>Kui temperatuur suureneb ühe Fahrenheiti võrra, siis <span class="math">\(\log \frac{p}{1-p}\)</span> “suureneb” <code>-0.23</code> võrra. Järelikult tihendi purunemise šanss (<em>odd</em>) <span class="math">\(\frac{p}{1-p}\)</span> muutub <code>exp(-0.23)</code> korda.</p>
+<p>Logistilisest regressioonist ning tulemuste interpreteerimisest oli juttu Johns Hopkinsi videos <a href="https://www.youtube.com/watch?v=79q9avsyG9Y">Binary Outcomes</a>.</p>
 </div>
 <div id="mudeli-graafiline-esitus" class="section level3">
 <h3>Mudeli graafiline esitus</h3>

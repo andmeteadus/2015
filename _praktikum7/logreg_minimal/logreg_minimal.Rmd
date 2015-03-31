@@ -56,11 +56,12 @@ $$p = \frac{e^{15.0 - 0.23 \cdot \text{temperature}}}{ 1 + e^{15.0 - 0.23 \cdot 
 
 ### Mudeli kordajate interpreteerimine
 
-Temperatuuri ees oleva kordaja `- 0.23` interpretatsioon:
+Temperatuuri ees oleva kordaja `-0.23` interpretatsioon:
 
-Kui temperatuur suureneb ühe Fahrenheiti võrra, siis $\log \frac{p}{1-p}$ väheneb `0.23` võrra. 
-Järelikult tõenäosus $p$ muutub `exp(-0.23) / (1 + exp(-0.23))` korda. 
+Kui temperatuur suureneb ühe Fahrenheiti võrra, siis $\log \frac{p}{1-p}$ "suureneb" `-0.23` võrra. 
+Järelikult tihendi purunemise ðanss (*odd*) $\frac{p}{1-p}$ muutub `exp(-0.23)` korda. 
 
+Logistilisest regressioonist ning tulemuste interpreteerimisest oli juttu Johns Hopkinsi videos [Binary Outcomes](https://www.youtube.com/watch?v=79q9avsyG9Y).
 
 ### Mudeli graafiline esitus
 
