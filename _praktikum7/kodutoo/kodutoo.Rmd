@@ -13,13 +13,15 @@ Tähtaeg: 06.04.2015 23:59 GMT
 
 # II osa
 
-Järgmises praktikumis tegeleme dopingutesti uurimisega.
+(**2 punkti**) Nimeta vähemalt kaks küsimust, mis tekkisid biomarkerite andmestikku analüüsides, ja millele tahaksid artikli autorilt vastust saada. 
+
+Järgmises praktikumis tegeleme dopingutesti uurimisega. Järgnev video ja artikkel annavad sissejuhatuse teemasse. 
 
 (**2 punkti**) Vaata videot [The tradeoff between sensitivity and specificity](https://www.youtube.com/watch?v=vtYDyGGeQyo) statistilise testi tundlikkuse ja spetsiifilisuse kohta. 
 
 * Mida näitab statistilise testi tundlikkus (*sensitivity*)? 
 Kuidas saavutada 100\% tundlikkus?
-* Miks on vaja leida kompromis tundlikkuse ja spetsiifilisuse vahel (*tradeoff between sensitivity and specificity*)?
+* Miks räägitakse kompromissi leidmisest tundlikkuse ja spetsiifilisuse vahel (*tradeoff between sensitivity and specificity*)?
 
 (**4 punkti**) Loe Krista Fischeri ja Donald A. Berry artiklit [Statisticians Introduce Science to International Doping Agency: The Andrus Veerpalu Case](http://chance.amstat.org/2014/09/doping/) ning vasta järgmistele küsimustele.
 
@@ -27,9 +29,6 @@ Kuidas saavutada 100\% tundlikkus?
 * Artiklis (sektsioonis *The hGH Doping Test*) on välja toodud neli eeldust, mis peaksid dopingutesti korral olema täidetud. Nimeta nende seast kaks ning selgita kummagi kohta lühidalt, miks need olulised on. 
 * Oleme koostanud [skeemi](/examples/doping.png), mis võtab kokku artiklis kirjeldatud protsessi otsustuspiiride paikapanekust ja verifitseerimisest. Täida skeemis olevad lüngad a ja b. 
 * Millised statistilised möödapanekud esinesid kasvuhormooni dopingutestis? Nimeta kaks. 
-
-
-(**2 punkti**) Nimeta vähemalt kaks küsimust, mis tekkisid biomarkerite andmestikku analüüsides, ja millele tahaksid artikli autorilt vastust saada?  
 
 
 (**1 boonuspunkt**) Kirjuta, kui palju aega kulus I ja II osa peale. Kas logistiline regressioon ja mitmese testimise korrektsioon olid sinu jaoks uued mõisted? Kuivõrd arusaadav oli nende idee? Mida arvad ülesannetest (kasulikkus, huvitavus)?
