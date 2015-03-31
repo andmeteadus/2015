@@ -1,0 +1,83 @@
+---
+output: 
+  html_document:
+    theme: null
+---
+
+```{r, include=FALSE}
+library(ggplot2)
+```
+
+
+# Logistiline regressioon - minimalistlik näide
+
+1986\. aastal plahvatas kosmosesüstik *Challenger* vahetult pärast starti kummitihendi purunemise tõttu. Uurime, kas logistilise regressiooni kasutamine oleks aidanud katastroofi ära hoida. 
+
+Taustast (Eduard Tufte "Visual and Statistical Thinking: Displays of Evidence for Making Decisions"):
+
+> On January 28, 1986, the space shuttle Challenger exploded and seven astronauts died because two rubber O-rings leaked. These rings had lost their resiliency because the shuttle was launched on a very cold day. Ambient temperatures were in the low 30s and the O-rings themselves were much colder, less than 20F.
+> 
+> One day before the flight, the predicted temperature for the launch was 26F to 29F. Concerned that the rings would not seal at such a cold temperature, the engineers who designed the rocket opposed launching Challenger the next day.  
+
+### Vaatlusandmed
+
+Meil on vaatlusandmed tihendite (*O-rings*) varasemate purunemiste kohta. Täpsemalt, on teada temperatuur (Fahrenheitides) ning indikaator, kas tihend purunes sellel temperatuuril või mitte. 
+
+```{r}
+temperature = c(53,57,58,63,66,67,67,67,68,69,70,70,70,70,72,73,75,75,76,76,78,79,81)
+failure = c(1,1,1,1,0,0,0,0,0,0,0,0,1,1,0,0,0,1,0,0,0,0,0)
+data = data.frame(temperature, failure)
+
+```
+
+Teeme joonise andmetest
+
+```{r, fig.height=3}
+ggplot(data, aes(temperature, failure)) + geom_point() + theme_bw()
+```
+
+### Logistilise regressiooni mudel
+
+```{r}
+model = glm(failure ~ temperature, family=binomial, data=data)
+summary(model)
+
+```
+
+### Mudeli esitus
+
+Kui tähistame tihendi purunemise tõenäosuse $p := \Pr(\text{Failure} = 1)$, saame mudeli esitada
+
+$$\log \frac{p}{1-p} = 15.0 - 0.23 \cdot \text{temperature}$$
+
+ehk alternatiivselt
+
+$$p = \frac{e^{15.0 - 0.23 \cdot \text{temperature}}}{ 1 + e^{15.0 - 0.23 \cdot \text{temperature}}}$$
+
+### Mudeli kordajate interpreteerimine
+
+Temperatuuri ees oleva kordaja `- 0.23` interpretatsioon:
+
+Kui temperatuur suureneb ühe Fahrenheiti võrra, siis $\log \frac{p}{1-p}$ väheneb `0.23` võrra. 
+Järelikult tõenäosus $p$ muutub `exp(-0.23) / (1 + exp(-0.23))` korda. 
+
+
+### Mudeli graafiline esitus
+
+Et lisada logistiline kõver joonisele, peame erinevate $x$-telje (praegu temperatuuri) väärtuste jaoks arvutama mudeli prognoositud tõenäosuse.
+
+```{r, fig.height=3}
+x = seq(50, 85, 0.1)
+### Variant 1: leiame käsitsi "predicted probabilities"
+pred = exp(15.0429 - 0.2322*x) / (1 + exp(15.0429 - 0.2322*x))
+### Variant 2: automaatselt
+# Selleks tuleb ette anda data.frame'i, mis sisaldab mudeli kõiki argumente tunnustena
+pred = predict(model, newdata = data.frame(temperature = x), type="response")
+
+data2 = data.frame(x, pred)
+ggplot(data, aes(temperature, failure)) + geom_point() + 
+  geom_line(aes(x, pred), data=data2) + theme_bw()
+
+```
+
+Üks päev enne Challengeri starti prognoositi järgmise päeva temperatuuriks 26F kuni 29F. Milline on tihendi purunemise tõenäosus saadud mudeli kohaselt? 
