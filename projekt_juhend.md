@@ -11,6 +11,7 @@ Aine läbimiseks tuleb läbi viia üks praktiline andmeanalüüs ning kirjutada 
 * Projekti tulemuste müümine (st esitlus) - 19.05.2015
 
 Mõned väljapakutud teemad leiad [siit](https://docs.google.com/document/d/1beb5n0H4Y4Xekf_A7xgZRX2uQqeoW3HsqpgCuiBjA48/edit).
+
 Registreeri oma teemavalik [siin](https://docs.google.com/document/d/1Zt8-mKq9QW3Bhb3YObgXrZK1AoglPLin5Z9BWZTaaGU/edit)
 
 ### Mida on vaja esitada?
