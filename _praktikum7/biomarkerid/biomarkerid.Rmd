@@ -171,6 +171,7 @@ Selgita, miks kasutati sellist p-väärtuse piiri (aga mitte klassikalist `p < 0.0
 
 * Mitme biomarkeri p-väärtused tulid väiksemad kui 0.05? 
 * Aga mitu tükki olid olulised Bonferroni korrektsiooni järgi?
+* Mitut olulist p-väärtust oleksid oodanud kummalgi juhul? Selgita. 
 * (**1 boonuspunkt**) Korda permuteerimist 100 korral ning tee kokkuvõte tulemustest. 
 
 ### Ülesanne 8 (1 punkt) - alternatiiv Bonferroni korrektsioonile
