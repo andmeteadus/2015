@@ -64,7 +64,6 @@ b. Tundub, et joonisest ei piisa ning tuleb pöörduda statistiliste mudelite juur
 c. Sobitasime mudeli `glm(s5 ~ HDL_C, family=binomial, data=data)` ning selgus, et HDL_C on oluline surma prognoosimisel. Seejärel aga sobitasime mudeli `glm(s5 ~ HDL_C + sugu, family=binomial, data=data)`, siis miskipärast HDL_C enam ei ole oluline. Selgita, mis värk on. Kas siis kokkuvõttes on oluline või mitte?
 d. Sobita kolm mudelit, et uurida kolesterooli (tunnuste Serum_C, HDL_C ja LDL_C) seost surmaga. Muide, kas lisad mudelitesse ka tunnused sugu, vanusegrupp, suits ja hyp? Põhjenda oma otsust. 
 e. Milline on tulemus, st kas siis mõni kolmest kolesterooli tunnusest on olulise mõjuga surma ennustamisel? 
-<!-- f. Kui mõni on oluline, siis vali üks ning interpreteeri, mis suunalise seosega on tegu. St kas suremise tõenäosust suurendab kõrgem või madalam skoor? -->
 
 ```{r}
 # sinu kood
@@ -82,9 +81,83 @@ Eelnimetatud teadusartiklis vaadeldi kõiki 106 biomarkerit. Tegelenud esialgu ko
 #  sinu kood
 ```
 
-### Ülesanne 4 (3 punkti) - p-väärtuse piiri paikapanek
 
-Kui soovime testida kõiki 106 biomarkeri olulisust surma ennustamisel, puutume kokku mitmese testimise probleemiga. Vaata selle kohta [koomiksit "Significant"](https://xkcd.com/882/) ning vajadusel selgitavat videot [Multiple Testing](https://www.youtube.com/watch?v=IDaHKAjxu_s) (vaata esimest 11 minutit). 
+### Ülesanne 4 (1 punkt) - Oluliste biomarkeri tuvastamine
+
+Milline biomarker aitab kõige paremini ennustada surma kui võtame arvesse vanuse ja soo mõju?
+
+Selleks sobita mudelid
+
+* s5 ~ sugu + vanusegrupp + biomarker_1
+* s5 ~ sugu + vanusegrupp + biomarker_2
+* ...
+* s5 ~ sugu + vanusegrupp + biomarker_106
+
+ja iga biomarkeri korral eralda mudelist selle p-väärtus ja kordaja.
+
+Kui sa ei soovi 106 korda glm mudelit käsitsi jooksutada ja manuaalselt p-väärtuseid välja noppida, siis automatiseeri see (näiteks `for` tsükli abil).
+
+Näide, kuidas ühe biomarkeri korral saada kätte p-väärtus ja kordaja:
+
+```{r, eval=FALSE}
+biomarker = "LDL_D"
+formula0 = "s5 ~ sugu + vanusegrupp"
+formula = paste(formula0, biomarker, sep=" + ")
+model = glm(formula, family=binomial, data=data)
+summary_table = coef(summary(model))
+pvalue = summary_table[nrow(summary_table), 4]
+estimate = summary_table[nrow(summary_table), 1]
+
+print(paste("Biomarker ", biomarker, 
+              ", kordaja: " , estimate,
+              ", pväärtus: ", pvalue,
+              sep=""))
+```
+
+
+### Ülesanne 5 (1 punkt)
+
+Kirjuta eelnev kood funktsiooniks. Funktsioon võiks välja näha umbes selline:
+
+```{r, eval=FALSE}
+estimate_significance = function(formula0, biomarkers, data){
+  
+  # sinu kood
+  
+  # võiksid tagastada iga biomarkeri nime, selle p-väärtuse ning kordaja suuruse
+  df = data.frame("biomarkers" = ..., "pvalues" = ..., "coefs" = ...)
+  return(df)
+}
+```
+
+Kontrolli oma lahendust:
+
+```{r, eval=FALSE}
+f = "s5 ~ sugu + vanusegrupp"
+estimate_significance(f, c("LDL_D", "HDL_C"), data)
+```
+
+Eelneva koodi jooksutamisel võiksid saada väljundiks:
+
+```{r, echo=FALSE}
+data.frame("biomarkers" = c("LDL_D", "HDL_C"), 
+           "pvalues" = c(0.00593, 0.073287), 
+           "coefs" = c(0.2846, -0.17294))
+```
+
+Kasuta nüüd eelnevalt kirjutatud funktsiooni kõigi 106 biomarkeri jaoks. Prindi välja iga biomarkeri p-väärtus ning kordaja hinnang. 
+
+### Ülesanne 6 (1 punkt)
+
+Visualiseeri saadud tulemust. Võid teha näiteks sellise joonise p-väärtustest log-skaalal
+
+![](example_plot_biomarkers.png)
+
+### Ülesanne 7 (4 punkti + 1 boonuspunkt) - p-väärtuse piiri paikapanek
+
+Nüüd saime kõigi biomarkerite jaoks teada p-väärtused. Jääb veel küsimus, millised neist peaksime liigitama olulisteks. 
+
+Kuna testisime kõigi 106 biomarkeri olulisust surma ennustamisel, puutume kokku mitmese testimise probleemiga. Vaata selle kohta [koomiksit "Significant"](https://xkcd.com/882/) ning uuri materjalist http://www.stat.berkeley.edu/~mgoldman/Section0402.pdf mitmese testimise ja Bonferroni korrektsiooni kohta. 
 
 (**1 punkt**) Selgita, milles seisnes koomiksi idee. 
 
@@ -94,75 +167,44 @@ Kui soovime testida kõiki 106 biomarkeri olulisust surma ennustamisel, puutume k
 
 Selgita, miks kasutati sellist p-väärtuse piiri (aga mitte klassikalist `p < 0.05`)?
 
-(**1 punkt**) Eelmises ülesandes nägime, et mitmed biomarkerid on omavahel tugevalt korreleeritud. Niisiis võib Bonferroni korrektsioon osutuda praegu liiga rangeks. Alternatiivselt võiksime leida, kui palju on meie andmestikus mittekorreleeritud tunnuseid, ning teha nende arvu järgi Bonferroni korrektsiooni. Selleks, et leida andmestiku nn "efektiivne dimensionaalsus", kasuta PCA-d. 
+(**2 punkti**) Veendumaks, et `p < 0.05` kasutamisel võime tõepoolest saada liiga palju valepositiivseid tulemusi, tekita andmestik, kus puudub seos tunnuse *s5* ja biomarkerite vahel. Selleks tekita uus tunnus, kus oleks *s5* väärtuseid permuteeritud suvaliselt. Sobita nüüd mudelid, kus prognoosiksid permuteeritud *s5* väärtuseid biomarkerite põhjal (selleks võid kasutada ülesandes 5 kirjutatud funktsiooni). 
+
+* Mitme biomarkeri p-väärtused tulid väiksemad kui 0.05? 
+* Aga mitu tükki olid olulised Bonferroni korrektsiooni järgi?
+* (**1 boonuspunkt**) Korda permuteerimist 100 korral ning tee kokkuvõte tulemustest. 
+
+### Ülesanne 8 (1 punkt) - alternatiiv Bonferroni korrektsioonile
+
+Ülesandes 3 nägime, et mitmed biomarkerid on omavahel tugevalt korreleeritud. Niisiis võib Bonferroni korrektsioon osutuda praegu liiga rangeks. Alternatiivselt võiksime leida, kui suur on meie andmestikus mittekorreleeritud tunnuste arv, ning teha nende arvu järgi Bonferroni korrektsiooni. Selleks, et leida andmestiku nn "efektiivne dimensionaalsus", kasuta PCA-d. 
 
 Juhised:
 
 * Rakenda andmestikul PCA-d ning leia, mitu peakomponenti seletavad näiteks 99\% variatsioonist. 
 * Leitud peakomponentide arv näitabki ligikaudu sõltumatute tunnuste arvu meie andmestikus. Tee Bonferroni korrektsioon selle arvu järgi. Millise p-väärtuse piiri saad?
 
-### Ülesanne 5 (3 punkti + 2 boonuspunkti) - Oluliste biomarkeri tuvastamine
+### Boonusülesanne 1 (2 punkti) - usaldusintervallid kordajate jaoks
 
-Kirjuta funktsioon, mis võimaldaks ette antud mudeli kujule (näiteks `s5 ~ sugu + vanusegrupp`) lisada ükshaaval kõik biomarkerid, näiteks 
+(**1 boonuspunkt**) Muuda funktsiooni `estimate_significance` selliselt, et iga biomarkeri kordajale arvutad ka 95% usaldusintervalli. Võid kasutada normaaljaotusel põhinevat lähendit ning arvutada selle `kordaja_hinnang +- 1.96 * SE`, kus SE on `summary(model)` väljundis toodud `Std. Error`. Funktsiooni tagastatavas andmetabelis peaksid nüüd olema ka veerud `lower` ja `upper`. 
 
-* `s5 ~ sugu + vanusegrupp + biomarker_1`
-* `s5 ~ sugu + vanusegrupp + biomarker_2`
+(**1 boonuspunkt**) Visualiseeri tulemust (näiteks iga biomarkeri kohta näita kordaja hinnangut koos usaldusintervalliga). 
 
-jne, et leida kõigist biomarkeritest üles kõige olulisem. 
-
-Funktsioon võiks välja näha umbes selline:
-
-```{r}
-estimate_significance = function(formula, biomarkers, data){
-  
-  # sinu kood
-  
-  # võiksid tagastada iga biomarkeri nime, selle p-väärtuse ning kordaja suuruse
-  return(list("biomarkers" = ..., "p.values" = ..., "coefs" = ...))
-}
-```
-
-Juhised:
-
-* Argument `formula` võiks olla esialgse mudeli kuju, näiteks `"s5 ~ vanusegrupp"` 
-* Argument `biomarkers` võiks sisaldada kõiki biomarkereid puudutavaid veerunimesid. Näiteks esimese biomarkeri korral oleks uuendatud valem `paste("s5 ~ vanusegrupp", biomarkers[1], sep=" + ")`. 
-* Argument `data` on andmestiku nimi.
-* Mudeli saab sobitada `model = glm(updated_formula, family=binomial, data=data)`. 
-* Mudeli p-väärtuse ja kordaja saad eraldada maatriksist `coef(summary(model))`. 
-
-(**1 boonuspunkt**) Muuda eelnevat funktsiooni nii, et iga biomarkeri kordajale arvutad ka 95\% usaldusintervalli. Võid kasutada normaaljaotusel põhinevat lähendit ning arvutada selle `kordaja_hinnang +- 1.96 * SE`, kus SE on `summary(model)` väljundis toodud `Std. Error`. Funktsioon peaks nüüd lisaks tagastama listi, mille elementide seas oleks ka `lower` ja `upper`. 
-
-Kontrolli, kas funktsioon töötab. 
-
-a. Millise mudeliga alustad, st kas lisad sugu, vanusegrupp, suits, hyp esialgsesse mudelisse?
-b. Millist p-väärtuse piiri kasutad? 
-c. Millised biomarkerid osutuvad olulisteks? 
-
-(**1 boonuspunkt**) Visualiseeri saadud tulemust. (Kui arvutasid eelnevalt usaldusintervallid, on üks variant visualiseerida neid.) Aga näiteks võid teha umbes sellise joonise p-väärtustest log-skaalal:
-
-![](example_plot_biomarkers.png)
-
-### Ülesanne 6 (2 punkti + 2 boonuspunkti) - Forward selection
+### Ülesanne 9 (1 punkt) - forward selection
 
 Artiklis on kirjeldatud mudeli koostamist järgnevalt: 
 
 > For biomarker discovery in the Estonian Biobank cohort, a multivariate model was derived in a forward stepwise fashion (Figure 2). First, the biomarker leading to the smallest p-value in the model adjusted for age and sex only was included as a predictor. Subsequently, the biomarker leading to the smallest p-value in the multivariate model adjusted for age, sex, and the first biomarker was included in the prediction model. The process was repeated until no additional biomarkers were significant at the Bonferroni-corrected threshold of p<0.0005, accounting for testing of 106 candidate biomarkers.
 
-Eelmises ülesandes leidsid kõige olulisema p-väärtusega biomarkeri. Jätka nüüd *forward selection*-iga:
+Eelmistes ülesannetes leidsid kõige olulisema p-väärtusega biomarkeri. Jätka nüüd *forward selection*-iga:
 
-* Lisa leitud biomarker mudelisse ning lähtu nüüd sellest mudelist. 
-* Kasuta eelmises ülesandes koostatud funktsiooni ning leia nüüd järgmine biomarker, mis mudelisse lisada. 
+* Lisa leitud biomarker mudelisse ning lähtu mudelist `s5 ~ sugu + vanusegrupp + kõige_olulisem_biomarker`
+* Kasuta funktsiooni `estimate_significance` ning leia nüüd järgmine biomarker, mis mudelisse lisada. 
 * Jätka senikaua, kuni mudelisse lisatavad biomarkerite p-väärtused on väiksemad kui sinu määratud piir. 
 
 Artiklis saadi sellise protsessi tulemusena 4 olulist biomarkerit: Alb, VLDL_D, Gp, Cit. Kas said samasugused?
 
-(**2 boonuspunkti**) Automatiseeri eelnevalt kirjeldatud forward selection. Kirjuta funktsioon, mis lisaks mudelisse biomarkereid senikaua, kuni p-väärtus on allpool ette antud piiri. 
+### Ülesanne 10 (1 punkt) - surma tõenäosuse prognoosimine
 
-### Ülesanne 7 (1 punkti) - surma tõenäosuse prognoosimine
-
-Eelmise ülesande tulemusena on sul nüüd olemas lõplik mudel, mis võtab arvesse kõik, mis on oluline surma tõenäosuse prognoosimiseks. 
-
-Kirjuta nüüd funktsioon, mis võtaks argumendiks andmestiku vajalike tunnustega, ning prognoosiks iga andmestikus oleva inimese kohta tema tõenäosust surra 5 aasta jooksul. 
+Eelmise ülesande tulemusena on sul nüüd olemas lõplik mudel, mis võtab arvesse kõik, mis on oluline surma tõenäosuse prognoosimiseks. Prognoosi iga andmestikus oleva inimese kohta tema tõenäosust surra 5 aasta jooksul ja visualiseeri tulemust (näiteks histogrammi abil).
 
 Näpunäide: Uuri, mida teeb järgnev kood
 
@@ -175,15 +217,8 @@ newdata = data.frame(suits = c(0, 0, 1),
 predicted_probabilities = predict(model, newdata=newdata, type = "response")
 ```
 
-Kirjuta nüüd vastava funktsioon
 
-```{r}
-death_probability = function(data){
-  # sinu kood
-}
-```
-
-### Ülesanne 8 (1 punkti) - prognooside täpsus
+### Boonusülesanne 2 (2 punkti) - prognooside täpsus
 
 Eelmises ülesandes prognoosisid surma tõenäosust. Aga mida hakkab tavainimene peale tõenäosusega? Olgem ikka konkreetsed, kas siis sureb 5 aasta jooksul või mitte. 
 
@@ -192,3 +227,4 @@ Selleks otsusta piir, millisest väiksemad tõenäosused klassifitseerid *ei sure* 
 Milline on sinu prognooside täpsus (st kui suur osa prognoosidest langes kokku tunnuse s5 väärtusega)?
 
 Võrdlusmomendi saamiseks paku välja veel mingi teine, naiivne klassifitseerija (see võib põhineda ükskõik kui lihtsal reeglil). Milline on selle täpsus?
+
