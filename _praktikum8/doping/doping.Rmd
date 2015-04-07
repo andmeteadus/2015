@@ -110,11 +110,17 @@ a. [Log-normaaljaotusel](http://en.wikipedia.org/wiki/Log-normal_distribution) o
 
 b. Ka [gammajaotusel](http://en.wikipedia.org/wiki/Gamma_distribution) on kaks parameetrit. Kuidas leiad sellised parameetrite väärtused, mille korral jaotus sobiks andmetega kõige paremini? Leia need parameetrid "kit1 - valged" osapopulatsiooni jaoks.
 
+> Praktikumis arutasime parameetrite hindamist ja kasutasime paketi `MASS` funktsiooni `fitdistr`.
+
 c. Leia kummagi jaotuse 99.99% kvantiil. 
 
 d. Visualiseeri ühel joonisel koos andmetega nii sobitatud log-normaal kui ka gammajaotust. Lisa joonisele 99.99% kvantiil. 
 
-Joonis võiks välja näha umbes selline
+Näpunäited:
+
+* Et histogrammi y-teljele saada *density*, uuri http://docs.ggplot2.org/current/geom_histogram.html 
+* Tiheduse lisamiseks uuri http://docs.ggplot2.org/current/stat_function.html
+* Joonis võiks välja näha umbes selline
 
 ![](doping_hist.png)
 
@@ -128,16 +134,6 @@ c. Oletame, et mõlemad jaotused sobisid andmetega. Mille põhjal langetad otsuse,
 
 WADA väitis, et log-normaaljaotus sobib andmetele kõige paremini. Kas said sama tulemuse?
 
-### Ülesanne 6 (2 punkti) - valged vs mustanahalised
-
-Valgetele ja mustanahalistele sobitati eraldi parameetriline jaotus. Kas see on vajalik? 
-
-Kuidas testid, kas uuringuandmed annavad põhjust arvata, et mustanahaliste ja valgete *rec/pit* suhe on erinev? Millise tulemuse said? 
-
-```{r}
-# sinu kood
-```
-
 
 ### Ülesanne 7 (2 punkti) - piirmäärad alamgruppide kaupa
 
@@ -147,7 +143,7 @@ Sobita nüüd kõigile neljale alamgrupile log-normaaljaotus ja leia selle 99.99% k
 # sinu kood
 ```
 
-Ametlik piirmäär kit1 korral oli 1.81 ja kit2 korral 1.68. Peaksid saama sarnased tulemused.
+Ametlik piirmäär kit1 korral oli 1.81 ja kit2 korral 1.68. Kas said sarnased tulemused?
 
 ### Kuidas verifitseeris otsustuspiire WADA?
 
@@ -180,10 +176,10 @@ Artiklis oli kirjas
 
 Leia bootstrap 95% usaldusintervall dopingutesti piirmäärale (ehk 99.99% kvantiilile). Visualiseeri saadud tulemust. 
 
-[Bootstrap](http://en.wikipedia.org/wiki/Bootstrapping_%28statistics%29) on üks viis leida valimihinnangule (näiteks kvantiilile) usaldusintervall. Kui see on sinu jaoks uus, võid vaadata ühte järgnevatest videotest:
+[Bootstrap](http://en.wikipedia.org/wiki/Bootstrapping_%28statistics%29) on üks viis leida valimihinnangule (näiteks meid huvitavale kvantiilile) usaldusintervall. Kui bootstrap on sinu jaoks uus, on abiks järgnev video. 
 
-* Vaata Coursera kursuse [Data Analysis and Statistical Inference](https://www.coursera.org/course/statistics) videot (Unit 4 Part 2 - Bootstrapping)
-* Alternatiivina vaata Stanfordi Statistical Learning [Bootstrap videot](https://www.youtube.com/watch?v=p4BYWX7PTBM)
+* Vaata Coursera kursuse [Data Analysis and Statistical Inference](https://www.coursera.org/course/statistics) videot Unit 4 Part 2 - Bootstrapping.  
+Juhul, kui sa ei soovi sellele kursusele registreeruda, saad seda videot vaadata ka [siit lingilt](https://www.dropbox.com/s/xez6gn4kyflpqkn/Data%20Analysis%20and%20Statistical%20Inference%20-%20Bootstrapping.mp4?dl=0)
 
 
 ### Ülesanne 9 (3 punkti) - valepositiivse testitulemuse tõenäosus
