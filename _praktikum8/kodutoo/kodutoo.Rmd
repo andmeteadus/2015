@@ -1,0 +1,21 @@
+---
+title: "Kodutöö"
+output: 
+  html_document:
+    theme: null
+---
+
+Tähtaeg: 13.04.2015 23:59 GMT
+
+
+(**25 punkti**) Lahenda praktikumis alustatud [dopingutesti ülesanded](/praktikum8_doping).
+
+
+(**1 boonuspunkt**) Kirjuta, kui palju aega kulus ülesannete peale. Mida arvad ülesannetest (kasulikkus, huvitavus)?
+
+
+# Mida on vaja esitada?
+
+* Tuleb esitada nii andmeanalüüsi raport (html või pdf formaadis) kui ka selle lähtekood .Rmd failina.
+
+Lahendused saata meili peale: andmeteadus@gmail.com
