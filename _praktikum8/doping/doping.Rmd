@@ -110,7 +110,7 @@ a. [Log-normaaljaotusel](http://en.wikipedia.org/wiki/Log-normal_distribution) o
 
 b. Ka [gammajaotusel](http://en.wikipedia.org/wiki/Gamma_distribution) on kaks parameetrit. Kuidas leiad sellised parameetrite v‰‰rtused, mille korral jaotus sobiks andmetega kıige paremini? Leia need parameetrid "kit1 - valged" osapopulatsiooni jaoks.
 
-> Praktikumis arutasime parameetrite hindamist ja kasutasime paketi `MASS` funktsiooni `fitdistr`.
+> Praktikumis tuletasime meelde statistika pıhitıdesid (parameetrite hindamist suurima tıep‰ra meetodil) ning kasutasime paketi `MASS` funktsiooni `fitdistr`.
 
 c. Leia kummagi jaotuse 99.99% kvantiil. 
 
@@ -130,12 +130,13 @@ a. Kas eelnevalt sobitatud log-normaaljaotus vıiks sobida andmetega? Mille aluse
 
 b. Aga kas gammajaotus vıiks sobida andmetega?
 
-c. Oletame, et mılemad jaotused sobisid andmetega. Mille pıhjal langetad otsuse, kumb sobib paremini?
+> Praktikumis arutasime m‰rksınu *QQplot* ja Kolmogorov-Smirnovi test. 
 
+c. Oletame, et mılemad jaotused sobisid andmetega. Mille pıhjal langetad otsuse, kumb sobib paremini?  
 WADA v‰itis, et log-normaaljaotus sobib andmetele kıige paremini. Kas said sama tulemuse?
 
 
-### ‹lesanne 7 (2 punkti) - piirm‰‰rad alamgruppide kaupa
+### ‹lesanne 6 (2 punkti) - piirm‰‰rad alamgruppide kaupa
 
 Sobita n¸¸d kıigile neljale alamgrupile log-normaaljaotus ja leia selle 99.99% kvantiil.
 
@@ -166,7 +167,7 @@ Uuri ise midagi pınevat. N‰iteks testi, kas tıesti enam log-normaaljaotus ei sob
 
 > See, kas tegu on gamma- vıi lognormaaljaotusega on tegelikult mınes mıttes pseudoprobleem. Tuleb silmas pidada, et me tahame hinnata v‰ga ‰‰rmuslikku, 99,99% kvantiili. Kui me valimi pıhjal mingi standardse testiga kontrollime parameetrilise jaotuse kehtivust ja j‰‰me nullh¸poteesi juurde, siis see t‰hendab seda, et suurem osa andmete jaotusest, nn jaotuse "keha" sobib selle jaotuse mudeliga. See test ei ¸tle midagi jaotuse "saba" kaugema otsa kohta. Ei ole suurt mıtet valideerimisuuringutes n‰ha vaeva sellega, kas algul eeldatud jaotus paika peab. Pigem tuleks n‰ha vaeva sellega, et uurida otsusepiirist ¸le minevate tulemuste kohta mingitki tausta - kas on v‰himatki lisatıendust dopingutarvitamise kohta? Ega ikka muudmoodi ei saagi seda valepositiivse tulemuse tıen‰osust k‰tte. Ja kui see pole vıimalik...siis kas saabki kehaomase aine lisadoseerimist t‰ie kindlusega testida?
 
-### ‹lesanne 8 (5 punkti) - bootstrap usaldusintervall otsustuspiirile
+### ‹lesanne 7 (5 punkti) - bootstrap usaldusintervall otsustuspiirile
 
 Testi otsustuspiirid olid m‰‰ratud vaid 106 sportlase pıhjal, kui testiga hakati juba sportlaseid ¥vahele vıtma°. Samas eeldati, et test teeb vaid 1 vea 10000 testis. Sellise t‰psuse saamiseks oli valimimaht ilmselgelt liiga v‰ike.
 
@@ -176,13 +177,11 @@ Artiklis oli kirjas
 
 Leia bootstrap 95% usaldusintervall dopingutesti piirm‰‰rale (ehk 99.99% kvantiilile). Visualiseeri saadud tulemust. 
 
-[Bootstrap](http://en.wikipedia.org/wiki/Bootstrapping_%28statistics%29) on ¸ks viis leida valimihinnangule (n‰iteks meid huvitavale kvantiilile) usaldusintervall. Kui bootstrap on sinu jaoks uus, on abiks j‰rgnev video. 
-
-* Vaata Coursera kursuse [Data Analysis and Statistical Inference](https://www.coursera.org/course/statistics) videot Unit 4 Part 2 - Bootstrapping.  
+> [Bootstrap](http://en.wikipedia.org/wiki/Bootstrapping_%28statistics%29) on ¸ks viis leida valimihinnangule (n‰iteks meid huvitavale kvantiilile) usaldusintervall. Kui bootstrap on sinu jaoks uus, on abiks j‰rgnev Coursera kursuse [Data Analysis and Statistical Inference](https://www.coursera.org/course/statistics) video *Unit 4 Part 2 - Bootstrapping*.  
 Juhul, kui sa ei soovi sellele kursusele registreeruda, saad seda videot vaadata ka [siit lingilt](https://www.dropbox.com/s/xez6gn4kyflpqkn/Data%20Analysis%20and%20Statistical%20Inference%20-%20Bootstrapping.mp4?dl=0)
 
 
-### ‹lesanne 9 (3 punkti) - valepositiivse testitulemuse tıen‰osus
+### ‹lesanne 8 (3 punkti) - valepositiivse testitulemuse tıen‰osus
 
 > CASis kohal k‰inud statistikud (1 Eestist, 1 v‰gagi nimekas professor USAst) tegid selgeks, et kui test on positiivne, siis dopingutarvitamise tıen‰osus j‰‰b vahemikku 10-90%. 90% on ıige siis, kui WADA poolt v‰idetav spetsiifilisus 99,99% (ehk siis valepositiivse tıen‰osus 0,01%) kehtib. 10% on ıige siis, kui see on tegelikult 99,9%. WADA andmed ei vıimalda kindlaks teha, kas ta tegelikult on 99,99% vıi 99,9%. Sellega oli nıus ka CAS
 
