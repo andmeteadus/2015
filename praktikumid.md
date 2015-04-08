@@ -67,7 +67,8 @@ Mittestandardne graafika. Kuidas teha sama häid jooniseid nagu NY Times seda te
 
 Andmete kraapimine veebist. Näide: Riigikogu saadikute hääletamismustrid.
 
-* [rvest minimalistlik näide](/praktikum5_rvest_minimal)
+* Abimaterjal:
+  * [rvest minimalistlik näide](/praktikum5_rvest_minimal)
 * [Veebi kraapimise ülesanded](/praktikum5_web)
 * [Kodutöö](/praktikum5_kodutoo)
   * Tähtaeg: 23.03.2015 kell 23.59 GMT
@@ -110,10 +111,6 @@ Doping ja statistika. Statistiline test. Näide: ühe dopingujuhtumi analüüs.
 
 ## Praktikum 9
 
-14.04.2015
+21.04.2015
 
 Külalisesineja: Krista Fischer. Küsimused dopingujuhtumi ning biomarkerite teema kohta. Kokkuvõte ainest.
-
-* [Slaidid](https://)
-* [Ülesanded](https://)
-* Tähtaeg: XX.XX.2015
