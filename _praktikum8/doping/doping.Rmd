@@ -185,7 +185,7 @@ Juhul, kui sa ei soovi sellele kursusele registreeruda, saad seda videot vaadata
 
 > CASis kohal k‰inud statistikud (1 Eestist, 1 v‰gagi nimekas professor USAst) tegid selgeks, et kui test on positiivne, siis dopingutarvitamise tıen‰osus j‰‰b vahemikku 10-90%. 90% on ıige siis, kui WADA poolt v‰idetav spetsiifilisus 99,99% (ehk siis valepositiivse tıen‰osus 0,01%) kehtib. 10% on ıige siis, kui see on tegelikult 99,9%. WADA andmed ei vıimalda kindlaks teha, kas ta tegelikult on 99,99% vıi 99,9%. Sellega oli nıus ka CAS
 
-Kuidas leida, et dopingutarvitamise tıen‰osus j‰‰b vahemikku 10-90%, kui sportlane sai positiivse testitulemuse.
+Kuidas leida dopingutarvitamise tıen‰osust, kui sportlane sai positiivse testitulemuse?
 
 N‰pun‰ited:
 
