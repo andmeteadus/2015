@@ -12,32 +12,27 @@ Aine läbimiseks tuleb läbi viia üks praktiline andmeanalüüs ning kirjutada 
 
 Mõned väljapakutud teemad leiad [siit](https://docs.google.com/document/d/1beb5n0H4Y4Xekf_A7xgZRX2uQqeoW3HsqpgCuiBjA48/edit).
 
-Registreeri oma teemavalik [siin](https://docs.google.com/document/d/1Zt8-mKq9QW3Bhb3YObgXrZK1AoglPLin5Z9BWZTaaGU/edit)
+Registreeri oma teemavalik [siin](https://docs.google.com/document/d/1Zt8-mKq9QW3Bhb3YObgXrZK1AoglPLin5Z9BWZTaaGU/edit).
 
 ### Mida on vaja esitada?
 
-**a. Teema valimine**
-
-Vaja on esitada:
-
-* Projekti pealkiri
-* Projekti motivatsioon - miks on teema huvitav sulle? Miks võiks teema olla põnev teistele?
-* Mis andmestikke plaanid kasutada?
-
-**b. Kood**
-
-Vaja on esitada:
-
-* Andmeanalüüsi raporti .Rmd fail või failid.
-* Genereeritud html või pdf raport.
-
-**c. Artikkel**
+**a. Artikkel**
 
 Valminud populaarteaduslik artikkel tehakse avalikuks [aine veebilehel](http://andmeteadus.github.io/projektid/).
 
-Vaja on esitada:
+Vaja on esitada märgenduskeeles Markdown kirjutatud artikkel.
+Kuna aine veebilehe postitused on kirjutatud Markdownis, siis on lihtsam projekte veebilehele lisada, kui need on tehtud Markdownis.
+Näiteks selle sama lehe Markdowni koodi näed [siit](https://raw.githubusercontent.com/andmeteadus/andmeteadus.github.io/master/projekt_juhend.md).
 
-* Markdownis kirjutatud artikkel.
+Artikli puhtandi võid kirjutada näiteks RStudios, aga see fail ei tohi sisaldada R-i koodiblokke.
+Joonise lisamiseks salvesta see eraldi pildifailina ja lisa see pilt Markdownis kirjutatud artiklisse.
+Abiks on järgmised [Markdowni näpunäited](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#images).
+
+
+**b. Kood**
+
+Vaja on esitada andmeanalüüsi R-i kood.
+
 
 ### Hindamine
 
