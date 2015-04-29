@@ -22,10 +22,23 @@ Valminud populaarteaduslik artikkel tehakse avalikuks [aine veebilehel](http://a
 
 Vaja on esitada märgenduskeeles Markdown kirjutatud artikkel.
 Kuna aine veebilehe postitused on kirjutatud Markdownis, siis on lihtsam projekte veebilehele lisada, kui need on tehtud Markdownis.
-Näiteks selle sama lehe Markdowni koodi näed [siit](https://raw.githubusercontent.com/andmeteadus/andmeteadus.github.io/master/projekt_juhend.md).
+Näiteks selle sama lehe lähtekoodi näed [siit](https://raw.githubusercontent.com/andmeteadus/andmeteadus.github.io/master/projekt_juhend.md).
 
-Artikli puhtandi võid kirjutada näiteks RStudios, aga see fail ei tohi sisaldada R-i koodiblokke.
+Artikli puhtandi võid kirjutada näiteks RStudios, aga see fail ei tohi sisaldada R-i koodi.
 Joonise lisamiseks salvesta see eraldi pildifailina ja lisa see pilt Markdownis kirjutatud artiklisse.
+
+Näiteks nii:
+
+```
+![](joonis1.png)
+```
+
+Aga mitte selliselt:
+
+```
+ggplot(data, aes(x, y)) + geom_point()
+```
+
 Abiks on järgmised [Markdowni näpunäited](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#images).
 
 
