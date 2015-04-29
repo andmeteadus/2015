@@ -46,6 +46,7 @@ Abiks on järgmised [Markdowni näpunäited](https://github.com/adam-p/markdown-
 
 Vaja on esitada andmeanalüüsi R-i kood.
 
+Selle eesmärgiks on veenduda, et analüüs on reprodutseeritav. 
 
 ### Hindamine
 
