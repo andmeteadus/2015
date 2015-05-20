@@ -66,7 +66,7 @@ Keskmine börsihind erineb ka aasta jooksul kuu lõikes, mida illustreerib järg
 
 ![](/images/month_avg_consumption.png)
 
-Tõepoolest, kui teha statistiline lineaarregressiooni mudel terve 2014. aasta Eesti regiooni börsi tunnihindade ja tunnis tarbitud elektrimahu suhtes, saame p-väärtuseks $4.337e-16$, mis näitab väga tugevat korrelatsiooni tarbimismahtude ja börsihinna vahel.
+Tõepoolest, kui teha statistiline lineaarregressiooni mudel terve 2014. aasta Eesti regiooni börsi tunnihindade ja tunnis tarbitud elektrimahu suhtes, saame p-väärtuseks $$4.337e-16$$, mis näitab väga tugevat korrelatsiooni tarbimismahtude ja börsihinna vahel.
 
 ## Elektriarve vähendamine börsihindade kõikumiste põhjal
 
@@ -123,7 +123,7 @@ Proovime hinnata, millist rahalist kasu selline päevase tarbimise vähendamise 
 
 Fikseerime öise vahemiku kella 21.00-5.00 vahel. Oletame, et tarbija vähendab ühtlaselt päevasel vahemikul 5.00-21.00 elektritarbimist kokku $$n\%$$ ning jaotab selle ühtlaselt ära öise vahemiku 21.00-5.00 vahel, ja nii aasta läbi iga päev. Arvutame siis erinevate $$n$$-i väärtuste korral aastase elektri maksumuse ja võidu tüüpgraafiku suhtes 2014. aasta börsihindade järgi.
 
-| Aastane tarbimismaht  | Aasta maksumus tüüpkoormusgraafikuga (€) | $n = 5\%$| $n = 10\%$|$n = 15\%$|$n = 25\%$|$n = 50\%$| $n = 100\%$| 
+| Aastane tarbimismaht  | Aasta maksumus tüüpkoormusgraafikuga (€) | $$n = 5\%$$| $$n = 10\%$$|$$n = 15\%$$|$$n = 25\%$$|$$n = 50\%$$| $$n = 100\%$$| 
 | ----------- |-------:|-------:|------:|------:|------:|------:|------:|
 | 2000 kWh    | 92.36  | 91.58   | 90.82   | 90.02  | 88.46  | 84.60  | 76.82  |
 | 10000 kWh   | 461.80 | 457.92  | 454.08  | 450.12 | 442.32 | 423.00 | 384.12 |
