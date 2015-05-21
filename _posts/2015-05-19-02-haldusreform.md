@@ -14,7 +14,7 @@ Kõrvutades omavahel Eesti kaarte, milledele on märgitud omavalitsuste kaupa ra
 
 Suuremad omavalitsused elanike arvu poolest:
 
-![](/images/elanikudtb.png)
+![](/images/elanikudtb.PNG)
 
 
 ###Töötuse määr
@@ -28,7 +28,7 @@ Lineaarsest mudelist, mis kasutab argumenttunnusena rahvaarvu ning funktsioontun
 
 Suurema töötuse osakaaludega omavalitsused:
 
-![](/images/tootudtb.png)
+![](/images/tootudtb.PNG)
 
 
 ###Pensionäride osakaal
@@ -41,12 +41,12 @@ Aladel, mis jäävad suurematest keskustest kaugemale, on ka selle suhte väärt
 
 Omavalitsused, kus on pensionäri kohta enam tööealisi inimesi:
 
-![](/images/penskarid1tb.png)
+![](/images/penskarid1tb.PNG)
 
 
 Omavalitsused, kus on pensionäri kohta vähem tööealisi inimesi:
 
-![](/images/penskarid2tb.png)
+![](/images/penskarid2tb.PNG)
 
 
 ###Tööliste palk
@@ -59,7 +59,7 @@ Kasutades lineaarse mudeli jaoks argumenttunnuse (rahvaarv) eelnevat logaritmimi
 
 Omavalitsused, kus sinikraedele makstakse suurimat keskmist palka:
 
-![](/images/sinikraedtb.png)
+![](/images/sinikraedtb.PNG)
 
 
 Osutus, et suurem osa sotsiaalmajanduslikest tunnustest, mida eelpool vaadeldi, ei ole statistiliselt oluliselt mõjutatud rahvaarvust. Vaid tööealiste ning pensionäride arvu suhe sõltus logaritmitud rahvaarvust. Selliseist tulemusist johtuvalt võiks väita, et haldusreformi tegemine ei ole õigustatud, sest statistilist tõestust ei leidnud tõik, nagu suurem omavalitsusüksuse rahvaarv aitaks hoida tööpuuduse taset madalamal või palgataset kõrgemal. Samas peab siiski möönma, et kaartidelt oli näha teatud sorti klasterdumist. Mõneti edukamad omavalitsused olid need, mis paiknesid lähedal tõmbekeskustele või olid ise need. Pigem kesiseid näitajaid andsid tõmbekeskustest kaugemal asuvad omavalitsused.
