@@ -29,11 +29,11 @@ Reprodutseeritav analüüs. Näide: Kas suur võlakoorem vähendab riigi majandu
 Pettuse tuvastamine Benfordi seaduse abil. 
 
 * Praktikumis kasutatud materjalid:
-  * [ggplot2 minimalistlik näide](/praktikum2_ggplot2)
-  * Boxploti [ülesanne 1](/slides/praktikum2_boxplot_quiz1.pdf) ja [ülesanne 2](/slides/praktikum2_boxplot_quiz2.pdf)
-* [*Growth in a Time of Debt*: Riigi võlakoormuse ja SKP vaheline seos](/praktikum2_riigivolg)
-* [Pettuse tuvastamise ülesanded](/praktikum2_pettus)
-* [Kodutöö](/praktikum2_kodutoo)
+  * [ggplot2 minimalistlik näide](../praktikum2_ggplot2)
+  * Boxploti [ülesanne 1](../slides/praktikum2_boxplot_quiz1.pdf) ja [ülesanne 2](../slides/praktikum2_boxplot_quiz2.pdf)
+* [*Growth in a Time of Debt*: Riigi võlakoormuse ja SKP vaheline seos](../praktikum2_riigivolg)
+* [Pettuse tuvastamise ülesanded](../praktikum2_pettus)
+* [Kodutöö](../praktikum2_kodutoo)
   * Tähtaeg: 02.03.2015 kell 23.59 GMT
 
 ## Praktikum 3
@@ -43,10 +43,10 @@ Pettuse tuvastamine Benfordi seaduse abil.
 Joonised paketiga ggplot2: erinevad joonisetüübid. Interaktiivsed rakendused paketiga shiny. Näide: ÕISi tagasiside visualiseerimine. 
 
 * Praktikumis kasutatud materjalid:
-  * [reshape2 minimalistlik näide](/praktikum3_reshape)
-  * [Jaotuste äraarvamise ülesanne](/praktikum3_quiz1) ja [graafikute tajumise ülesanne](/praktikum3_quiz2)
-* [Õppetulemuste visualiseerimise ülesanded](/praktikum3_oppeained)
-* [Kodutöö](/praktikum3_kodutoo)
+  * [reshape2 minimalistlik näide](../praktikum3_reshape)
+  * [Jaotuste äraarvamise ülesanne](../praktikum3_quiz1) ja [graafikute tajumise ülesanne](../praktikum3_quiz2)
+* [Õppetulemuste visualiseerimise ülesanded](../praktikum3_oppeained)
+* [Kodutöö](../praktikum3_kodutoo)
   * Tähtaeg: 09.03.2015 kell 23.59 GMT
 
 
@@ -56,9 +56,9 @@ Joonised paketiga ggplot2: erinevad joonisetüübid. Interaktiivsed rakendused p
 
 Mittestandardne graafika. Kuidas teha sama häid jooniseid nagu NY Times seda teeb? Näide: NBA andmestik.
 
-* [NBA ülesanded](/praktikum4_nba)
-* [Lennuliikluse visualiseerimise ülesanded](/praktikum4_geo)
-* [Kodutöö](/praktikum4_kodutoo)
+* [NBA ülesanded](../praktikum4_nba)
+* [Lennuliikluse visualiseerimise ülesanded](../praktikum4_geo)
+* [Kodutöö](../praktikum4_kodutoo)
   * Tähtaeg: 16.03.2015 kell 23.59 GMT
 
 ## Praktikum 5
@@ -68,9 +68,9 @@ Mittestandardne graafika. Kuidas teha sama häid jooniseid nagu NY Times seda te
 Andmete kraapimine veebist. Näide: Riigikogu saadikute hääletamismustrid.
 
 * Abimaterjal:
-  * [rvest minimalistlik näide](/praktikum5_rvest_minimal)
-* [Veebi kraapimise ülesanded](/praktikum5_web)
-* [Kodutöö](/praktikum5_kodutoo)
+  * [rvest minimalistlik näide](../praktikum5_rvest_minimal)
+* [Veebi kraapimise ülesanded](../praktikum5_web)
+* [Kodutöö](../praktikum5_kodutoo)
   * Tähtaeg: 23.03.2015 kell 23.59 GMT
 
 ## Praktikum 6
@@ -80,11 +80,11 @@ Andmete kraapimine veebist. Näide: Riigikogu saadikute hääletamismustrid.
 Heatmap. Peakomponentanalüüs. Näide (jätkub): Riigikogu saadikute hääletamismustrid. Käsitsi kirjutatud numbrite andmestik.
 
 * Abimaterjalid:
-  * [PCA minimalistlik näide](/praktikum6_pca_minimal)
-  * [pheatmap minimalistlik näide](/praktikum6_pheatmap_minimal)
-* [Käsitsi kirjutatud numbritel põhinevad ülesanded](/praktikum6_numbrid)
-* [Riigikogu saadikute hääletusmustrite analüüs](/praktikum6_polaarsus)
-* [Kodutöö](/praktikum6_kodutoo)
+  * [PCA minimalistlik näide](../praktikum6_pca_minimal)
+  * [pheatmap minimalistlik näide](../praktikum6_pheatmap_minimal)
+* [Käsitsi kirjutatud numbritel põhinevad ülesanded](../praktikum6_numbrid)
+* [Riigikogu saadikute hääletusmustrite analüüs](../praktikum6_polaarsus)
+* [Kodutöö](../praktikum6_kodutoo)
   * Tähtaeg: 30.03.2015 kell 23.59 GMT
 
 ## Praktikum 7
@@ -94,9 +94,9 @@ Heatmap. Peakomponentanalüüs. Näide (jätkub): Riigikogu saadikute hääletam
 Logistiline regressioon. Mitmese testimise probleem. Näide: biomarkerid ja statistika (ehk kuidas ennustada surma).
 
 * Abimaterjal:
-  * [Logistilise regressiooni minimalistlik näide](/praktikum7_logreg_minimal)
-* [Biomarkerite abil surma prognoosimine](/praktikum7_biomarkerid)
-* [Kodutöö](/praktikum7_kodutoo)
+  * [Logistilise regressiooni minimalistlik näide](../praktikum7_logreg_minimal)
+* [Biomarkerite abil surma prognoosimine](../praktikum7_biomarkerid)
+* [Kodutöö](../praktikum7_kodutoo)
   * Tähtaeg: 06.04.2015 kell 23.59 GMT
 
 ## Praktikum 8
@@ -105,8 +105,8 @@ Logistiline regressioon. Mitmese testimise probleem. Näide: biomarkerid ja stat
 
 Doping ja statistika. Statistiline test. Näide: ühe dopingujuhtumi analüüs.
 
-* [Dopingutesti ülesanded](/praktikum8_doping)
-* [Kodutöö](/praktikum8_kodutoo)
+* [Dopingutesti ülesanded](../praktikum8_doping)
+* [Kodutöö](../praktikum8_kodutoo)
   * Tähtaeg: 13.04.2015 kell 23.59 GMT
 
 ## Praktikum 9
