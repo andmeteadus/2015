@@ -7,7 +7,7 @@ title:            Statistiline andmeteadus ja visualiseerimine
 tagline:          MTMS.01.100
 url:              http://andmeteadus.github.io
 paginate:         1
-baseurl:          2015/
+baseurl:          /
 author:
   name:           Tanel Pärnamaa, Kaspar Märtens
   url:            
