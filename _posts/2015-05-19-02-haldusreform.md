@@ -10,56 +10,56 @@ Käesolevas artiklis vaadeldakse peaasjalikult rahvaarvu ning erinevate sotsiaal
 
 ###Elanike arv
 Kõrvutades omavahel Eesti kaarte, milledele on märgitud omavalitsuste kaupa rahvaarv, on näha, et suurema rahvaarvuga on pigem Harjumaa omavalitsused, lisaks veel ka nn regionaalsed tõmbekeskused (nt Pärnu, Türi, Kuressaare).
-![](/images/elanikearv.png)
+![](/2015/images/elanikearv.png)
 
 Suuremad omavalitsused elanike arvu poolest:
 
-![](/images/elanikudtb.PNG)
+![](/2015/images/elanikudtb.PNG)
 
 
 ###Töötuse määr
 Huvitaval kombel näitab sarnast klasterdumise tendentsi ka töötuse määr (töötuid tööealise elanikkonna kohta), kuid sel juhul on olukord vastupidine. Töötuse määr on selgelt suurem just Lõuna-Eestis ning pigem väiksem Põhja-Eestis mõningate eranditega Ida-Virumaal. Seega näib, et võib kehtida seos, mille kohaselt on töötuse määr väiksem piirkondades, kus on suurem rahvaarv, seega ka suurem suutlikkus panustada tööhõive kõrgemasse tasemesse.
 
-![](/images/tootuid.png)
+![](/2015/images/tootuid.png)
 
 Lineaarsest mudelist, mis kasutab argumenttunnusena rahvaarvu ning funktsioontunnusena töötuse määra, selgub, et rahvaarv osutub (olulisuse nivool 0,05) töötuse määra kirjeldamisel ebaoluliseks. Sarnane tulemus joonistub välja ka graafikul (siin on tunnus rahvaarv logaritmitud). Punktiparv paikneb graafikul hajutatult ning pole võimalik väita nagu oleks seos tööpuuduse ja rahvaarvu vahel.
 
-![](/images/tootutesc.png)
+![](/2015/images/tootutesc.png)
 
 Suurema töötuse osakaaludega omavalitsused:
 
-![](/images/tootudtb.PNG)
+![](/2015/images/tootudtb.PNG)
 
 
 ###Pensionäride osakaal
 Uurime ka tööealiste ning pensionäride arvu suhet. Mida suurem on see suhe, seda edukam võib arvatavasti ka omavalitsus olla, sest maksumaksjaid on suurema suhte puhul rohkem võrreldes passiivsete saajatega. Eesti kaardi pealt joonistub jällegi välja asjaolu, et tööealiste arv suhtes pensionäride arvuga on suurem suuremate asulate ning tõmbekeskuste juures.
-![](/images/penskareid.png)
+![](/2015/images/penskareid.png)
 
 Aladel, mis jäävad suurematest keskustest kaugemale, on ka selle suhte väärtus väiksem. Lineaarsest mudelist, mis kasutab argumenttunnusena rahvaarvu ning funktsioontunnusena eelkirjeldatud suhet, selgub, et rahvaarv osutub (olulisuse nivool 0,05) tööealiste ja pensionäride suhte kirjeldamisel ebaoluliseks. Samas, kui elanike arvu eelnevalt logaritmida, osutub, et tööealiste ja pensionäride arvu suhe sõltub logaritmitud elanike arvust. Mida suurem on rahvaarv, seda kõrgem on ka tööealiste ja pensionäride suhtarv.
 
-![](/images/pensisc.png)
+![](/2015/images/pensisc.png)
 
 Omavalitsused, kus on pensionäri kohta enam tööealisi inimesi:
 
-![](/images/penskarid1tb.PNG)
+![](/2015/images/penskarid1tb.PNG)
 
 
 Omavalitsused, kus on pensionäri kohta vähem tööealisi inimesi:
 
-![](/images/penskarid2tb.PNG)
+![](/2015/images/penskarid2tb.PNG)
 
 
 ###Tööliste palk
 Vaatleme erinevate omavalitsuste keskmist palgataset. Niinimetatud sinikraede ehk oskustööliste keskmine palk valdade kaupa on küllaltki erinev ning on raske eristada kindlat mustrit. Et mitmed vallad on üsna väiksed, võib see tulemus olla suuresti mõjutatud ka näiteks mõne suurema ettevõtte poolt. Ka siin ei tule lineaarses mudelis argumenttunnusena kasutatav rahvaarv oluline sinikraede keskmise palga kirjeldamisel.
-![](/images/sinikraed.png)
+![](/2015/images/sinikraed.png)
 
 Kasutades lineaarse mudeli jaoks argumenttunnuse (rahvaarv) eelnevat logaritmimist, saame, et oskustöölise keskmine palk ei sõltu logaritmitud elanike arvust. 
 
-![](/images/sinisc.png)
+![](/2015/images/sinisc.png)
 
 Omavalitsused, kus sinikraedele makstakse suurimat keskmist palka:
 
-![](/images/sinikraedtb.PNG)
+![](/2015/images/sinikraedtb.PNG)
 
 
 Osutus, et suurem osa sotsiaalmajanduslikest tunnustest, mida eelpool vaadeldi, ei ole statistiliselt oluliselt mõjutatud rahvaarvust. Vaid tööealiste ning pensionäride arvu suhe sõltus logaritmitud rahvaarvust. Selliseist tulemusist johtuvalt võiks väita, et haldusreformi tegemine ei ole õigustatud, sest statistilist tõestust ei leidnud tõik, nagu suurem omavalitsusüksuse rahvaarv aitaks hoida tööpuuduse taset madalamal või palgataset kõrgemal. Samas peab siiski möönma, et kaartidelt oli näha teatud sorti klasterdumist. Mõneti edukamad omavalitsused olid need, mis paiknesid lähedal tõmbekeskustele või olid ise need. Pigem kesiseid näitajaid andsid tõmbekeskustest kaugemal asuvad omavalitsused.

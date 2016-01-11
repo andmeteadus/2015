@@ -7,9 +7,9 @@ Tudengite poolt tehtud projektid. Projekti juhendi leiad [siit](http://andmetead
 <br><br>
 
 {% for post in site.posts %}
-## [ {{ post.title }} ]({{ post.url }})
+## [ {{ post.title }} ](..{{ post.url }})
   {{ post.content | strip_html | truncatewords:30}}
-  [ (loe edasi) ]({{ post.url }})
+  [ (loe edasi) ](..{{ post.url }})
   <br><br>
   
 {% endfor %}

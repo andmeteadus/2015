@@ -48,23 +48,23 @@ Asume nüüd uurima võimalusi, mil moel saaks tunniarvestusega börsipakettide 
 
 Esmalt on huvitav näha, kui palju ja mis korrapärade järgi ikkagi börsihinnad ööpäeva jooksul kõiguvad. Näiteks oleks oluline teada kui palju odavam on öine elekter päevasest elektrist. Iseloomustame börsihindade ööpäevast käitumist 2014. jaanuari börsihindade jaotuse näitel alloleval graafikul.
 
-![](/images/price_jan2014.png)
+![](/2015/images/price_jan2014.png)
 
 Graafikult on näha, et börsihinnad kõiguvad üsna palju, ühe ööpäeva jooksul võib elektri hind erineda kuni 3 korda. Seega saab oluliselt mõjutada elektriarve suurust kui tarbimist jaotada päeva peale laiali. Järgmistelt graafikutelt näeme lähemalt, millistel tundidel on keskmiselt elekter odavam ja millistel kallim.
 
-![](/images/hour_avg2014.png)
+![](/2015/images/hour_avg2014.png)
 
-![](/images/hour_avg_jan2014.png)
+![](/2015/images/hour_avg_jan2014.png)
 
 Ülemisel graafikul on kujutatud 2014. aasta iga kuu jaoks ööpäeva tundide keskmised börsi tunnihinnad, keskmistatud üle kõikide selle kuu päevade. Järgmine graafik näitab tunni keskmisi hindu 2014. aasta jaanuaris. Kellaajad on esitatud Eesti aja järgi. Üsna selgelt eristuvad kaks nö tipptunni perioodi --- hommikul umbes kella 8 ajal ning õhtul 17 ajal. Need on kahtlemata kõige kõrgema nõudlusega ajaperioodid, kus inimesed lähevad tööle ja tulevat töölt ning suurenenud nõudluse tagajärjel tõusevad ka börsihinnad. Öösel ajavahemikus umbes 21.00-5.00 tundub olevat elekter kõige odavam. Seega, mida rohkem tarbija kulutab elektrit pigem öisel, kui päevasel ajal, on tema elektriarve kokkuvõttes väiksem samade tarbimismahtude juures.
 
 Keskmine börsihind erineb ka aasta jooksul kuu lõikes, mida illustreerib järgmine graafik.
 
-![](/images/month_avg2014.png)
+![](/2015/images/month_avg2014.png)
 
 Üldtrendina on suvekuudel elekter kõige kallim. 2014. jaanuari kõrge keskmine börsihind on seletatav sellega, et 2013. aastal olid börsihinnad üleüldiselt kõrgemad kui 2014. aastal. See, et suvekuudel on elekter hoopis kallim kui talvekuudel võib olla pisut ebaintuitiivne, sest talvisel kütteperioodil võiks nõudlus elektrienergia järele olla suurem. Nord Pool Spot andmed Eesti regiooni kogu tarbimise kohta näitavad aga vastupidist, mis aitab seletada suvekuude kõrgemat börsihinda.
 
-![](/images/month_avg_consumption.png)
+![](/2015/images/month_avg_consumption.png)
 
 Tõepoolest, kui teha statistiline lineaarregressiooni mudel terve 2014. aasta Eesti regiooni börsi tunnihindade ja tunnis tarbitud elektrimahu suhtes, saame p-väärtuseks $$4.337e-16$$, mis näitab väga tugevat korrelatsiooni tarbimismahtude ja börsihinna vahel.
 
@@ -74,9 +74,9 @@ Järgnevalt uurime, kui suurt võitu elektriarvelt võib saavutada keskmisest er
 
 Vaatleme esmalt 2014. aasta tüüpkoormusgraafiku poolt määratud tarbimisjaotust lähemalt. 
 
-![](/images/tyypkoormus.png)
+![](/2015/images/tyypkoormus.png)
 
-![](/images/tyypkoormus_jan.png)
+![](/2015/images/tyypkoormus_jan.png)
 
 Graafikutelt on näha, et tüüpkoormusgraafik on väga korrapärane ühe kuu lõikes ning võtab otseselt arvesse hommikusi ja õhtuseid tipptunde. Samuti on nädalavahetustel arvestatud väiksemat tarbimismahtu ning näiteks jõulude ajal tavapärasest suuremat.
 

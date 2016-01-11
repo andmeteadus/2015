@@ -13,14 +13,14 @@ Analüüsis on kasutatud EUROSTUDENT V küsitluse andmeid, kus on 6418 üliõpil
 Joonisel 1 on üliõpilaste sissetulekute jaotus, millelt on näha, et kõige sagedamini jääb sissetulek vahemikku 201-300 eurot kuus. Keskmine kuusissetulek on 537.5 eurot ning mediaansissetulek 405 eurot kuus. 2013. aastal oli arvestuslik elatusmiinimum 205.3 eurot kuus. Analüüsi käigus selgus, et viiendikul üliõpilastest on sissetulek alla elatusmiinimumi. Paljudel juhtudel tähendab see ilmselt, et tudeng ei maksa elamispinna eest ise, sest vastasel juhul ei oleks nii väikese summaga võimalik toime tulla.
 
 
-![](/images/yliopilased_joonis1.png)
+![](/2015/images/yliopilased_joonis1.png)
 
 *Joonis 1. Sissetulekute jaotus*
 <br>
 <br>
 
 
-![](/images/yliopilased_joonis2.png)
+![](/2015/images/yliopilased_joonis2.png)
 
 *Joonis 2. Soovitud sissetulekute jaotus*
 <br>
@@ -30,7 +30,7 @@ Edasi uuriti üliõpilaste soovituid sissetulekuid (vt joonis 2). Tudengitelt k�
 Kuna sissetulekute jaotus, mille korral tudeng ei peaks äraelamiseks töötama, on võrreldes tegelike sissetulekute jaotusega paremale nihkes, võib arvata, et paljud tudengid käivad tööl. Seetõttu on järgmisena uuritud, kui paljud üliõpilased töötavad.
  
 
-![](/images/yliopilased_joonis3.png)
+![](/2015/images/yliopilased_joonis3.png)
 
 *Joonis 3. Töölkäimine üliõpilaste hulgas*
 <br>
@@ -38,14 +38,14 @@ Kuna sissetulekute jaotus, mille korral tudeng ei peaks äraelamiseks töötama,
 Jooniselt 3 selgub, et 62% vastanutest käib tööl ning 38% ei tööta. Edasi küsiti tudenigte töölkäimise põhjuseid. Huvi pakkus, kui paljud tudengid käivad tööl selleks, et toime tulla. Vastata sai viie palli skaalal, kus 1 tähistas vastust "üldse mitte" ja 5 vastust "täiesti". Jooniselt 4 on näha, et üle 60% töölkäijatest teeb seda täielikult toimetuleku jaoks. 
 
 
-![](/images/yliopilased_joonis4.png)
+![](/2015/images/yliopilased_joonis4.png)
 
 *Joonis 4. Töölkäimine toimetuleku jaoks*
 <br>
 <br>
 Järgmisena uuriti, millised on sissetulekuallikate osakaalud erinevatest vanusklassidest tudengitel (vt joonis 5). Selgus, et vanuse kasvades väheneb perelt saadava sissetuleku osakaal ning suureneb palga osakaal. Näiteks kuni 21-aastaste hulgas on perelt saadava raha osakaal keskmiselt 46%, üle 30-aastaste hulgas on see aga vaid 12% kogusissetulekust. Palga osakaal on kuni 21-aastaste hulgas keskmiselt 18%, üle 30-aastaste hulgas aga 64% sissetulekust. Õppetoetuse osakaal sissetulekust on kuni 21-aastaste hulgas keskmiselt 14%, 22-24 ja 25-29-aastaste hulgas keskmiselt 12% ning üle 30-aastaste hulgas keskmiselt 6%. Õppelaenu osakaal on igas vanusklassis väike: keskmiselt 2-3% kogusissetulekust.
 
-![](/images/yliopilased_joonis5.png)
+![](/2015/images/yliopilased_joonis5.png)
 
 *Joonis 5. Erinevate sissetulekuallikate osakaalud erinevates vanusklassides*
 <br>
